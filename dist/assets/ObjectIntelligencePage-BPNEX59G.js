@@ -12,7 +12,7 @@ import{t as e}from"./sparkles-DzJ4r12z.js";import{n as t,t as n}from"./orbit-lFz
   },[isBlink]);
 
   let imgSrc=vMode==="e1"?"/static/objects_media/"+t+"/epoch1.png":vMode==="e2"?"/static/objects_media/"+t+"/epoch2.png":"/static/objects_media/"+t+"/difference.png",
-  modeLabel=vMode==="e1"?"NASA SPHEREx Epoch 1 (2025.4)":vMode==="e2"?"NASA SPHEREx Epoch 2 (2026.5)":"Difference Map (Shift Target)",
+  modeLabel=vMode==="e1"?"🛰️ NASA SPHEREx DR1 (2025.4) HD":vMode==="e2"?"🛰️ NASA SPHEREx DR1 (2026.5) HD":"🔬 Subtracted Difference Map (HD)",
   catColor=i==="transient_candidate"?"bg-rose-950/60 text-rose-300 border-rose-700/50":i==="calibration_standard"?"bg-emerald-950/60 text-emerald-300 border-emerald-700/50":i==="brown_dwarf"?"bg-cyan-950/60 text-cyan-300 border-cyan-700/50":i==="variable_star"?"bg-amber-950/60 text-amber-300 border-amber-700/50":"bg-purple-950/60 text-purple-300 border-purple-700/50";
 
   return (0,V.jsxs)("div",{
@@ -57,7 +57,7 @@ import{t as e}from"./sparkles-DzJ4r12z.js";import{n as t,t as n}from"./orbit-lFz
         children:[
           // Image Container
           (0,V.jsxs)("div",{
-            className:"relative h-44 w-full overflow-hidden rounded-lg border border-slate-700/60 bg-black flex items-center justify-center",
+            className:"relative h-56 w-full overflow-hidden rounded-lg border border-slate-700/60 bg-black flex items-center justify-center",
             children:[
               (0,V.jsx)("img",{
                 src:imgSrc,
