@@ -9,13 +9,16 @@
   "coordinates": {
     "ra": 150.1,
     "dec": 2.2,
-    "target_pixel": [1442, 1821]
+    "target_pixel": [
+      1442,
+      1821
+    ]
   },
   "region": {
     "center_ra": 150.1,
     "center_dec": 2.2,
     "coordinate_frame": "ICRS J2000",
-    "cutout_size": "0.25° × 0.25°",
+    "cutout_size": "0.25\u00b0 \u00d7 0.25\u00b0",
     "pixel_scale": "6.2 arcsec/pixel",
     "dimensions": {
       "width": 1586,
@@ -31,7 +34,7 @@
       "release": "DR1",
       "detector": "Detector-5",
       "wavelength_um": 3.98,
-      "wavelength_range_um": "3.95 - 4.02 μm",
+      "wavelength_range_um": "3.95 - 4.02 \u03bcm",
       "fwhm_um": 0.03651,
       "units": "MJy/sr",
       "product_type": "SPHEREx Level-2 Spectral Image (DR1)",
@@ -47,7 +50,7 @@
       "release": "DR1",
       "detector": "Detector-5",
       "wavelength_um": 3.98,
-      "wavelength_range_um": "3.95 - 4.02 μm",
+      "wavelength_range_um": "3.95 - 4.02 \u03bcm",
       "fwhm_um": 0.0365,
       "units": "MJy/sr",
       "product_type": "SPHEREx Level-2 Spectral Image (DR1)",
@@ -81,20 +84,26 @@
     "time_baseline_days": 379,
     "reprojection_method": "AstroPy WCS Reproject",
     "psf_matched": true,
-    "masks_applied": ["bad_pixels", "cosmic_rays"],
-    "notes": "Optimal spectral overlap (<1.1% Δλ). Point-spread function matched across both epochs."
+    "masks_applied": [
+      "bad_pixels",
+      "cosmic_rays"
+    ],
+    "notes": "Optimal spectral overlap (<1.1% \u0394\u03bb). Point-spread function matched across both epochs."
   },
   "difference": {
     "image": "/static/demo-deepfield-01/difference.png",
     "method": "WCS-reprojected background-subtracted difference (Var(diff) = Var(later) + Var(earlier))",
     "method_description": "Later epoch (2026-05-08) background-subtracted minus Earlier epoch (2025-04-24) background-subtracted on matched tangent projection.",
-    "masked_flags_applied": ["bad_pixels", "cosmic_rays"],
+    "masked_flags_applied": [
+      "bad_pixels",
+      "cosmic_rays"
+    ],
     "limitations": "A measured surface brightness difference is a candidate variation, not proof of an astrophysical event."
   },
   "difference_statistics": {
     "units": "MJy / sr",
     "earlier_value_mjy_sr": 0.086797,
-    "later_value_mjy_sr": -0.0000889,
+    "later_value_mjy_sr": -8.89e-05,
     "difference_mjy_sr": -0.086886,
     "propagated_sigma_mjy_sr": 0.04797,
     "snr": -1.811,
