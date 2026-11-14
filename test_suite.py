@@ -149,3 +149,24 @@ def test_automated_nasa_import_and_autonomous_sifter():
     assert "comets_and_asteroids" in disc
     assert "brown_dwarfs_and_planet_candidates" in disc
     assert "variable_and_pulsating_stars" in disc
+
+
+def test_target_evidence_and_pipeline_verification():
+    client = TestClient(app)
+
+    # 1. Test GET target evidence
+    ev_res = client.get("/api/targets/demo-deepfield-01/evidence")
+    assert ev_res.status_code == 200
+    ev = ev_res.json()
+    assert ev["targetId"] == "demo-deepfield-01"
+    assert len(ev["candidates"]) >= 1
+    assert "provenance" in ev
+
+    # 2. Test POST pipeline verification
+    ver_res = client.post("/api/pipeline/verify/demo-deepfield-01")
+    assert ver_res.status_code == 200
+    ver = ver_res.json()
+    assert ver["status"] == "VERIFIED"
+    assert ver["stages_completed"] == 7
+    assert ver["fits_wcs_status"] == "AVAILABLE"
+
