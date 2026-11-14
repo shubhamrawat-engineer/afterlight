@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <rect width="400" height="300" fill="#060913" />
+  <!-- Coordinate Grid -->
+  <g stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="0" y1="75" x2="400" y2="75" />
+    <line x1="0" y1="150" x2="400" y2="150" />
+    <line x1="0" y1="225" x2="400" y2="225" />
+    <line x1="100" y1="0" x2="100" y2="300" />
+    <line x1="200" y1="0" x2="200" y2="300" />
+    <line x1="300" y1="0" x2="300" y2="300" />
+  </g>
+  <!-- Schematic Reticle -->
+  <circle cx="200" cy="155" r="65" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.5" />
+  <circle cx="200" cy="155" r="28" fill="none" stroke="#60a5fa" stroke-width="1.2" opacity="0.7" />
+  <circle cx="200" cy="155" r="3" fill="#60a5fa" />
+  <!-- Schematic Reference Markers -->
+  <circle cx="130" cy="115" r="2.5" fill="#94a3b8" />
+  <circle cx="265" cy="125" r="2" fill="#94a3b8" />
+  <circle cx="155" cy="200" r="2" fill="#94a3b8" />
+  <circle cx="245" cy="190" r="3" fill="#38bdf8" />
+  <!-- Top Explicit Disclosure Banner -->
+  <rect x="12" y="12" width="376" height="36" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1" stroke-opacity="0.6" />
+  <text x="200" y="27" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="bold">
+    DEMONSTRATION PLACEHOLDER — MOCK FIXTURE
+  </text>
+  <text x="200" y="40" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="8.5">
+    SCHEMATIC SKY REGION DIAGRAM (NOT NASA SPHEREx DATA)
+  </text>
+  <!-- Bottom Label -->
+  <rect x="80" y="256" width="240" height="26" rx="5" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <text x="200" y="273" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="10">
+    ICRS J2000 SCHEMATIC CUTOUT
+  </text>
+</svg>

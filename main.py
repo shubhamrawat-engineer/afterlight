@@ -2,6 +2,7 @@ import time
 import uuid
 from collections import defaultdict, deque
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -366,6 +367,28 @@ async def get_live_sky_cutout(
         return FileResponse(path=str(img_path), media_type="image/png")
     fallback = BUNDLE_DIR / "demo-deepfield-01" / "earlier.png"
     return FileResponse(path=str(fallback), media_type="image/png")
+
+
+DIST_DIR = Path(__file__).resolve().parent / "dist"
+if DIST_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=str(DIST_DIR / "assets")), name="frontend-assets")
+
+    @app.get("/favicon.svg", include_in_schema=False)
+    def favicon():
+        return FileResponse(str(DIST_DIR / "favicon.svg"))
+
+    @app.get("/icons.svg", include_in_schema=False)
+    def icons():
+        return FileResponse(str(DIST_DIR / "icons.svg"))
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    def serve_frontend_spa(full_path: str):
+        if full_path.startswith(("api", "static", "docs", "redoc", "openapi.json")):
+            raise HTTPException(status_code=404, detail="Not Found")
+        target_file = DIST_DIR / full_path
+        if target_file.is_file():
+            return FileResponse(str(target_file))
+        return FileResponse(str(DIST_DIR / "index.html"))
 
 
 if __name__ == "__main__":
