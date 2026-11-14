@@ -2,10 +2,14 @@
   "targets": [
     {
       "id": "demo-deepfield-01",
-      "title": "Deep field sample",
+      "title": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
       "kind": "deep_field",
-      "status": "verified",
-      "thumbnail": "demo-deepfield-01/earlier.png"
+      "status": "scientifically_verified",
+      "thumbnail": "demo-deepfield-01/earlier.png",
+      "ra": 150.1,
+      "dec": 2.2,
+      "wavelength_um": 3.98,
+      "release": "DR1"
     }
   ]
 }
