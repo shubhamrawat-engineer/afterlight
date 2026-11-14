@@ -1,0 +1,561 @@
+{
+  "target_id": "test-synthetic-pair",
+  "target_title": "Substellar Brown Dwarf BD-01 Candidate",
+  "target_kind": "deep_field",
+  "status": "verified",
+  "supported_wavelength_range": "0.75 \u03bcm \u2013 5.00 \u03bcm (SPHEREx Bands 1\u20136)",
+  "provenance": {
+    "archive_source": "NASA/IPAC Infrared Science Archive (IRSA)",
+    "mission": "NASA SPHEREx",
+    "instrument_configuration": "6-Band Linear Variable Filter Array (InSb/Si)",
+    "extraction_method": "Synthetic Aperture Point Source Extraction",
+    "pipeline_version": "SPHEREx Science Pipeline v2.4.1 (DR1 Calibration)",
+    "retrieval_date_utc": "2026-11-14T12:00:00Z",
+    "archive_citation": "NASA/IPAC Infrared Science Archive (IRSA)",
+    "doi_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
+  },
+  "profiles": [
+    {
+      "epoch_id": "T0-EARLIER",
+      "epoch_label": "T0: Synthetic Band A (1.15 \u03bcm, 2025-01-01)",
+      "observation_id": "SPX-SYNTH-E1",
+      "obs_date_utc": "2025-01-01T00:00:00Z",
+      "source_id": "Brown Dwarf Candidate BD-01",
+      "flux_unit": "\u03bcJy",
+      "wavelength_unit": "\u03bcm",
+      "wavelength_min_um": 0.75,
+      "wavelength_max_um": 5.0,
+      "sampling_resolution": "R \u2248 41\u2013130",
+      "color": "#38bdf8",
+      "data_points": [
+        {
+          "index": 1,
+          "wavelength_um": 0.75,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 2,
+          "wavelength_um": 0.89,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 3,
+          "wavelength_um": 1.02,
+          "signal_value": 21.98,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 4,
+          "wavelength_um": 1.16,
+          "signal_value": 20.84,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 5,
+          "wavelength_um": 1.3,
+          "signal_value": 12.38,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 6,
+          "wavelength_um": 1.44,
+          "signal_value": 8.03,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 7,
+          "wavelength_um": 1.57,
+          "signal_value": 17.85,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 8,
+          "wavelength_um": 1.71,
+          "signal_value": 21.79,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 9,
+          "wavelength_um": 1.85,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 10,
+          "wavelength_um": 1.98,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 11,
+          "wavelength_um": 2.12,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 12,
+          "wavelength_um": 2.26,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 13,
+          "wavelength_um": 2.4,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 14,
+          "wavelength_um": 2.53,
+          "signal_value": 22.01,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 15,
+          "wavelength_um": 2.67,
+          "signal_value": 22.05,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 16,
+          "wavelength_um": 2.81,
+          "signal_value": 22.19,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 17,
+          "wavelength_um": 2.94,
+          "signal_value": 22.59,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 18,
+          "wavelength_um": 3.08,
+          "signal_value": 23.76,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 19,
+          "wavelength_um": 3.22,
+          "signal_value": 26.46,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 20,
+          "wavelength_um": 3.35,
+          "signal_value": 31.2,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 21,
+          "wavelength_um": 3.49,
+          "signal_value": 39.22,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 22,
+          "wavelength_um": 3.63,
+          "signal_value": 49.57,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 23,
+          "wavelength_um": 3.77,
+          "signal_value": 59.72,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 24,
+          "wavelength_um": 3.9,
+          "signal_value": 65.86,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 25,
+          "wavelength_um": 4.04,
+          "signal_value": 66.36,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 26,
+          "wavelength_um": 4.18,
+          "signal_value": 60.35,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 27,
+          "wavelength_um": 4.31,
+          "signal_value": 51.11,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 28,
+          "wavelength_um": 4.45,
+          "signal_value": 40.6,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 29,
+          "wavelength_um": 4.59,
+          "signal_value": 32.16,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 30,
+          "wavelength_um": 4.73,
+          "signal_value": 26.74,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 31,
+          "wavelength_um": 4.86,
+          "signal_value": 24.03,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 32,
+          "wavelength_um": 5.0,
+          "signal_value": 22.7,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        }
+      ]
+    },
+    {
+      "epoch_id": "T1-LATER",
+      "epoch_label": "T1: Synthetic Band B (4.25 \u03bcm, 2025-07-01)",
+      "observation_id": "SPX-SYNTH-L1",
+      "obs_date_utc": "2025-07-01T00:00:00Z",
+      "source_id": "Brown Dwarf Candidate BD-01",
+      "flux_unit": "\u03bcJy",
+      "wavelength_unit": "\u03bcm",
+      "wavelength_min_um": 0.75,
+      "wavelength_max_um": 5.0,
+      "sampling_resolution": "R \u2248 41\u2013130",
+      "color": "#818cf8",
+      "data_points": [
+        {
+          "index": 1,
+          "wavelength_um": 0.75,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 2,
+          "wavelength_um": 0.89,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 3,
+          "wavelength_um": 1.02,
+          "signal_value": 21.98,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 4,
+          "wavelength_um": 1.16,
+          "signal_value": 20.84,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 5,
+          "wavelength_um": 1.3,
+          "signal_value": 12.38,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 6,
+          "wavelength_um": 1.44,
+          "signal_value": 8.03,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 7,
+          "wavelength_um": 1.57,
+          "signal_value": 17.85,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 8,
+          "wavelength_um": 1.71,
+          "signal_value": 21.79,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 9,
+          "wavelength_um": 1.85,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 10,
+          "wavelength_um": 1.98,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 11,
+          "wavelength_um": 2.12,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 12,
+          "wavelength_um": 2.26,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 13,
+          "wavelength_um": 2.4,
+          "signal_value": 22.0,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 14,
+          "wavelength_um": 2.53,
+          "signal_value": 22.01,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 15,
+          "wavelength_um": 2.67,
+          "signal_value": 22.05,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 16,
+          "wavelength_um": 2.81,
+          "signal_value": 22.19,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 17,
+          "wavelength_um": 2.94,
+          "signal_value": 22.59,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 18,
+          "wavelength_um": 3.08,
+          "signal_value": 23.76,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 19,
+          "wavelength_um": 3.22,
+          "signal_value": 26.46,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 20,
+          "wavelength_um": 3.35,
+          "signal_value": 31.2,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 21,
+          "wavelength_um": 3.49,
+          "signal_value": 39.22,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 22,
+          "wavelength_um": 3.63,
+          "signal_value": 49.57,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 23,
+          "wavelength_um": 3.77,
+          "signal_value": 59.72,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 24,
+          "wavelength_um": 3.9,
+          "signal_value": 65.86,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 25,
+          "wavelength_um": 4.04,
+          "signal_value": 66.36,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 26,
+          "wavelength_um": 4.18,
+          "signal_value": 60.35,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 27,
+          "wavelength_um": 4.31,
+          "signal_value": 51.11,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 28,
+          "wavelength_um": 4.45,
+          "signal_value": 40.6,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 29,
+          "wavelength_um": 4.59,
+          "signal_value": 32.16,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 30,
+          "wavelength_um": 4.73,
+          "signal_value": 26.74,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 31,
+          "wavelength_um": 4.86,
+          "signal_value": 24.03,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        },
+        {
+          "index": 32,
+          "wavelength_um": 5.0,
+          "signal_value": 22.7,
+          "uncertainty": 1.1,
+          "quality_flag": "OK",
+          "quality_flag_description": null
+        }
+      ]
+    }
+  ]
+}

@@ -17,6 +17,11 @@ def test_manifest_spectra_and_images():
     assert m.status_code == 200 and m.json()["spectra_available"] is True
     s = client.get("/api/targets/demo-deepfield-01/spectra")
     assert s.status_code == 200 and "flux_mjy" in s.json()
+    data = s.json()
+    assert "profiles" in data
+    assert len(data["profiles"]) >= 2
+    assert len(data["profiles"][0]["data_points"]) >= 10
+    assert data["target_id"] == "demo-deepfield-01"
     img = client.get("/static/demo-deepfield-01/earlier.png")
     assert img.status_code == 200
 
