@@ -197,22 +197,255 @@ import{_ as e,d as t,g as n,i as r,n as i,p as a,r as o}from"./index-Caqz24Pb.js
       })
     })
   ]})
-}var v=[{id:`universe-explorer`,title:`Universe Explorer`,description:`Navigate the cosmos with interactive sky maps.`,href:`/explore`,visualType:`orbit`,ariaLabel:`Open Universe Explorer interactive sky maps`},{id:`temporal-analysis`,title:`Temporal Analysis`,description:`Compare observations across time.`,href:`/temporal-analysis/demo-deepfield-01`,visualType:`temporal`,ariaLabel:`Open Temporal Analysis observation comparison`},{id:`spectral-lab`,title:`Spectral Lab`,description:`Explore infrared wavelengths.`,href:`/spectral-lab/demo-deepfield-01`,visualType:`spectral`,ariaLabel:`Open Spectral Lab wavelength explorer`},{id:`object-intelligence`,title:`Object Intelligence`,description:`Learn about celestial objects.`,href:`/objects`,visualType:`intelligence`,ariaLabel:`Open Object Intelligence celestial dossiers`}];var y=[{id:`q1`,text:`What are black holes?`},{id:`q2`,text:`Why do galaxies glow?`},{id:`q3`,text:`Tell me about SPHEREx`}];function b({type:e}){switch(e){case`orbit`:return(0,h.jsxs)(`svg`,{viewBox:`0 0 200 120`,className:`h-full w-full`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,"aria-hidden":`true`,children:[(0,h.jsxs)(`defs`,{children:[(0,h.jsxs)(`radialGradient`,{id:`centerCore`,cx:`50%`,cy:`50%`,r:`50%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#93c5fd`,stopOpacity:`1`}),(0,h.jsx)(`stop`,{offset:`35%`,stopColor:`#3b82f6`,stopOpacity:`0.8`}),(0,h.jsx)(`stop`,{offset:`70%`,stopColor:`#1d4ed8`,stopOpacity:`0.4`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#1e3a8a`,stopOpacity:`0`})]}),(0,h.jsxs)(`radialGradient`,{id:`nodeGlow`,cx:`50%`,cy:`50%`,r:`50%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#60a5fa`,stopOpacity:`1`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#3b82f6`,stopOpacity:`0`})]})]}),(0,h.jsx)(`circle`,{cx:`25`,cy:`20`,r:`0.75`,fill:`#60a5fa`,fillOpacity:`0.4`}),(0,h.jsx)(`circle`,{cx:`170`,cy:`25`,r:`1`,fill:`#60a5fa`,fillOpacity:`0.5`}),(0,h.jsx)(`circle`,{cx:`185`,cy:`85`,r:`0.75`,fill:`#60a5fa`,fillOpacity:`0.3`}),(0,h.jsx)(`circle`,{cx:`30`,cy:`100`,r:`0.8`,fill:`#60a5fa`,fillOpacity:`0.4`}),(0,h.jsx)(`ellipse`,{cx:`100`,cy:`60`,rx:`78`,ry:`36`,stroke:`#3b82f6`,strokeOpacity:`0.25`,strokeWidth:`1`,strokeDasharray:`3 3`}),(0,h.jsx)(`ellipse`,{cx:`100`,cy:`60`,rx:`60`,ry:`24`,transform:`rotate(-12 100 60)`,stroke:`#60a5fa`,strokeOpacity:`0.5`,strokeWidth:`1.2`}),(0,h.jsx)(`ellipse`,{cx:`100`,cy:`60`,rx:`36`,ry:`14`,transform:`rotate(18 100 60)`,stroke:`#93c5fd`,strokeOpacity:`0.4`,strokeWidth:`1`}),(0,h.jsx)(`circle`,{cx:`152`,cy:`50`,r:`3.5`,fill:`url(#nodeGlow)`}),(0,h.jsx)(`circle`,{cx:`152`,cy:`50`,r:`1.5`,fill:`#ffffff`}),(0,h.jsx)(`circle`,{cx:`48`,cy:`67`,r:`2.5`,fill:`url(#nodeGlow)`}),(0,h.jsx)(`circle`,{cx:`48`,cy:`67`,r:`1`,fill:`#ffffff`}),(0,h.jsx)(`circle`,{cx:`118`,cy:`48`,r:`2`,fill:`#93c5fd`,fillOpacity:`0.8`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`22`,fill:`url(#centerCore)`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`7`,fill:`#60a5fa`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`3.5`,fill:`#ffffff`})]});case`temporal`:return(0,h.jsxs)(`svg`,{viewBox:`0 0 200 120`,className:`h-full w-full`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,"aria-hidden":`true`,children:[(0,h.jsxs)(`defs`,{children:[(0,h.jsxs)(`linearGradient`,{id:`frameGrad1`,x1:`0%`,y1:`0%`,x2:`100%`,y2:`100%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#1e293b`,stopOpacity:`0.8`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#0f172a`,stopOpacity:`0.6`})]}),(0,h.jsxs)(`linearGradient`,{id:`frameGrad2`,x1:`0%`,y1:`0%`,x2:`100%`,y2:`100%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#1e3a8a`,stopOpacity:`0.6`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#0c1e47`,stopOpacity:`0.85`})]})]}),(0,h.jsxs)(`g`,{transform:`translate(34, 18)`,children:[(0,h.jsx)(`rect`,{width:`80`,height:`64`,rx:`4`,fill:`url(#frameGrad1)`,stroke:`#334155`,strokeWidth:`1`}),(0,h.jsx)(`line`,{x1:`40`,y1:`8`,x2:`40`,y2:`56`,stroke:`#475569`,strokeWidth:`0.7`,strokeDasharray:`2 2`,strokeOpacity:`0.4`}),(0,h.jsx)(`line`,{x1:`12`,y1:`32`,x2:`68`,y2:`32`,stroke:`#475569`,strokeWidth:`0.7`,strokeDasharray:`2 2`,strokeOpacity:`0.4`}),(0,h.jsx)(`circle`,{cx:`40`,cy:`32`,r:`5`,stroke:`#64748b`,strokeWidth:`0.8`}),(0,h.jsx)(`circle`,{cx:`28`,cy:`22`,r:`1.5`,fill:`#94a3b8`,fillOpacity:`0.7`}),(0,h.jsx)(`circle`,{cx:`56`,cy:`44`,r:`1`,fill:`#94a3b8`,fillOpacity:`0.5`}),(0,h.jsx)(`text`,{x:`8`,y:`14`,fill:`#64748b`,fontSize:`6`,fontFamily:`var(--font-mono)`,children:`T0: 2024`})]}),(0,h.jsx)(`path`,{d:`M 94 48 L 112 56`,stroke:`#38bdf8`,strokeWidth:`1.2`,strokeDasharray:`2 2`,strokeOpacity:`0.8`}),(0,h.jsxs)(`g`,{transform:`translate(86, 36)`,children:[(0,h.jsx)(`rect`,{width:`82`,height:`66`,rx:`4`,fill:`url(#frameGrad2)`,stroke:`#3b82f6`,strokeWidth:`1.2`,className:`drop-shadow-[0_4px_12px_rgba(30,58,138,0.5)]`}),(0,h.jsx)(`circle`,{cx:`41`,cy:`33`,r:`10`,stroke:`#60a5fa`,strokeWidth:`0.8`,strokeDasharray:`2 2`}),(0,h.jsx)(`circle`,{cx:`41`,cy:`33`,r:`3`,fill:`#38bdf8`}),(0,h.jsx)(`circle`,{cx:`41`,cy:`33`,r:`1`,fill:`#ffffff`}),(0,h.jsx)(`circle`,{cx:`26`,cy:`22`,r:`2.5`,fill:`#93c5fd`}),(0,h.jsx)(`circle`,{cx:`60`,cy:`46`,r:`2`,fill:`#60a5fa`,fillOpacity:`0.8`}),(0,h.jsx)(`text`,{x:`8`,y:`14`,fill:`#93c5fd`,fontSize:`6`,fontWeight:`bold`,fontFamily:`var(--font-mono)`,children:`T1: +Δλ`}),(0,h.jsx)(`path`,{d:`M 6 6 L 6 10 M 6 6 L 10 6`,stroke:`#60a5fa`,strokeWidth:`1`}),(0,h.jsx)(`path`,{d:`M 76 60 L 76 56 M 76 60 L 72 60`,stroke:`#60a5fa`,strokeWidth:`1`})]})]});case`spectral`:return(0,h.jsxs)(`svg`,{viewBox:`0 0 200 120`,className:`h-full w-full`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,"aria-hidden":`true`,children:[(0,h.jsxs)(`defs`,{children:[(0,h.jsxs)(`linearGradient`,{id:`specAreaGrad`,x1:`0%`,y1:`0%`,x2:`0%`,y2:`100%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#3b82f6`,stopOpacity:`0.45`}),(0,h.jsx)(`stop`,{offset:`60%`,stopColor:`#1e3a8a`,stopOpacity:`0.15`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#0b1120`,stopOpacity:`0`})]}),(0,h.jsxs)(`linearGradient`,{id:`specLineGrad`,x1:`0%`,y1:`0%`,x2:`100%`,y2:`0%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#38bdf8`}),(0,h.jsx)(`stop`,{offset:`35%`,stopColor:`#60a5fa`}),(0,h.jsx)(`stop`,{offset:`65%`,stopColor:`#a855f7`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#38bdf8`})]})]}),(0,h.jsx)(`line`,{x1:`20`,y1:`25`,x2:`180`,y2:`25`,stroke:`#1e293b`,strokeWidth:`0.8`,strokeDasharray:`3 3`}),(0,h.jsx)(`line`,{x1:`20`,y1:`50`,x2:`180`,y2:`50`,stroke:`#1e293b`,strokeWidth:`0.8`,strokeDasharray:`3 3`}),(0,h.jsx)(`line`,{x1:`20`,y1:`75`,x2:`180`,y2:`75`,stroke:`#1e293b`,strokeWidth:`0.8`,strokeDasharray:`3 3`}),(0,h.jsx)(`line`,{x1:`20`,y1:`95`,x2:`180`,y2:`95`,stroke:`#334155`,strokeWidth:`1`}),(0,h.jsx)(`line`,{x1:`68`,y1:`20`,x2:`68`,y2:`95`,stroke:`#3b82f6`,strokeWidth:`0.6`,strokeDasharray:`2 2`,strokeOpacity:`0.5`}),(0,h.jsx)(`line`,{x1:`125`,y1:`20`,x2:`125`,y2:`95`,stroke:`#3b82f6`,strokeWidth:`0.6`,strokeDasharray:`2 2`,strokeOpacity:`0.5`}),(0,h.jsx)(`path`,{d:`M 20 95 
-               C 35 94, 45 88, 54 78
-               C 60 70, 64 35, 68 32
-               C 72 29, 76 60, 85 75
-               C 95 90, 108 86, 116 68
-               C 120 58, 123 38, 126 36
-               C 130 34, 136 65, 146 82
-               C 156 94, 168 93, 180 95
-               L 180 95 L 20 95 Z`,fill:`url(#specAreaGrad)`}),(0,h.jsx)(`path`,{d:`M 20 95 
-               C 35 94, 45 88, 54 78
-               C 60 70, 64 35, 68 32
-               C 72 29, 76 60, 85 75
-               C 95 90, 108 86, 116 68
-               C 120 58, 123 38, 126 36
-               C 130 34, 136 65, 146 82
-               C 156 94, 168 93, 180 95`,stroke:`url(#specLineGrad)`,strokeWidth:`2`,strokeLinecap:`round`}),(0,h.jsx)(`circle`,{cx:`68`,cy:`32`,r:`4`,fill:`#38bdf8`,fillOpacity:`0.3`}),(0,h.jsx)(`circle`,{cx:`68`,cy:`32`,r:`2`,fill:`#ffffff`}),(0,h.jsx)(`circle`,{cx:`126`,cy:`36`,r:`4`,fill:`#a855f7`,fillOpacity:`0.3`}),(0,h.jsx)(`circle`,{cx:`126`,cy:`36`,r:`2`,fill:`#ffffff`}),(0,h.jsx)(`text`,{x:`22`,y:`106`,fill:`#64748b`,fontSize:`6`,fontFamily:`var(--font-mono)`,children:`0.75 μm`}),(0,h.jsx)(`text`,{x:`68`,y:`106`,fill:`#38bdf8`,fontSize:`6`,textAnchor:`middle`,fontFamily:`var(--font-mono)`,children:`2.4 μm`}),(0,h.jsx)(`text`,{x:`126`,y:`106`,fill:`#818cf8`,fontSize:`6`,textAnchor:`middle`,fontFamily:`var(--font-mono)`,children:`3.8 μm`}),(0,h.jsx)(`text`,{x:`180`,y:`106`,fill:`#64748b`,fontSize:`6`,textAnchor:`end`,fontFamily:`var(--font-mono)`,children:`5.0 μm`})]});case`intelligence`:return(0,h.jsxs)(`svg`,{viewBox:`0 0 200 120`,className:`h-full w-full`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,"aria-hidden":`true`,children:[(0,h.jsx)(`defs`,{children:(0,h.jsxs)(`radialGradient`,{id:`meshGlow`,cx:`50%`,cy:`50%`,r:`50%`,children:[(0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#3b82f6`,stopOpacity:`0.25`}),(0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#1e3a8a`,stopOpacity:`0`})]})}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`48`,fill:`url(#meshGlow)`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`44`,stroke:`#1e3a8a`,strokeWidth:`0.8`,strokeOpacity:`0.6`,strokeDasharray:`3 3`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`32`,stroke:`#3b82f6`,strokeWidth:`0.6`,strokeOpacity:`0.3`}),(0,h.jsxs)(`g`,{stroke:`#60a5fa`,strokeOpacity:`0.6`,strokeWidth:`1`,children:[(0,h.jsx)(`line`,{x1:`100`,y1:`24`,x2:`68`,y2:`44`}),(0,h.jsx)(`line`,{x1:`100`,y1:`24`,x2:`132`,y2:`44`}),(0,h.jsx)(`line`,{x1:`100`,y1:`24`,x2:`100`,y2:`60`}),(0,h.jsx)(`line`,{x1:`68`,y1:`44`,x2:`132`,y2:`44`}),(0,h.jsx)(`line`,{x1:`68`,y1:`44`,x2:`100`,y2:`60`}),(0,h.jsx)(`line`,{x1:`132`,y1:`44`,x2:`100`,y2:`60`}),(0,h.jsx)(`line`,{x1:`68`,y1:`44`,x2:`74`,y2:`82`}),(0,h.jsx)(`line`,{x1:`132`,y1:`44`,x2:`126`,y2:`82`}),(0,h.jsx)(`line`,{x1:`100`,y1:`60`,x2:`74`,y2:`82`}),(0,h.jsx)(`line`,{x1:`100`,y1:`60`,x2:`126`,y2:`82`}),(0,h.jsx)(`line`,{x1:`74`,y1:`82`,x2:`126`,y2:`82`}),(0,h.jsx)(`line`,{x1:`74`,y1:`82`,x2:`100`,y2:`96`}),(0,h.jsx)(`line`,{x1:`126`,y1:`82`,x2:`100`,y2:`96`}),(0,h.jsx)(`line`,{x1:`100`,y1:`60`,x2:`100`,y2:`96`,strokeDasharray:`2 2`,strokeOpacity:`0.4`})]}),(0,h.jsx)(`polygon`,{points:`100,24 68,44 100,60`,fill:`#3b82f6`,fillOpacity:`0.12`}),(0,h.jsx)(`polygon`,{points:`100,24 132,44 100,60`,fill:`#60a5fa`,fillOpacity:`0.08`}),(0,h.jsx)(`polygon`,{points:`68,44 100,60 74,82`,fill:`#1d4ed8`,fillOpacity:`0.15`}),(0,h.jsx)(`polygon`,{points:`132,44 100,60 126,82`,fill:`#2563eb`,fillOpacity:`0.12`}),(0,h.jsx)(`polygon`,{points:`100,60 74,82 126,82`,fill:`#3b82f6`,fillOpacity:`0.18`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`24`,r:`2.5`,fill:`#93c5fd`}),(0,h.jsx)(`circle`,{cx:`68`,cy:`44`,r:`2.5`,fill:`#60a5fa`}),(0,h.jsx)(`circle`,{cx:`132`,cy:`44`,r:`2.5`,fill:`#60a5fa`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`3.5`,fill:`#ffffff`,className:`drop-shadow-[0_0_6px_#38bdf8]`}),(0,h.jsx)(`circle`,{cx:`74`,cy:`82`,r:`2.5`,fill:`#60a5fa`}),(0,h.jsx)(`circle`,{cx:`126`,cy:`82`,r:`2.5`,fill:`#60a5fa`}),(0,h.jsx)(`circle`,{cx:`100`,cy:`96`,r:`2.5`,fill:`#93c5fd`}),(0,h.jsx)(`text`,{x:`138`,y:`42`,fill:`#60a5fa`,fontSize:`5`,fontFamily:`var(--font-mono)`,children:`RA: +32.4°`}),(0,h.jsx)(`text`,{x:`132`,y:`86`,fill:`#60a5fa`,fontSize:`5`,fontFamily:`var(--font-mono)`,children:`DEC: -14.2°`})]})}}function x({feature:e,className:n}){return(0,h.jsxs)(t,{to:e.href,"aria-label":e.ariaLabel,className:r(`group relative flex flex-col justify-between overflow-hidden rounded-xl border p-6 transition-all duration-200`,`bg-[#101A2B] border-[#24344D] hover:border-[#4388FF]/50 hover:bg-[#131F33]`,`hover:-translate-y-0.5 shadow-[0_4px_18px_rgba(3,6,14,0.38)] hover:shadow-[0_12px_30px_rgba(3,6,14,0.58)]`,`focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2]`,n),children:[(0,h.jsxs)(`div`,{children:[(0,h.jsx)(`div`,{className:`relative mb-5 flex h-32 w-full items-center justify-center overflow-hidden rounded-lg border border-[#1A2940] bg-[#080E1C] p-3`,children:(0,h.jsx)(b,{type:e.visualType})}),(0,h.jsx)(`h3`,{className:`font-[family-name:var(--font-display)] text-[18px] font-semibold tracking-[-0.01em] text-[#F4F7FF] transition-colors duration-200 group-hover:text-[#45D5F2]`,children:e.title}),(0,h.jsx)(`p`,{className:`mt-2 text-[13.5px] leading-relaxed text-[#B5C2D6]`,children:e.description})]}),(0,h.jsxs)(`div`,{className:`mt-6 flex items-center justify-between border-t border-[#1A2940] pt-4`,children:[(0,h.jsx)(`span`,{className:`text-xs font-medium text-[#8293AD] transition-colors group-hover:text-[#F4F7FF]`,children:`Open workstation`}),(0,h.jsx)(`div`,{className:`flex h-8 w-8 items-center justify-center rounded-lg border border-[#24344D] bg-[#131F33] text-[#B5C2D6] transition-all duration-200 group-hover:border-[#4388FF]/60 group-hover:bg-[#4388FF] group-hover:text-[#F4F7FF]`,children:(0,h.jsx)(l,{className:`h-4 w-4`,"aria-hidden":`true`})})]})]})}function S({className:e}){return(0,h.jsx)(`section`,{"aria-label":`Core AFTERLIGHT Features`,className:e,children:(0,h.jsx)(`div`,{className:`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5`,children:v.map(e=>(0,h.jsx)(x,{feature:e},e.id))})})}function C({className:e}){let[t,n]=(0,m.useState)(``),r=(0,m.useRef)(null),o=a(),l=e=>{e.preventDefault();let n=t.trim();n&&o(`/ai?q=${encodeURIComponent(n)}`)},u=e=>{n(e),r.current?.focus()};return(0,h.jsx)(`section`,{"aria-label":`Cosmos AI Assistant Query`,className:`rounded-xl border border-[#24344D] bg-[#101A2B] p-6 sm:p-7 shadow-[0_6px_24px_rgba(3,6,14,0.42)] ${e??``}`,children:(0,h.jsxs)(`div`,{className:`flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between`,children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-3.5 lg:min-w-[230px]`,children:[(0,h.jsx)(`div`,{className:`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#4388FF]/35 bg-[#131F33] text-[#45D5F2] shadow-sm`,children:(0,h.jsx)(f,{className:`h-5 w-5`,"aria-hidden":`true`})}),(0,h.jsxs)(`div`,{children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-1.5`,children:[(0,h.jsx)(`h2`,{className:`font-[family-name:var(--font-display)] text-[16px] font-semibold tracking-wide text-[#F4F7FF]`,children:`Cosmos AI`}),(0,h.jsx)(c,{className:`h-3.5 w-3.5 text-[#45D5F2]`,"aria-hidden":`true`})]}),(0,h.jsx)(`p`,{className:`text-[13px] text-[#B5C2D6]`,children:`Contextual investigation assistant.`})]})]}),(0,h.jsx)(`form`,{onSubmit:l,className:`flex-1 lg:max-w-xl`,role:`search`,children:(0,h.jsx)(p,{ref:r,type:`text`,inputSize:`lg`,value:t,onChange:e=>n(e.target.value),placeholder:`Ask about candidate targets, compatibility thresholds, or workflow steps...`,"aria-label":`Ask anything about the universe`,rightElement:(0,h.jsx)(i,{type:`submit`,size:`sm`,variant:`active`,disabled:!t.trim(),"aria-label":`Submit astronomical inquiry`,children:(0,h.jsx)(s,{className:`h-4 w-4`})})})}),(0,h.jsxs)(`div`,{className:`flex flex-wrap items-center gap-2 lg:max-w-md lg:justify-end`,children:[(0,h.jsx)(`span`,{className:`mr-1 text-[11px] font-medium tracking-wider text-[#8293AD] uppercase`,children:`Suggested:`}),y.map(e=>(0,h.jsx)(`button`,{type:`button`,onClick:()=>u(e.text),className:`inline-flex h-8 items-center rounded-lg border border-[#24344D] bg-[#131F33] px-3 text-xs font-medium text-[#B5C2D6] transition-colors duration-200 hover:border-[#4388FF]/50 hover:bg-[#192842] hover:text-[#F4F7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2] cursor-pointer`,children:e.text},e.id))]})]})})}function w(){
+}var v=[{id:`universe-explorer`,title:`Universe Explorer`,description:`Navigate 7 SPHEREx deep fields with interactive pan-zoom astrometric cutouts.`,href:`/explore`,visualType:`orbit`,ariaLabel:`Open Universe Explorer interactive sky maps`},{id:`temporal-analysis`,title:`Temporal Analysis`,description:`Compare multi-epoch observation pairs with pixel-by-pixel difference subtraction.`,href:`/temporal-analysis/demo-deepfield-01`,visualType:`temporal`,ariaLabel:`Open Temporal Analysis observation comparison`},{id:`spectral-lab`,title:`Spectral Lab`,description:`Inspect 102 continuous infrared spectrophotometric channels from 0.75 to 5.00 μm.`,href:`/spectral-lab/demo-deepfield-01`,visualType:`spectral`,ariaLabel:`Open Spectral Lab wavelength explorer`},{id:`object-intelligence`,title:`Object Intelligence`,description:`Autonomous discovery dossiers for comets, asteroids, brown dwarfs & candidate worlds.`,href:`/objects`,visualType:`intelligence`,ariaLabel:`Open Object Intelligence celestial dossiers`}];var y=[{id:`q1`,text:`What are black holes?`},{id:`q2`,text:`Why do galaxies glow?`},{id:`q3`,text:`Tell me about SPHEREx`}];function b({type:e}){
+  switch(e){
+    case`orbit`:
+      return (0,h.jsxs)(`div`,{
+        className:`relative h-full w-full overflow-hidden flex items-center justify-center bg-black`,
+        children:[
+          (0,h.jsx)(`img`,{
+            src:`/assets/galaxy.png`,
+            alt:`Universe Starfield Preview`,
+            className:`absolute inset-0 h-full w-full object-cover opacity-60 group-hover:scale-110 group-hover:opacity-80 transition-all duration-700 ease-out`,
+            loading:`lazy`
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute inset-0 bg-gradient-to-t from-[#080E1C] via-[#080E1C]/40 to-transparent pointer-events-none`
+          }),
+          (0,h.jsxs)(`svg`,{
+            viewBox:`0 0 200 120`,
+            className:`absolute inset-0 h-full w-full z-10 pointer-events-none`,
+            fill:`none`,
+            xmlns:`http://www.w3.org/2000/svg`,
+            children:[
+              (0,h.jsx)(`ellipse`,{cx:`100`,cy:`60`,rx:`78`,ry:`36`,stroke:`#38bdf8`,strokeOpacity:`0.4`,strokeWidth:`1`,strokeDasharray:`3 3`}),
+              (0,h.jsx)(`ellipse`,{cx:`100`,cy:`60`,rx:`58`,ry:`22`,transform:`rotate(-12 100 60)`,stroke:`#60a5fa`,strokeOpacity:`0.6`,strokeWidth:`1.2`}),
+              (0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`18`,fill:`#38bdf8`,fillOpacity:`0.15`}),
+              (0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`5`,fill:`#38bdf8`}),
+              (0,h.jsx)(`circle`,{cx:`100`,cy:`60`,r:`2`,fill:`#ffffff`}),
+              (0,h.jsx)(`circle`,{cx:`152`,cy:`50`,r:`3`,fill:`#60a5fa`,className:`animate-pulse`}),
+              (0,h.jsx)(`circle`,{cx:`48`,cy:`68`,r:`2.5`,fill:`#93c5fd`})
+            ]
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute top-2 left-2 z-20 flex items-center gap-1.5 rounded bg-[#070B14]/85 px-2 py-0.5 text-[9px] font-mono font-semibold text-cyan-300 border border-cyan-500/40 backdrop-blur-md`,
+            children:[(0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping`}),(0,h.jsx)(`span`,{children:`ALL-SKY • 7 TARGETS`})]
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute bottom-2 right-2 z-20 text-[9px] font-mono text-cyan-300/80 drop-shadow`,
+            children:`RA 150.1° • Dec +2.2°`
+          })
+        ]
+      });
+
+    case`temporal`:
+      return (0,h.jsxs)(`div`,{
+        className:`relative h-full w-full overflow-hidden flex items-center justify-center bg-black`,
+        children:[
+          (0,h.jsx)(`img`,{
+            src:`/static/demo-deepfield-01/earlier.png`,
+            alt:`SPHEREx Epoch 1 Frame`,
+            className:`absolute inset-0 h-full w-full object-cover opacity-65 group-hover:scale-105 group-hover:opacity-85 transition-all duration-700 ease-out`,
+            loading:`lazy`
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute inset-0 bg-gradient-to-t from-[#080E1C] via-transparent to-[#080E1C]/60 pointer-events-none`
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute top-2 right-2 z-20 w-16 h-12 rounded-lg overflow-hidden border border-cyan-400/60 shadow-[0_0_12px_rgba(69,213,242,0.5)] group-hover:scale-110 transition-transform duration-300`,
+            children:[
+              (0,h.jsx)(`img`,{src:`/static/demo-deepfield-01/difference.png`,alt:`Diff Map`,className:`w-full h-full object-cover`}),
+              (0,h.jsx)(`div`,{className:`absolute bottom-0 inset-x-0 bg-cyan-950/90 text-[7px] font-mono text-cyan-300 text-center py-0.2`,children:`DIFF MAP`})
+            ]
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute left-[40%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center z-15 pointer-events-none`,
+            children:[
+              (0,h.jsx)(`span`,{className:`absolute h-9 w-9 rounded-full border border-cyan-400 animate-ping opacity-75`}),
+              (0,h.jsx)(`span`,{className:`h-5 w-5 rounded-full border-2 border-cyan-300 bg-cyan-400/25`}),
+              (0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-white`}),
+              (0,h.jsx)(`span`,{className:`absolute -bottom-5 text-[8px] font-mono text-cyan-200 whitespace-nowrap bg-black/85 px-1.5 py-0.5 rounded border border-cyan-500/50 shadow`,children:`ΔF = +0.32 mJy`})
+            ]
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute top-2 left-2 z-20 flex items-center gap-1.5 rounded bg-blue-950/85 px-2 py-0.5 text-[9px] font-mono font-semibold text-blue-300 border border-blue-500/40 backdrop-blur-md`,
+            children:[(0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse`}),(0,h.jsx)(`span`,{children:`EPOCH 1 ↔ EPOCH 2`})]
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute bottom-2 left-2 z-20 text-[9px] font-mono text-slate-400 drop-shadow`,
+            children:`Baseline: 185 Days`
+          })
+        ]
+      });
+
+    case`spectral`:
+      return (0,h.jsxs)(`div`,{
+        className:`relative h-full w-full overflow-hidden flex items-center justify-center bg-black`,
+        children:[
+          (0,h.jsx)(`img`,{
+            src:`/static/demo-deepfield-01/later.png`,
+            alt:`SPHEREx Infrared Emission Field`,
+            className:`absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-700 ease-out`,
+            loading:`lazy`
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute inset-0 bg-gradient-to-t from-[#080E1C] via-[#080E1C]/60 to-purple-950/40 pointer-events-none`
+          }),
+          (0,h.jsxs)(`svg`,{
+            viewBox:`0 0 200 120`,
+            className:`absolute inset-0 h-full w-full z-10 pointer-events-none`,
+            fill:`none`,
+            xmlns:`http://www.w3.org/2000/svg`,
+            children:[
+              (0,h.jsxs)(`defs`,{
+                children:[
+                  (0,h.jsxs)(`linearGradient`,{
+                    id:`specLineGrad2`,
+                    x1:`0%`,
+                    y1:`0%`,
+                    x2:`100%`,
+                    y2:`0%`,
+                    children:[
+                      (0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#38bdf8`}),
+                      (0,h.jsx)(`stop`,{offset:`40%`,stopColor:`#818cf8`}),
+                      (0,h.jsx)(`stop`,{offset:`70%`,stopColor:`#c084fc`}),
+                      (0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#f472b6`})
+                    ]
+                  }),
+                  (0,h.jsxs)(`linearGradient`,{
+                    id:`specAreaGrad2`,
+                    x1:`0%`,
+                    y1:`0%`,
+                    x2:`0%`,
+                    y2:`100%`,
+                    children:[
+                      (0,h.jsx)(`stop`,{offset:`0%`,stopColor:`#818cf8`,stopOpacity:`0.4`}),
+                      (0,h.jsx)(`stop`,{offset:`100%`,stopColor:`#080E1C`,stopOpacity:`0`})
+                    ]
+                  })
+                ]
+              }),
+              (0,h.jsx)(`path`,{
+                d:`M 20 95 C 40 93, 50 85, 60 70 C 66 58, 68 35, 74 32 C 80 29, 86 65, 96 78 C 106 90, 115 84, 122 65 C 126 55, 128 38, 134 36 C 140 34, 146 65, 156 82 C 166 94, 172 93, 180 95 L 180 95 L 20 95 Z`,
+                fill:`url(#specAreaGrad2)`
+              }),
+              (0,h.jsx)(`path`,{
+                d:`M 20 95 C 40 93, 50 85, 60 70 C 66 58, 68 35, 74 32 C 80 29, 86 65, 96 78 C 106 90, 115 84, 122 65 C 126 55, 128 38, 134 36 C 140 34, 146 65, 156 82 C 166 94, 172 93, 180 95`,
+                stroke:`url(#specLineGrad2)`,
+                strokeWidth:`2.2`,
+                strokeLinecap:`round`
+              }),
+              (0,h.jsx)(`circle`,{cx:`74`,cy:`32`,r:`3`,fill:`#38bdf8`,className:`animate-ping`}),
+              (0,h.jsx)(`circle`,{cx:`74`,cy:`32`,r:`2`,fill:`#ffffff`}),
+              (0,h.jsx)(`circle`,{cx:`134`,cy:`36`,r:`3`,fill:`#c084fc`,className:`animate-ping`}),
+              (0,h.jsx)(`circle`,{cx:`134`,cy:`36`,r:`2`,fill:`#ffffff`})
+            ]
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute top-2 left-2 z-20 flex items-center gap-1.5 rounded bg-purple-950/85 px-2 py-0.5 text-[9px] font-mono font-semibold text-purple-300 border border-purple-500/40 backdrop-blur-md`,
+            children:[(0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse`}),(0,h.jsx)(`span`,{children:`102 BANDS • 0.75 - 5.0 μm`})]
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute bottom-2 right-2 z-20 text-[9px] font-mono text-purple-300/80 drop-shadow`,
+            children:`CO₂ & H₂O Infrared Lines`
+          })
+        ]
+      });
+
+    case`intelligence`:
+      return (0,h.jsxs)(`div`,{
+        className:`relative h-full w-full overflow-hidden flex items-center justify-center bg-black`,
+        children:[
+          (0,h.jsx)(`img`,{
+            src:`/static/objects_media/SPX-OBJ-BD-01/epoch1.png`,
+            alt:`Celestial Discovery Candidate`,
+            className:`absolute inset-0 h-full w-full object-cover opacity-70 group-hover:scale-110 group-hover:opacity-90 transition-all duration-700 ease-out`,
+            loading:`lazy`
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute inset-0 bg-gradient-to-t from-[#080E1C] via-[#080E1C]/35 to-black/40 pointer-events-none`
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute inset-0 flex items-center justify-center z-15 pointer-events-none`,
+            children:[
+              (0,h.jsxs)(`div`,{
+                className:`relative w-28 h-20 border border-dashed border-emerald-400/70 rounded flex items-center justify-center shadow-[0_0_15px_rgba(52,211,153,0.3)]`,
+                children:[
+                  (0,h.jsx)(`span`,{className:`absolute -top-1 -left-1 w-2.5 h-2.5 border-t-2 border-l-2 border-emerald-400`}),
+                  (0,h.jsx)(`span`,{className:`absolute -top-1 -right-1 w-2.5 h-2.5 border-t-2 border-r-2 border-emerald-400`}),
+                  (0,h.jsx)(`span`,{className:`absolute -bottom-1 -left-1 w-2.5 h-2.5 border-b-2 border-l-2 border-emerald-400`}),
+                  (0,h.jsx)(`span`,{className:`absolute -bottom-1 -right-1 w-2.5 h-2.5 border-b-2 border-r-2 border-emerald-400`}),
+                  (0,h.jsx)(`div`,{className:`h-3 w-3 rounded-full border border-emerald-300 bg-emerald-400/30 animate-ping`}),
+                  (0,h.jsx)(`div`,{className:`h-1.5 w-1.5 rounded-full bg-white`}),
+                  (0,h.jsx)(`span`,{className:`absolute -top-4 text-[8px] font-mono font-bold text-emerald-300 bg-black/90 px-1 rounded border border-emerald-500/50`,children:`[+] TARGET ACQUIRED`})
+                ]
+              })
+            ]
+          }),
+          (0,h.jsxs)(`div`,{
+            className:`absolute top-2 left-2 z-20 flex items-center gap-1.5 rounded bg-emerald-950/85 px-2 py-0.5 text-[9px] font-mono font-semibold text-emerald-300 border border-emerald-500/40 backdrop-blur-md`,
+            children:[(0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse`}),(0,h.jsx)(`span`,{children:`5 CLASSES • 9 OBJECTS`})]
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute bottom-2 right-2 z-20 text-[9px] font-mono text-emerald-300/80 drop-shadow`,
+            children:`μ = 1.48″/yr Shift`
+          })
+        ]
+      });
+
+    default:
+      return null;
+  }
+}function x({feature:e,className:n}){
+  return (0,h.jsxs)(t,{
+    to:e.href,
+    "aria-label":e.ariaLabel,
+    className:r(
+      `group relative flex flex-col justify-between overflow-hidden rounded-2xl border p-5 sm:p-6 transition-all duration-300`,
+      `bg-gradient-to-b from-[#0D1527] to-[#070B14] border-[#1E2E4A] hover:border-cyan-400/60 hover:bg-[#101C33]`,
+      `hover:-translate-y-1.5 shadow-[0_6px_24px_rgba(3,6,14,0.5)] hover:shadow-[0_16px_36px_rgba(69,213,242,0.18)]`,
+      `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2]`,
+      n
+    ),
+    children:[
+      (0,h.jsxs)(`div`,{
+        children:[
+          (0,h.jsx)(`div`,{
+            className:`relative mb-5 flex h-40 w-full items-center justify-center overflow-hidden rounded-xl border border-cyan-500/20 bg-black shadow-inner group-hover:border-cyan-400/50 transition-colors duration-300`,
+            children:(0,h.jsx)(b,{type:e.visualType})
+          }),
+          (0,h.jsx)(`h3`,{
+            className:`font-[family-name:var(--font-display)] text-[18px] font-bold tracking-[-0.01em] text-[#F4F7FF] transition-colors duration-200 group-hover:text-[#45D5F2] flex items-center justify-between`,
+            children:[
+              (0,h.jsx)(`span`,{children:e.title}),
+              (0,h.jsx)(`span`,{className:`text-[11px] font-mono font-medium text-cyan-400/70 group-hover:text-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity`,children:`ACTIVE`})
+            ]
+          }),
+          (0,h.jsx)(`p`,{
+            className:`mt-2 text-[13px] leading-relaxed text-[#B5C2D6]`,
+            children:e.description
+          })
+        ]
+      }),
+      (0,h.jsxs)(`div`,{
+        className:`mt-6 flex items-center justify-between border-t border-[#1A2940] pt-4`,
+        children:[
+          (0,h.jsxs)(`span`,{
+            className:`text-xs font-semibold text-cyan-400/90 transition-colors group-hover:text-cyan-300 flex items-center gap-1.5`,
+            children:[
+              (0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-cyan-400 group-hover:animate-ping`}),
+              (0,h.jsx)(`span`,{children:`Open Workstation`})
+            ]
+          }),
+          (0,h.jsx)(`div`,{
+            className:`flex h-8 w-8 items-center justify-center rounded-lg border border-[#24344D] bg-[#131F33] text-[#B5C2D6] transition-all duration-200 group-hover:border-[#4388FF]/60 group-hover:bg-[#4388FF] group-hover:text-[#F4F7FF] group-hover:scale-105 shadow-sm`,
+            children:(0,h.jsx)(l,{className:`h-4 w-4`,"aria-hidden":`true`})
+          })
+        ]
+      })
+    ]
+  })
+}function S({className:e}){return(0,h.jsx)(`section`,{"aria-label":`Core AFTERLIGHT Features`,className:e,children:(0,h.jsx)(`div`,{className:`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5`,children:v.map(e=>(0,h.jsx)(x,{feature:e},e.id))})})}function C({className:e}){let[t,n]=(0,m.useState)(``),r=(0,m.useRef)(null),o=a(),l=e=>{e.preventDefault();let n=t.trim();n&&o(`/ai?q=${encodeURIComponent(n)}`)},u=e=>{n(e),r.current?.focus()};return(0,h.jsx)(`section`,{"aria-label":`Cosmos AI Assistant Query`,className:`rounded-xl border border-[#24344D] bg-[#101A2B] p-6 sm:p-7 shadow-[0_6px_24px_rgba(3,6,14,0.42)] ${e??``}`,children:(0,h.jsxs)(`div`,{className:`flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between`,children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-3.5 lg:min-w-[230px]`,children:[(0,h.jsx)(`div`,{className:`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#4388FF]/35 bg-[#131F33] text-[#45D5F2] shadow-sm`,children:(0,h.jsx)(f,{className:`h-5 w-5`,"aria-hidden":`true`})}),(0,h.jsxs)(`div`,{children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-1.5`,children:[(0,h.jsx)(`h2`,{className:`font-[family-name:var(--font-display)] text-[16px] font-semibold tracking-wide text-[#F4F7FF]`,children:`Cosmos AI`}),(0,h.jsx)(c,{className:`h-3.5 w-3.5 text-[#45D5F2]`,"aria-hidden":`true`})]}),(0,h.jsx)(`p`,{className:`text-[13px] text-[#B5C2D6]`,children:`Contextual investigation assistant.`})]})]}),(0,h.jsx)(`form`,{onSubmit:l,className:`flex-1 lg:max-w-xl`,role:`search`,children:(0,h.jsx)(p,{ref:r,type:`text`,inputSize:`lg`,value:t,onChange:e=>n(e.target.value),placeholder:`Ask about candidate targets, compatibility thresholds, or workflow steps...`,"aria-label":`Ask anything about the universe`,rightElement:(0,h.jsx)(i,{type:`submit`,size:`sm`,variant:`active`,disabled:!t.trim(),"aria-label":`Submit astronomical inquiry`,children:(0,h.jsx)(s,{className:`h-4 w-4`})})})}),(0,h.jsxs)(`div`,{className:`flex flex-wrap items-center gap-2 lg:max-w-md lg:justify-end`,children:[(0,h.jsx)(`span`,{className:`mr-1 text-[11px] font-medium tracking-wider text-[#8293AD] uppercase`,children:`Suggested:`}),y.map(e=>(0,h.jsx)(`button`,{type:`button`,onClick:()=>u(e.text),className:`inline-flex h-8 items-center rounded-lg border border-[#24344D] bg-[#131F33] px-3 text-xs font-medium text-[#B5C2D6] transition-colors duration-200 hover:border-[#4388FF]/50 hover:bg-[#192842] hover:text-[#F4F7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2] cursor-pointer`,children:e.text},e.id))]})]})})}function w(){
   return (0,h.jsxs)(`div`,{
     className:`relative min-h-[calc(100vh-var(--navbar-height))] overflow-hidden bg-[#070B14]`,
     children:[
