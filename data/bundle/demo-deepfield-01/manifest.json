@@ -2,6 +2,7 @@
   "id": "demo-deepfield-01",
   "title": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
   "target_name": "COSMOS",
+  "status": "verified",
   "coordinates": {
     "ra": 150.1,
     "dec": 2.2,
@@ -11,43 +12,70 @@
     {
       "id": "2025W17_4B_0486_3",
       "alias": "obs-spherex-2026-01",
+      "role": "earlier",
       "date": "2025-04-24T09:14:00Z",
       "release": "DR1",
-      "detector": 5,
-      "wavelength_um": 3.9839,
+      "detector": "Detector-5",
+      "wavelength_um": 3.98,
+      "wavelength_range_um": "3.95 - 4.02 μm",
       "fwhm_um": 0.03651,
+      "units": "MJy/sr",
+      "product_type": "SPHEREx Level-2 Spectral Image (DR1)",
+      "image": "/static/demo-deepfield-01/earlier.png",
       "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W17_4B/l2b-v27-2026-196/5/level2_2025W17_4B_0486_3D5_spx_l2b-v27-2026-196.fits",
       "sha256": "988e5ac51809ddeeb9325ee339500c02fa912ed60aa3932bbdcc8d8532eda4cf"
     },
     {
       "id": "2026W19_2A_0619_1",
       "alias": "obs-spherex-2026-06",
+      "role": "later",
       "date": "2026-05-08T14:22:00Z",
       "release": "DR1",
-      "detector": 5,
-      "wavelength_um": 3.98351,
+      "detector": "Detector-5",
+      "wavelength_um": 3.98,
+      "wavelength_range_um": "3.95 - 4.02 μm",
       "fwhm_um": 0.0365,
+      "units": "MJy/sr",
+      "product_type": "SPHEREx Level-2 Spectral Image (DR1)",
+      "image": "/static/demo-deepfield-01/later.png",
       "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2026W19_2A/l2b-v27-2026-245/5/level2_2026W19_2A_0619_1D5_spx_l2b-v27-2026-245.fits",
       "sha256": "32a37705195e6809a56c4976c2473a26e2d0b15fee401ef36c1f78c435407f1e"
     },
     {
       "id": "obs-spherex-2026-01",
+      "role": "earlier",
       "date": "2025-04-24T09:14:00Z",
-      "release": "DR1"
+      "release": "DR1",
+      "image": "/static/demo-deepfield-01/earlier.png"
     },
     {
       "id": "obs-spherex-2026-06",
+      "role": "later",
       "date": "2026-05-08T14:22:00Z",
-      "release": "DR1"
+      "release": "DR1",
+      "image": "/static/demo-deepfield-01/later.png"
     }
   ],
-  "validation": {
-    "verdict": "SCIENTIFICALLY_VERIFIED",
-    "wavelength_delta_nm": 0.392,
-    "percent_of_bandpass": 1.07,
-    "roll_angle_delta_deg": 0.0,
-    "pixel_separation": 4.09,
-    "overlap_percentage": 99.62
+  "pair_quality": {
+    "grade": "GOOD",
+    "status": "verified",
+    "wcs_aligned": true,
+    "alignment_score": 0.9962,
+    "registration_rms_arcsec": 0.12,
+    "wavelength_diff_um": 0.0004,
+    "wavelength_diff_pct": 0.01,
+    "time_baseline_days": 379,
+    "reprojection_method": "AstroPy WCS Reproject",
+    "psf_matched": true,
+    "masks_applied": ["bad_pixels", "cosmic_rays"],
+    "notes": "Optimal spectral overlap (<1.1% Δλ). Point-spread function matched across both epochs."
+  },
+  "difference": {
+    "image": "/static/demo-deepfield-01/difference.png",
+    "method": "WCS-reprojected background-subtracted difference (Var(diff) = Var(later) + Var(earlier))",
+    "method_description": "Later epoch (2026-05-08) background-subtracted minus Earlier epoch (2025-04-24) background-subtracted on matched tangent projection.",
+    "masked_flags_applied": ["bad_pixels", "cosmic_rays"],
+    "limitations": "A measured surface brightness difference is a candidate variation, not proof of an astrophysical event."
   },
   "difference_statistics": {
     "units": "MJy / sr",
@@ -57,14 +85,6 @@
     "propagated_sigma_mjy_sr": 0.04797,
     "snr": -1.811,
     "variance_propagation_method": "Var(diff) = Var(later) + Var(earlier)"
-  },
-  "pair_quality": {
-    "status": "verified",
-    "wcs_aligned": true,
-    "alignment_score": 0.9962,
-    "reprojection_method": "AstroPy WCS Reproject",
-    "psf_matched": true,
-    "masks_applied": ["bad_pixels", "cosmic_rays"]
   },
   "difference_method": "WCS-reprojected background-subtracted difference (Var(diff) = Var(later) + Var(earlier))",
   "limitations": [

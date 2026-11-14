@@ -1,15 +1,18 @@
 {
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-14T18:00:00Z",
   "targets": [
     {
       "id": "demo-deepfield-01",
       "title": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
       "kind": "deep_field",
-      "status": "scientifically_verified",
-      "thumbnail": "demo-deepfield-01/earlier.png",
-      "ra": 150.1,
-      "dec": 2.2,
-      "wavelength_um": 3.98,
-      "release": "DR1"
+      "status": "verified",
+      "thumbnail": "/static/demo-deepfield-01/earlier.png",
+      "short_info": "Real SPHEREx DR1 multi-epoch verified tangent projection with 99.62% overlap and optimal spectral matching.",
+      "center_ra": 150.1,
+      "center_dec": 2.2,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 2
     }
   ]
 }

@@ -385,9 +385,19 @@ if DIST_DIR.exists():
     def serve_frontend_spa(full_path: str):
         if full_path.startswith(("api", "static", "docs", "redoc", "openapi.json")):
             raise HTTPException(status_code=404, detail="Not Found")
+
+        # 1. Direct support for bundle image requests (e.g. demo-deepfield-01/earlier.png)
+        bundle_file = BUNDLE_DIR / full_path
+        if bundle_file.is_file():
+            media = "image/png" if bundle_file.suffix == ".png" else None
+            return FileResponse(str(bundle_file), media_type=media)
+
+        # 2. Check if file is in dist directory
         target_file = DIST_DIR / full_path
         if target_file.is_file():
             return FileResponse(str(target_file))
+
+        # 3. Fallback to index.html for client-side routing
         return FileResponse(str(DIST_DIR / "index.html"))
 
 
