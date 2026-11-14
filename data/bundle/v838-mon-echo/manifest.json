@@ -1,0 +1,96 @@
+{
+  "id": "v838-mon-echo",
+  "title": "V838 Monocerotis Light Echo",
+  "kind": "variable_star",
+  "status": "verified",
+  "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+  "preview_image": "/assets/demo/epoch-earlier-placeholder.svg",
+  "region": {
+    "center_ra": 106.0125,
+    "center_dec": -3.8461,
+    "coordinate_frame": "ICRS J2000",
+    "cutout_size": "0.20° × 0.20°",
+    "pixel_scale": "6.2 arcsec/pixel",
+    "dimensions": {
+      "width": 120,
+      "height": 120
+    }
+  },
+  "observations": [
+    {
+      "id": "SPX-OBS-2025-0082-B2",
+      "role": "earlier",
+      "date": "2025-03-01T12:00:00Z",
+      "product_type": "SPHEREx Galactic Plane L2 (Demo Fixture)",
+      "data_release": "DR1-Early",
+      "wavelength_um": 1.65,
+      "wavelength_range_um": "1.63 - 1.67 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-earlier-placeholder.svg",
+      "display_scaling": "asinh"
+    },
+    {
+      "id": "SPX-OBS-2025-0290-B2",
+      "role": "later",
+      "date": "2025-09-22T18:45:00Z",
+      "product_type": "SPHEREx Galactic Plane L2 (Demo Fixture)",
+      "data_release": "DR1-Early",
+      "wavelength_um": 1.67,
+      "wavelength_range_um": "1.65 - 1.69 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-later-placeholder.svg",
+      "display_scaling": "asinh"
+    },
+    {
+      "id": "SPX-OBS-2025-0115-B4",
+      "role": null,
+      "date": "2025-04-20T11:05:44Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Early",
+      "wavelength_um": 3.55,
+      "wavelength_range_um": "3.50 - 3.60 μm",
+      "units": "MJy/sr",
+      "detector": "Array-4 (InSb 3.4 - 4.5 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-earlier-placeholder.svg",
+      "display_scaling": "asinh"
+    },
+    {
+      "id": "SPX-OBS-2025-0720-B4",
+      "role": null,
+      "date": "2025-10-25T16:48:19Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Early",
+      "wavelength_um": 3.56,
+      "wavelength_range_um": "3.50 - 3.60 μm",
+      "units": "MJy/sr",
+      "detector": "Array-4 (InSb 3.4 - 4.5 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-later-placeholder.svg",
+      "display_scaling": "asinh"
+    }
+  ],
+  "pair_quality": {
+    "grade": "FAIR",
+    "wavelength_diff_um": 0.02,
+    "wavelength_diff_pct": 1.2,
+    "time_baseline_days": 205,
+    "registration_rms_arcsec": 0.28,
+    "notes": "Band 2 (1.65 - 1.67 μm) pair across 205-day baseline. Additional Band 4 (3.55 - 3.56 μm) epochs available in catalogue.",
+    "compatibility_warning": "Moderate LVF passband drift (Δλ = 0.02 μm, 1.2%) across Steep CO/H2O absorption features may introduce continuum subtraction residuals."
+  },
+  "difference": {
+    "image": "/assets/demo/difference-placeholder.svg",
+    "method": "Astrometrically Registered Multi-Epoch Difference",
+    "method_description": "Subtraction of central stellar PSF reveals temporal expansion of illuminated circumstellar light echo dust rings over 205-day baseline.",
+    "masked_flags_applied": [
+      "SATURATION_MASK",
+      "NON_LINEARITY_CORRECTION"
+    ],
+    "limitations": "Core saturated within central 3 pixels. Outer circumstellar diffuse flux represents expanding dust echo."
+  }
+}

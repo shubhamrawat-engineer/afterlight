@@ -2,11 +2,25 @@
   "id": "demo-deepfield-01",
   "title": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
   "target_name": "COSMOS",
+  "kind": "deep_field",
   "status": "verified",
+  "thumbnail": "/static/demo-deepfield-01/earlier.png",
+  "preview_image": "/static/demo-deepfield-01/earlier.png",
   "coordinates": {
     "ra": 150.1,
     "dec": 2.2,
     "target_pixel": [1442, 1821]
+  },
+  "region": {
+    "center_ra": 150.1,
+    "center_dec": 2.2,
+    "coordinate_frame": "ICRS J2000",
+    "cutout_size": "0.25° × 0.25°",
+    "pixel_scale": "6.2 arcsec/pixel",
+    "dimensions": {
+      "width": 1586,
+      "height": 817
+    }
   },
   "observations": [
     {

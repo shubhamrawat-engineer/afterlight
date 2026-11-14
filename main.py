@@ -120,6 +120,16 @@ def get_target_detail(target_id: str):
     if not manifest_path.exists():
         raise_api_error(404, "NOT_FOUND", f"Target {target_id} does not exist")
     manifest = storage.read_json(manifest_path, cache_key=f"manifest:{target_id}")
+    if "region" not in manifest or not manifest["region"]:
+        coords = manifest.get("coordinates", {})
+        manifest["region"] = {
+            "center_ra": coords.get("ra", 150.1),
+            "center_dec": coords.get("dec", 2.2),
+            "coordinate_frame": "ICRS J2000",
+            "cutout_size": "0.25° × 0.25°",
+            "pixel_scale": "6.2 arcsec/pixel",
+            "dimensions": {"width": 1586, "height": 817},
+        }
     return {
         **manifest,
         "spectra_available": (BUNDLE_DIR / target_id / "spectra.json").exists(),

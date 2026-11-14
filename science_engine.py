@@ -48,9 +48,10 @@ class SafeStorage:
 
     def read_json(self, path: Path, cache_key: Optional[str] = None) -> Dict[str, Any]:
         with self._lock:
+            mtime = path.stat().st_mtime if path.exists() else 0
             if cache_key and cache_key in self._cache:
-                exp, val = self._cache[cache_key]
-                if time.time() < exp:
+                exp, cached_mtime, val = self._cache[cache_key]
+                if time.time() < exp and cached_mtime == mtime:
                     return val
                 del self._cache[cache_key]
 
@@ -63,7 +64,7 @@ class SafeStorage:
                 raise_api_error(500, "CORRUPT_JSON", f"Invalid JSON in {path.name}: {exc}")
 
             if cache_key:
-                self._cache[cache_key] = (time.time() + self._ttl, data)
+                self._cache[cache_key] = (time.time() + self._ttl, mtime, data)
             return data
 
     def atomic_write_json(self, path: Path, data: Dict[str, Any]) -> None:

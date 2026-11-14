@@ -1,0 +1,95 @@
+{
+  "id": "spherex-deep-field-north",
+  "title": "SPHEREx Deep Field North (NEP)",
+  "kind": "deep_field",
+  "status": "preliminary",
+  "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+  "preview_image": "/assets/demo/epoch-earlier-placeholder.svg",
+  "region": {
+    "center_ra": 270,
+    "center_dec": 66.5607,
+    "coordinate_frame": "ICRS J2000",
+    "cutout_size": "0.50° × 0.50°",
+    "pixel_scale": "6.2 arcsec/pixel",
+    "dimensions": {
+      "width": 290,
+      "height": 290
+    }
+  },
+  "observations": [
+    {
+      "id": "SPX-OBS-2025-0210-B2",
+      "role": "earlier",
+      "date": "2025-05-10T14:20:00Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Beta",
+      "wavelength_um": 1.62,
+      "wavelength_range_um": "1.60 - 1.65 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-earlier-placeholder.svg",
+      "display_scaling": "linear"
+    },
+    {
+      "id": "SPX-OBS-2025-0512-B2",
+      "role": "later",
+      "date": "2025-08-11T09:44:18Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Beta",
+      "wavelength_um": 1.72,
+      "wavelength_range_um": "1.70 - 1.75 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-later-placeholder.svg",
+      "display_scaling": "linear"
+    },
+    {
+      "id": "SPX-OBS-2025-0325-B2",
+      "role": null,
+      "date": "2025-06-28T16:10:00Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Beta",
+      "wavelength_um": 1.65,
+      "wavelength_range_um": "1.63 - 1.67 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-earlier-placeholder.svg",
+      "display_scaling": "linear"
+    },
+    {
+      "id": "SPX-OBS-2025-0610-B2",
+      "role": null,
+      "date": "2025-11-04T08:30:00Z",
+      "product_type": "SPHEREx Spectral Mosaic L2 (Demo Fixture)",
+      "data_release": "DR1-Beta",
+      "wavelength_um": 1.7,
+      "wavelength_range_um": "1.68 - 1.72 μm",
+      "units": "MJy/sr",
+      "detector": "Array-2 (InSb 1.5 - 2.4 μm)",
+      "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
+      "image": "/assets/demo/epoch-later-placeholder.svg",
+      "display_scaling": "linear"
+    }
+  ],
+  "pair_quality": {
+    "grade": "FAIR",
+    "wavelength_diff_um": 0.1,
+    "wavelength_diff_pct": 6.1,
+    "time_baseline_days": 93,
+    "registration_rms_arcsec": 0.38,
+    "notes": "Moderate spectral slope difference. Residual pointing jitter identified in second epoch.",
+    "compatibility_warning": "Caution: Δλ = 6.1% indicates mild band disparity. Flux subtraction may introduce diffuse background residuals."
+  },
+  "difference": {
+    "image": "/assets/demo/difference-placeholder.svg",
+    "method": "Linear Direct Difference with Astrometric Reprojection",
+    "method_description": "Preliminary difference product without kernel convolution. Point spread function differences are uncorrected.",
+    "masked_flags_applied": [
+      "BASIC_BAD_PIXEL_MASK"
+    ],
+    "limitations": "Elevated residual noise due to minor 6.1% passband difference and pointing jitter. Positive-negative dipole patterns may indicate astrometric offset rather than true variability."
+  }
+}

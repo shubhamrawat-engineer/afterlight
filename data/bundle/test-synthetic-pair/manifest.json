@@ -1,0 +1,65 @@
+{
+  "id": "test-synthetic-pair",
+  "title": "Synthetic Photometric Calibration Mock",
+  "kind": "deep_field",
+  "status": "mock",
+  "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+  "preview_image": "/assets/demo/epoch-earlier-placeholder.svg",
+  "region": {
+    "center_ra": 0,
+    "center_dec": 0,
+    "coordinate_frame": "ICRS J2000",
+    "cutout_size": "0.10° × 0.10°",
+    "pixel_scale": "6.2 arcsec/pixel",
+    "dimensions": {
+      "width": 60,
+      "height": 60
+    }
+  },
+  "observations": [
+    {
+      "id": "SPX-SYNTH-E1",
+      "role": "earlier",
+      "date": "2025-01-01T00:00:00Z",
+      "product_type": "Synthetic Mock Image (Demo Fixture)",
+      "data_release": "TEST-FIXTURE",
+      "wavelength_um": 1.15,
+      "wavelength_range_um": "1.10 - 1.20 μm",
+      "units": "MJy/sr",
+      "detector": "Simulated Sensor A",
+      "source_url": null,
+      "image": "/assets/demo/epoch-earlier-placeholder.svg",
+      "display_scaling": "linear"
+    },
+    {
+      "id": "SPX-SYNTH-L1",
+      "role": "later",
+      "date": "2025-07-01T00:00:00Z",
+      "product_type": "Synthetic Mock Image (Demo Fixture)",
+      "data_release": "TEST-FIXTURE",
+      "wavelength_um": 4.25,
+      "wavelength_range_um": "4.20 - 4.30 μm",
+      "units": "MJy/sr",
+      "detector": "Simulated Sensor B",
+      "source_url": null,
+      "image": "/assets/demo/epoch-later-placeholder.svg",
+      "display_scaling": "linear"
+    }
+  ],
+  "pair_quality": {
+    "grade": "POOR",
+    "wavelength_diff_um": 3.1,
+    "wavelength_diff_pct": 73,
+    "time_baseline_days": 181,
+    "registration_rms_arcsec": 2.15,
+    "notes": "Severe cross-instrument passband mismatch. Photometric zero-points cannot be reconciled.",
+    "compatibility_warning": "These observations are not suitable for a like-for-like temporal comparison."
+  },
+  "difference": {
+    "image": "/assets/demo/difference-placeholder.svg",
+    "method": "Uncorrected Cross-Band Difference (Simulated Artifact Fixture)",
+    "method_description": "Difference computed across incompatible spectral passbands (1.15 μm vs 4.25 μm) for scientific verification testing.",
+    "masked_flags_applied": false,
+    "limitations": "SCIENTIFIC LIMITATION: Severe non-physical subtraction artifacts across the entire field. Bandpass discrepancy renders flux differences invalid for astrophysical interpretation."
+  }
+}

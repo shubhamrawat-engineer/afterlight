@@ -13,6 +13,78 @@
       "center_dec": 2.2,
       "coordinate_frame": "ICRS J2000",
       "observation_count": 2
+    },
+    {
+      "id": "kbo-2024-xr1",
+      "title": "Trans-Neptunian Candidate 2024-XR1",
+      "kind": "moving_object",
+      "status": "preliminary",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target Trans-Neptunian Candidate 2024-XR1 with 4 epoch observations.",
+      "center_ra": 348.1125,
+      "center_dec": -12.456,
+      "coordinate_frame": "ICRS J2000 (Topocentric)",
+      "observation_count": 4
+    },
+    {
+      "id": "spherex-deep-field-north",
+      "title": "SPHEREx Deep Field North (NEP)",
+      "kind": "deep_field",
+      "status": "preliminary",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target SPHEREx Deep Field North (NEP) with 4 epoch observations.",
+      "center_ra": 270,
+      "center_dec": 66.5607,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 4
+    },
+    {
+      "id": "spherex-deep-field-south",
+      "title": "SPHEREx Deep Field South (SDF-S)",
+      "kind": "deep_field",
+      "status": "verified",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target SPHEREx Deep Field South (SDF-S) with 4 epoch observations.",
+      "center_ra": 61.2235,
+      "center_dec": -48.4121,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 4
+    },
+    {
+      "id": "static-calibration-field-c1",
+      "title": "Invariant Stellar Calibrator C1",
+      "kind": "control_static",
+      "status": "verified",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target Invariant Stellar Calibrator C1 with 4 epoch observations.",
+      "center_ra": 180,
+      "center_dec": 0,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 4
+    },
+    {
+      "id": "test-synthetic-pair",
+      "title": "Synthetic Photometric Calibration Mock",
+      "kind": "deep_field",
+      "status": "mock",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target Synthetic Photometric Calibration Mock with 2 epoch observations.",
+      "center_ra": 0,
+      "center_dec": 0,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 2
+    },
+    {
+      "id": "v838-mon-echo",
+      "title": "V838 Monocerotis Light Echo",
+      "kind": "variable_star",
+      "status": "verified",
+      "thumbnail": "/assets/demo/thumbnail-placeholder.svg",
+      "short_info": "Survey target V838 Monocerotis Light Echo with 4 epoch observations.",
+      "center_ra": 106.0125,
+      "center_dec": -3.8461,
+      "coordinate_frame": "ICRS J2000",
+      "observation_count": 4
     }
   ]
 }
