@@ -111,3 +111,41 @@ def test_scientific_refusal_for_unverified_observations():
 def test_error_contract():
     err = client.get("/api/targets/unknown-target-xyz")
     assert err.status_code == 404 and err.json()["error"]["code"] == "NOT_FOUND"
+
+
+def test_automated_nasa_import_and_autonomous_sifter():
+    """Verify automated NASA import, sync status, and multi-epoch discovery sifter"""
+    # 1. Objects catalog
+    r_objs = client.get("/api/objects")
+    assert r_objs.status_code == 200
+    objs = r_objs.json()
+    assert len(objs) >= 5
+    categories = {o["category"] for o in objs}
+    assert "moving_object" in categories
+    assert "brown_dwarf" in categories
+    assert "variable_star" in categories
+    assert "transient_candidate" in categories
+
+    # 2. NASA Auto-Import
+    r_sync = client.post("/api/nasa/auto-import")
+    assert r_sync.status_code == 200
+    sync_data = r_sync.json()
+    assert sync_data["status"] == "SUCCESS"
+    assert sync_data["observations_retrieved"] >= 2
+    assert "NASA" in sync_data["archive_source"]
+
+    # 3. NASA Sync Status
+    r_stat = client.get("/api/nasa/sync-status")
+    assert r_stat.status_code == 200
+    assert r_stat.json()["status"] == "ONLINE"
+
+    # 4. Autonomous Discovery Sifter
+    r_sifter = client.post("/api/sifter/run")
+    assert r_sifter.status_code == 200
+    sifter_res = r_sifter.json()
+    assert sifter_res["status"] == "SIFTING_COMPLETED"
+    assert sifter_res["total_candidates_detected"] >= 5
+    disc = sifter_res["categorized_discoveries"]
+    assert "comets_and_asteroids" in disc
+    assert "brown_dwarfs_and_planet_candidates" in disc
+    assert "variable_and_pulsating_stars" in disc
