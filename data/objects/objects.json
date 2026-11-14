@@ -9,7 +9,7 @@
     "ra_deg": 348.1125,
     "dec_deg": -12.456,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-KBO-XR1/difference.png",
     "description": "Outer Solar System trans-Neptunian candidate identified via rapid angular shift across multi-epoch SPHEREx observations. Displaced by 3.4 arcsec over 185 days along an ecliptic retrograde orbital path.",
     "associated_region": "Trans-Neptunian Candidate 2024-XR1",
     "observations": [
@@ -72,7 +72,22 @@
       "last_updated_utc": "2026-11-14T19:00:00Z",
       "pipeline_version": "v2.4.1-astrometric",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-KBO-XR1/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-KBO-XR1/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-KBO-XR1/difference.png"
+    },
+    "simple_title": "Outer Solar System Ice World",
+    "simple_explanation": "An icy space rock floating in the deep freeze beyond Neptune. It slowly circles our Sun along the outer rim of the solar system.",
+    "how_to_spot_the_shift": "When you blink between Picture 1 and Picture 2, watch the green target circle! While all background stars stay frozen, this little dot jumps 3.4 arcseconds! That jump proves it is orbiting our Sun!",
+    "plain_stats": {
+      "speed": "Approx. 4.5 km/sec through the Kuiper Belt",
+      "distance": "44 times farther than Earth is from the Sun (~6.6 billion km)",
+      "temperature": "-230°C (Near absolute zero)",
+      "visibility": "Invisible to human eyes; detected by SPHEREx telescope"
+    },
+    "fun_fact": "It takes over 290 Earth years for this icy body to complete just one single orbit around our Sun!"
   },
   {
     "id": "SPX-OBJ-NEO-2025",
@@ -84,7 +99,7 @@
     "ra_deg": 150.245,
     "dec_deg": 2.314,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-NEO-2025/difference.png",
     "description": "Fast-moving near-Earth asteroid candidate detected by automated multi-epoch centroid tracking. Displaces 85.2 mas/day with trailing elongation indicative of orbital velocity relative to geocentric survey frame.",
     "associated_region": "COSMOS Deep Field",
     "observations": [
@@ -139,7 +154,22 @@
       "last_updated_utc": "2026-11-14T20:00:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-NEO-2025/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-NEO-2025/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-NEO-2025/difference.png"
+    },
+    "simple_title": "Speeding Near-Earth Asteroid",
+    "simple_explanation": "A cosmic boulder racing through space. Because it is much closer to Earth than distant stars, it appears to streak quickly across the telescope's camera between visits.",
+    "how_to_spot_the_shift": "Blink between the two pictures: you will see this dot make a HUGE diagonal jump across the frame! Close-by space rocks jump much farther than distant stars!",
+    "plain_stats": {
+      "speed": "Blazing fast: ~25 km/sec relative to Earth",
+      "distance": "Within our inner solar system (~15 million km)",
+      "temperature": "Warmer (+10°C on sunlit side)",
+      "visibility": "Reflects sunlight; tracked by planetary defense teams"
+    },
+    "fun_fact": "Asteroids like this are leftover building blocks from when our Earth and planets first formed 4.6 billion years ago!"
   },
   {
     "id": "SPX-OBJ-COMET-C2",
@@ -151,7 +181,7 @@
     "ra_deg": 270.0512,
     "dec_deg": 66.562,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-COMET-C2/difference.png",
     "description": "Distant cometary activity showing both angular displacement and diffuse coma expansion in 3.0-4.0 μm SPHEREx channels, indicative of volatile gas outgassing and water-ice sublimation.",
     "associated_region": "SPHEREx Deep Field North (NEP)",
     "observations": [
@@ -196,7 +226,22 @@
       "last_updated_utc": "2026-11-14T20:15:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-COMET-C2/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-COMET-C2/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-COMET-C2/difference.png"
+    },
+    "simple_title": "Awakening Dirty Snowball Comet",
+    "simple_explanation": "A giant frozen ball of dust, water ice, and frozen gases. As it gets closer to the warmth of the Sun, the ice turns to vapor, forming a glowing cosmic cloud (coma).",
+    "how_to_spot_the_shift": "In Picture 1 it was a sharp small point. In Picture 2 it moved AND grew into a fuzzy, hazy glow! That fuzziness is water vapor exploding into space!",
+    "plain_stats": {
+      "speed": "~15 km/sec on an elliptical orbit",
+      "distance": "Outer asteroid belt boundary (~450 million km)",
+      "temperature": "-100°C (Ice is actively sublimating into gas)",
+      "visibility": "Glowing vapor cloud detected in SPHEREx 3-micron water band"
+    },
+    "fun_fact": "Comets brought much of the original water to early Earth billions of years ago!"
   },
   {
     "id": "SPX-OBJ-BD-01",
@@ -208,7 +253,7 @@
     "ra_deg": 150.1005,
     "dec_deg": 2.2024,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/static/demo-deepfield-01/difference.png",
+    "preview_image": "/static/objects_media/SPX-OBJ-BD-01/difference.png",
     "description": "Ultra-cold sub-stellar brown dwarf / outer Solar System candidate discovered by automated multi-epoch sifting. Exhibits extreme infrared excess (glowing intensely at 3.98 μm while undetectable in optical Gaia DR3), coupled with distinct proper motion (μ = 320 mas/yr), consistent with a sub-stellar body within 15 parsecs or trans-Neptunian gravitational perturber.",
     "associated_region": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
     "observations": [
@@ -280,7 +325,22 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "SPHEREx Science Pipeline v2.4.1",
       "curator": "ASTRION Challenge 12 Research Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-BD-01/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-BD-01/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-BD-01/difference.png"
+    },
+    "simple_title": "Cold Hidden World / Planet X Candidate",
+    "simple_explanation": "A mysterious sub-stellar world 4 times heavier than Jupiter, but too small to ignite as a star. It produces almost no normal visible light, but glows intensely in thermal heat vision!",
+    "how_to_spot_the_shift": "Optical telescopes see pitch black darkness here! But when you switch to SPHEREx 3.98-micron heat vision, a brilliant dot appears and drifts steadily across the sky!",
+    "plain_stats": {
+      "speed": "Drifting at ~80 km/sec through our galactic neighborhood",
+      "distance": "Only ~14 light-years away (In our cosmic backyard!)",
+      "temperature": "Lukewarm: ~25°C (Room temperature in space!)",
+      "visibility": "100% invisible to human eyes; glowing hot in SPHEREx infrared"
+    },
+    "fun_fact": "You could stand in the upper clouds of this brown dwarf and experience room-temperature air, but with gravity 30 times stronger than Earth!"
   },
   {
     "id": "SPX-OBJ-T-DWARF",
@@ -292,7 +352,7 @@
     "ra_deg": 61.2008,
     "dec_deg": -48.4028,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-T-DWARF/difference.png",
     "description": "Late-T sub-stellar dwarf identified via distinctive methane (CH4) absorption band dip at 1.6 μm and 3.3 μm, coupled with steady proper motion of 185 mas/yr in South Ecliptic Pole survey.",
     "associated_region": "SPHEREx Deep Field South (SDF-S)",
     "observations": [
@@ -345,7 +405,22 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-T-DWARF/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-T-DWARF/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-T-DWARF/difference.png"
+    },
+    "simple_title": "Methane-Rich Sub-Stellar Dwarf",
+    "simple_explanation": "A failed star with an atmosphere filled with methane and water vapor gas, similar to giant gas planets like Jupiter and Saturn.",
+    "how_to_spot_the_shift": "Watch the subtle astrometric shift: while background galaxies stay motionless, this cool dwarf drifts steadily eastward due to its orbital journey around the Milky Way.",
+    "plain_stats": {
+      "speed": "Steady drift of 185 milli-arcseconds per year",
+      "distance": "Approximately 28 light-years away",
+      "temperature": "Cool glow: ~500°C",
+      "visibility": "Strong methane absorption fingerprints at 1.6 & 3.3 microns"
+    },
+    "fun_fact": "Methane gas in its atmosphere absorbs certain wavelengths of infrared light, creating natural cosmic barcodes that tell us what it is made of!"
   },
   {
     "id": "SPX-OBJ-V838",
@@ -357,7 +432,7 @@
     "ra_deg": 106.0125,
     "dec_deg": -3.8461,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-V838/difference.png",
     "description": "Famous eruptive variable star surrounded by expanding circumstellar dust light echo. Astrometrically stationary central source with extensive multi-epoch infrared flux variability across 2.0 to 4.5 μm.",
     "associated_region": "V838 Monocerotis Light Echo",
     "observations": [
@@ -428,7 +503,22 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-V838/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-V838/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-V838/difference.png"
+    },
+    "simple_title": "Erupting Star & Expanding Light Echo",
+    "simple_explanation": "A supergiant star that suddenly erupted in a blinding flash. The light flash travels outward through space, illuminating surrounding dust clouds like ripples in a pond.",
+    "how_to_spot_the_shift": "The central star did NOT move, but look at the brightness: it dramatically flares up, illuminating huge rings of dust that were previously pitch black!",
+    "plain_stats": {
+      "speed": "Star is stationary; the illuminated dust rings expand at the speed of light!",
+      "distance": "20,000 light-years away in the constellation Monoceros",
+      "temperature": "Hot central star surrounded by cold interstellar dust",
+      "visibility": "One of the most famous cosmic fireworks displays ever photographed"
+    },
+    "fun_fact": "What looks like a giant fireball expanding is actually an optical illusion called a 'Light Echo' — light from the original flash reflecting off clouds at different distances!"
   },
   {
     "id": "SPX-OBJ-MIRA-01",
@@ -440,7 +530,7 @@
     "ra_deg": 150.127,
     "dec_deg": 2.1945,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/static/demo-deepfield-01/difference.png",
+    "preview_image": "/static/objects_media/SPX-OBJ-MIRA-01/difference.png",
     "description": "Long-period pulsating red giant star (Asymptotic Giant Branch) displaying high-amplitude infrared flux variability (+0.32 mJy) between 2025 and 2026 SPHEREx DR1 epochs while remaining perfectly fixed on the sky.",
     "associated_region": "COSMOS Deep Field (Real SPHEREx DR1 Verified Pair)",
     "observations": [
@@ -495,7 +585,22 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-MIRA-01/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-MIRA-01/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-MIRA-01/difference.png"
+    },
+    "simple_title": "Cosmic Breathing Star (Pulsating Giant)",
+    "simple_explanation": "A giant red star near the end of its life that rhythmically expands and contracts like a beating heart over hundreds of days.",
+    "how_to_spot_the_shift": "Notice how the coordinates stay locked in place, but the star swells to over triple its brightness between the two visits! It is breathing in and out!",
+    "plain_stats": {
+      "speed": "Fixed celestial position (Zero motion)",
+      "distance": "Approximately 1,200 light-years away",
+      "temperature": "Varies rhythmically as it expands and shrinks",
+      "visibility": "Huge infrared flux change (+0.32 mJy / 4.5σ detection)"
+    },
+    "fun_fact": "When this star swells to its maximum size, it would swallow the orbits of Mercury, Venus, Earth, and Mars if it were at the center of our solar system!"
   },
   {
     "id": "SPX-OBJ-SDFS-01",
@@ -507,7 +612,7 @@
     "ra_deg": 61.2312,
     "dec_deg": -48.4095,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-SDFS-01/difference.png",
     "description": "Luminous point-source infrared transient identified via optimal PSF convolution difference imaging in the South Ecliptic Pole survey field. Displays a 1.54 magnitude brightening (5.1σ) over 185 days in distant host galaxy.",
     "associated_region": "SPHEREx Deep Field South (SDF-S)",
     "observations": [
@@ -579,7 +684,22 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-SDFS-01/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-SDFS-01/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-SDFS-01/difference.png"
+    },
+    "simple_title": "Supernova Explosion in a Distant Galaxy",
+    "simple_explanation": "The violent death explosion of a massive star in a galaxy billions of light-years away. For a few brief weeks, this single exploding star shines brighter than 10 billion ordinary stars combined!",
+    "how_to_spot_the_shift": "In Picture 1 from 2025: completely empty black sky. In Picture 2 from 2026: BAM! A blazing white-hot point of light suddenly appears! That is a supernova explosion!",
+    "plain_stats": {
+      "speed": "Explosion debris blasting outward at 10,000 km/second",
+      "distance": "3.5 billion light-years away (Its light traveled when Earth was young!)",
+      "temperature": "Millions of degrees at the core",
+      "visibility": "5.1σ statistical significance flare in SPHEREx Deep Field"
+    },
+    "fun_fact": "Supernovae create all the heavy elements in the universe, including the calcium in our bones and the iron in our blood!"
   },
   {
     "id": "SPX-OBJ-CAL-C1",
@@ -591,7 +711,7 @@
     "ra_deg": 180.0,
     "dec_deg": 0.0,
     "coordinate_frame": "ICRS (J2000)",
-    "preview_image": "/assets/demo/difference-placeholder.svg",
+    "preview_image": "/static/objects_media/SPX-OBJ-CAL-C1/difference.png",
     "description": "Isolated spectrophotometric standard star used for zero-point baseline stability and PSF verification. Exhibits zero astrometric motion (<0.01 arcsec) and photometric invariance (<0.8%) across all epochs.",
     "associated_region": "Invariant Stellar Calibrator C1",
     "observations": [
@@ -655,6 +775,21 @@
       "last_updated_utc": "2026-11-14T20:30:00Z",
       "pipeline_version": "v2.4.1",
       "curator": "ASTRION / AFTERLIGHT Team"
-    }
+    },
+    "images": {
+      "epoch1": "/static/objects_media/SPX-OBJ-CAL-C1/epoch1.png",
+      "epoch2": "/static/objects_media/SPX-OBJ-CAL-C1/epoch2.png",
+      "difference": "/static/objects_media/SPX-OBJ-CAL-C1/difference.png"
+    },
+    "simple_title": "The Cosmic Lighthouse (Calibration Anchor)",
+    "simple_explanation": "An ultra-stable, unchanging star. Astronomers use it as an unvarying benchmark to calibrate and focus satellite cameras.",
+    "how_to_spot_the_shift": "Compare Picture 1, Picture 2, and the Difference Map: NOTHING changes! Zero movement and zero flicker! That perfect rock-solid stability proves the telescope camera is working accurately!",
+    "plain_stats": {
+      "speed": "Rock-steady anchor (<0.01 arcseconds drift)",
+      "distance": "Approximately 450 light-years away",
+      "temperature": "Stable surface temperature of ~5,800 K (Like our Sun)",
+      "visibility": "Standard reference fixture used by NASA and ESA observatories"
+    },
+    "fun_fact": "Without anchor calibrator stars like this, scientists wouldn't know if a star got brighter or if the telescope camera just got a little warmer!"
   }
 ]
