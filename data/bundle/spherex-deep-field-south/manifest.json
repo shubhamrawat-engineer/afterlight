@@ -29,7 +29,8 @@
       "detector": "Array-3 (InSb 2.4 - 3.8 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/spherex-deep-field-south/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0320-B3",
@@ -43,7 +44,8 @@
       "detector": "Array-3 (InSb 2.4 - 3.8 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/spherex-deep-field-south/later.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0218-B3",
@@ -57,7 +59,8 @@
       "detector": "Array-3 (InSb 2.4 - 3.8 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/spherex-deep-field-south/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0405-B3",
@@ -71,7 +74,8 @@
       "detector": "Array-3 (InSb 2.4 - 3.8 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/spherex-deep-field-south/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     }
   ],
   "pair_quality": {

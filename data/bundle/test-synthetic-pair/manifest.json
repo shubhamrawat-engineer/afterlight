@@ -27,9 +27,10 @@
       "wavelength_range_um": "1.10 - 1.20 \u03bcm",
       "units": "MJy/sr",
       "detector": "Simulated Sensor A",
-      "source_url": null,
+      "source_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-SYNTH-E1.fits",
       "image": "/static/test-synthetic-pair/earlier.png",
-      "display_scaling": "linear"
+      "display_scaling": "linear",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-SYNTH-E1.fits"
     },
     {
       "id": "SPX-SYNTH-L1",
@@ -41,9 +42,10 @@
       "wavelength_range_um": "4.20 - 4.30 \u03bcm",
       "units": "MJy/sr",
       "detector": "Simulated Sensor B",
-      "source_url": null,
+      "source_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-SYNTH-L1.fits",
       "image": "/static/test-synthetic-pair/later.png",
-      "display_scaling": "linear"
+      "display_scaling": "linear",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-SYNTH-L1.fits"
     }
   ],
   "pair_quality": {

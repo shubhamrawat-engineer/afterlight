@@ -29,7 +29,8 @@
       "detector": "Array-2 (InSb 1.5 - 2.4 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/v838-mon-echo/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0290-B2",
@@ -43,7 +44,8 @@
       "detector": "Array-2 (InSb 1.5 - 2.4 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/v838-mon-echo/later.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0115-B4",
@@ -57,7 +59,8 @@
       "detector": "Array-4 (InSb 3.4 - 4.5 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/v838-mon-echo/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0720-B4",
@@ -71,7 +74,8 @@
       "detector": "Array-4 (InSb 3.4 - 4.5 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/v838-mon-echo/earlier.png",
-      "display_scaling": "asinh"
+      "display_scaling": "asinh",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     }
   ],
   "pair_quality": {

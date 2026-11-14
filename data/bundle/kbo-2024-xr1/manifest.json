@@ -29,7 +29,8 @@
       "detector": "Array-1 (HgCdTe 0.75 - 1.5 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/kbo-2024-xr1/earlier.png",
-      "display_scaling": "log"
+      "display_scaling": "log",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0230-B1",
@@ -43,7 +44,8 @@
       "detector": "Array-1 (HgCdTe 0.75 - 1.5 \u03bcm)",
       "source_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/",
       "image": "/static/kbo-2024-xr1/later.png",
-      "display_scaling": "log"
+      "display_scaling": "log",
+      "access_url": "https://irsa.ipac.caltech.edu/data/SPHEREx/"
     },
     {
       "id": "SPX-OBS-2025-0301-B1",
@@ -55,9 +57,10 @@
       "wavelength_range_um": "1.20 - 1.30 \u03bcm",
       "units": "MJy/sr",
       "detector": "Array-1 (HgCdTe 0.75 - 1.5 \u03bcm)",
-      "source_url": null,
+      "source_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-OBS-2025-0301-B1.fits",
       "image": "/static/kbo-2024-xr1/earlier.png",
-      "display_scaling": "log"
+      "display_scaling": "log",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-OBS-2025-0301-B1.fits"
     },
     {
       "id": "SPX-OBS-2025-0308-B1",
@@ -69,9 +72,10 @@
       "wavelength_range_um": "1.20 - 1.30 \u03bcm",
       "units": "MJy/sr",
       "detector": "Array-1 (HgCdTe 0.75 - 1.5 \u03bcm)",
-      "source_url": null,
+      "source_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-OBS-2025-0308-B1.fits",
       "image": "/static/kbo-2024-xr1/earlier.png",
-      "display_scaling": "log"
+      "display_scaling": "log",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/SPX-OBS-2025-0308-B1.fits"
     }
   ],
   "pair_quality": {
