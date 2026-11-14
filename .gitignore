@@ -1,0 +1,23 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.idea/
+
+# Ignore live cache downloaded files, but keep the directory
+data/live_cache/*
+!data/live_cache/.gitkeep
+
+# Ignore user cases created during local testing (keep directory)
+data/cases/*
+!data/cases/.gitkeep

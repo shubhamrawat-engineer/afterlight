@@ -1,0 +1,12 @@
+{
+  "id": "demo-deepfield-01",
+  "title": "Deep field sample",
+  "coordinates": { "ra": 150.1191, "dec": 2.2058 },
+  "observations": [
+    { "id": "obs-spherex-2026-01", "date": "2026-01-15T04:12:00Z", "release": "DR1" },
+    { "id": "obs-spherex-2026-06", "date": "2026-06-18T09:45:00Z", "release": "DR1" }
+  ],
+  "pair_quality": { "status": "verified", "wcs_aligned": true },
+  "difference_method": "WCS-aligned normalized flux subtraction",
+  "limitations": "Preliminary hackathon verification sample."
+}

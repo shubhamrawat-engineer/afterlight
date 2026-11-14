@@ -1,0 +1,11 @@
+{
+  "targets": [
+    {
+      "id": "demo-deepfield-01",
+      "title": "Deep field sample",
+      "kind": "deep_field",
+      "status": "verified",
+      "thumbnail": "demo-deepfield-01/earlier.png"
+    }
+  ]
+}
