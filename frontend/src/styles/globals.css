@@ -1,0 +1,271 @@
+/*
+ * AFTERLIGHT — Global Design System, Typography & Tokens
+ *
+ * Tailwind CSS v4 integration with custom design tokens for the
+ * AFTERLIGHT astronomical exploration platform.
+ *
+ * Visual identity: minimalist scientific observatory interface with
+ * restrained cosmic blue accents and refined typographic hierarchy.
+ */
+
+@import "tailwindcss";
+
+/*
+ * --------------------------------------------------------------------------
+ * Design Tokens (CSS Custom Properties)
+ * --------------------------------------------------------------------------
+ */
+
+:root {
+  /* ── Backgrounds & Surfaces (Deep-Space Observatory Palette) ─────────── */
+  --color-bg-primary: #070B14;
+  --color-bg-secondary: #0A1020;
+  --color-bg-tertiary: #0D1526;
+  --color-bg-surface: #101A2B;
+  --color-bg-elevated: #131F33;
+
+  /* ── Translucent Surfaces & Cards ────────────────────────────────────── */
+  --color-surface-card: #101A2B;
+  --color-surface-elevated: #131F33;
+  --color-surface-hover: #17253D;
+  --color-surface-overlay: rgba(7, 11, 20, 0.88);
+  --color-surface-input: #080E1C;
+
+  /* ── Accent Colours (Electric Blue, Bright Cyan, Violet & Magenta) ───── */
+  --color-accent-primary: #4388FF;
+  --color-accent-primary-hover: #5A9BFF;
+  --color-accent-electric: #45D5F2;
+  --color-accent-cyan: #45D5F2;
+  --color-accent-violet: #9B8CFF;
+  --color-accent-magenta: #D17BDB;
+  --color-accent-subtle: rgba(67, 136, 255, 0.14);
+  --color-accent-secondary: #B5C2D6;
+
+  /* ── Typography Colours ──────────────────────────────────────────────── */
+  --color-text-primary: #F4F7FF;
+  --color-text-secondary: #B5C2D6;
+  --color-text-tertiary: #8293AD;
+  --color-text-muted: #64758F;
+  --color-text-accent: #45D5F2;
+
+  /* ── Borders ─────────────────────────────────────────────────────────── */
+  --color-border-primary: #24344D;
+  --color-border-secondary: #1A2940;
+  --color-border-strong: #324869;
+  --color-border-accent: rgba(67, 136, 255, 0.45);
+
+  /* ── Shadows ─────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 2px 6px rgba(3, 6, 14, 0.4);
+  --shadow-md: 0 8px 20px rgba(3, 6, 14, 0.5);
+  --shadow-lg: 0 14px 36px rgba(3, 6, 14, 0.62);
+  --shadow-glow: 0 0 24px rgba(67, 136, 255, 0.16);
+
+  /* ── Border Radius Scale ─────────────────────────────────────────────── */
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 0.875rem;   /* 14px */
+  --radius-full: 9999px;
+
+  /* ── Font Families ───────────────────────────────────────────────────── */
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'SF Mono',
+    Menlo, Consolas, 'Liberation Mono', monospace;
+
+  /* ── Typography Scale Tokens ─────────────────────────────────────────── */
+  --text-hero: clamp(2.75rem, 4.6vw + 1rem, 4.5rem);        /* ~44px -> 72px */
+  --text-page-title: clamp(1.875rem, 2.4vw + 0.5rem, 2.5rem); /* 30px -> 40px */
+  --text-section-title: clamp(1.25rem, 1.4vw + 0.25rem, 1.625rem); /* 20px -> 26px */
+  --text-card-title: 1.125rem;  /* 18px */
+  --text-body: 0.9375rem;       /* 15px */
+  --text-secondary: 0.8125rem;  /* 13px */
+  --text-nav: 0.875rem;         /* 14px */
+  --text-meta: 0.75rem;         /* 12px */
+
+  /* ── Spacing Scale ───────────────────────────────────────────────────── */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+
+  /* ── Layout Constants ────────────────────────────────────────────────── */
+  --navbar-height: 4rem;         /* 64px */
+  --content-max-width: 80rem;    /* 1280px */
+}
+
+/*
+ * --------------------------------------------------------------------------
+ * Tailwind v4 Theme Extensions
+ * --------------------------------------------------------------------------
+ */
+
+@theme {
+  --font-display: 'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-afterlight-bg: #070B14;
+  --color-afterlight-bg-secondary: #0A1020;
+  --color-afterlight-surface: #101A2B;
+  --color-afterlight-surface-elevated: #131F33;
+  --color-afterlight-accent: #4388FF;
+  --color-afterlight-cyan: #45D5F2;
+  --color-afterlight-violet: #9B8CFF;
+  --color-afterlight-magenta: #D17BDB;
+  --color-afterlight-text: #F4F7FF;
+  --color-afterlight-muted: #8293AD;
+  --color-afterlight-border: #24344D;
+  --color-afterlight-border-subtle: #1A2940;
+}
+
+/*
+ * --------------------------------------------------------------------------
+ * Layered Base Styles (Preserves Tailwind @layer utilities Cascade Priority)
+ * --------------------------------------------------------------------------
+ */
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.6;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    font-size: var(--text-body);
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Refined editorial headings */
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+  }
+
+  h4, h5, h6 {
+    color: var(--color-text-primary);
+    letter-spacing: -0.015em;
+  }
+}
+
+/*
+ * --------------------------------------------------------------------------
+ * Component & Typography Primitives
+ * --------------------------------------------------------------------------
+ */
+
+@layer components {
+  .text-hero-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-hero);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+  }
+
+  .text-page-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-page-title);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+  }
+
+  .text-section-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-section-title);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  .text-card-heading {
+    font-family: var(--font-display);
+    font-size: var(--text-card-title);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+  }
+
+  .afterlight-card {
+    background-color: var(--color-surface-card);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .afterlight-panel-elevated {
+    background-color: var(--color-surface-elevated);
+    border: 1px solid var(--color-border-primary);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+
+  .afterlight-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/*
+ * --------------------------------------------------------------------------
+ * Scrollbars, Selection, Reduced Motion & Accessibility Focus
+ * --------------------------------------------------------------------------
+ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24344D;
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #364F73;
+}
+
+::selection {
+  background-color: rgba(67, 136, 255, 0.3);
+  color: var(--color-text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-electric);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

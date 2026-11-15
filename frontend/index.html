@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AFTERLIGHT — Astronomical exploration and multi-epoch investigation workspace for SPHEREx mission workflows." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>AFTERLIGHT | Astronomical Exploration Platform</title>
+
+    <!-- Immediate Theme Initialization (Prevents theme flicker) -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('afterlight_theme');
+          if (t === 'day') {
+            document.documentElement.classList.add('day-mode');
+          } else {
+            document.documentElement.classList.add('night-mode');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <style>
+      /* --- Smooth 3D & Global Transitions --- */
+      html {
+        scroll-behavior: smooth;
+        background-color: #040711;
+      }
+      
+      body {
+        background-color: #040711;
+        overflow-x: hidden;
+      }
+
+      /* Subtle glowing hover & smooth transitions on cards and buttons */
+      button, a, input, select, textarea {
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      /* Image loading smoothness */
+      img {
+        transition: opacity 0.35s ease-in-out, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: transform, opacity;
+      }
+
+      /* Custom Sleek Cosmic Scrollbar */
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #040711;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #38bdf8;
+      }
+
+      /* 4D Relativistic Spacetime Canvas */
+      #afterlight-3d-cosmic-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.9;
+        transition: opacity 0.4s ease;
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
+      }
+    
+      /* --- Space Telescope Authentic Physics & Animations --- */
+      @keyframes cosmicGalaxyDrift {
+        0% {
+          transform: rotate(0deg) scale(1.02);
+        }
+        50% {
+          transform: rotate(2.4deg) scale(1.055);
+        }
+        100% {
+          transform: rotate(-1.6deg) scale(1.02);
+        }
+      }
+
+      @keyframes cosmicCorePulse {
+        0%, 100% {
+          opacity: 0.62;
+          transform: scale(0.96);
+          filter: brightness(1) drop-shadow(0 0 35px rgba(69, 213, 242, 0.45));
+        }
+        50% {
+          opacity: 0.94;
+          transform: scale(1.07);
+          filter: brightness(1.22) drop-shadow(0 0 65px rgba(69, 213, 242, 0.85));
+        }
+      }
+
+      @keyframes diffractionSpikePulse {
+        0%, 100% {
+          opacity: 0.55;
+          transform: scale(0.92);
+        }
+        50% {
+          opacity: 0.95;
+          transform: scale(1.08);
+        }
+      }
+
+      @keyframes reticleScanRotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes astrometricBlink {
+        0%, 100% {
+          opacity: 0.35;
+        }
+        50% {
+          opacity: 0.9;
+        }
+      }
+
+      /* Microscopic Astronomical Sensor Photon Shot Noise */
+      .astronomical-photon-grain {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 4px 4px;
+        pointer-events: none;
+      }
+
+      /* Optical 4-Point Space Telescope Diffraction Cross */
+      .diffraction-spike-star {
+        position: absolute;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .diffraction-spike-star::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 52px;
+        background: linear-gradient(to bottom, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
+        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+      }
+      .diffraction-spike-star::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 52px;
+        background: linear-gradient(to right, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
+        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+      }
+      .diffraction-core-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 9999px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.9), 0 0 20px rgba(67, 136, 255, 0.7);
+        z-index: 2;
+      }
+
+      /* --- 4D Interactivity & Temporal Hover Depth --- */
+      .spacetime-4d-card {
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transform-style: preserve-3d;
+      }
+      .spacetime-4d-card:hover {
+        transform: perspective(1000px) translateY(-3px) translateZ(8px);
+        box-shadow: 0 12px 35px rgba(67, 136, 255, 0.22), 0 0 20px rgba(69, 213, 242, 0.15);
+      }
+
+      /* --- DAY / NIGHT OBSERVATORY CONTRAST SYSTEM --- */
+      html, body {
+        transition: background-color 0.35s ease, color 0.35s ease !important;
+      }
+
+      /* Day Mode High-Contrast Overrides */
+      html.day-mode,
+      html.day-mode body {
+        background-color: #f8fafc !important;
+        color: #0f172a !important;
+      }
+      html.day-mode header {
+        background: rgba(255, 255, 255, 0.94) !important;
+        border-bottom-color: #cbd5e1 !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+      }
+      html.day-mode header a,
+      html.day-mode header span {
+        color: #0f172a !important;
+      }
+      html.day-mode header button {
+        background-color: #f1f5f9 !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+      }
+      html.day-mode header .bg-\[\#101A2B\] {
+        background-color: #e2e8f0 !important;
+        border-color: #94a3b8 !important;
+      }
+      html.day-mode footer {
+        background-color: #ffffff !important;
+        border-top-color: #cbd5e1 !important;
+      }
+      html.day-mode footer span,
+      html.day-mode footer a,
+      html.day-mode footer p {
+        color: #475569 !important;
+      }
+
+      /* Cards & Containers in Day Mode */
+      html.day-mode .bg-\[\#070B14\],
+      html.day-mode .bg-\[\#0A1020\],
+      html.day-mode .bg-\[\#040711\],
+      html.day-mode .bg-\[\#0d1527\],
+      html.day-mode .bg-\[\#101A2B\],
+      html.day-mode .bg-slate-950,
+      html.day-mode .bg-slate-900,
+      html.day-mode .bg-slate-900\/60,
+      html.day-mode .bg-slate-900\/80,
+      html.day-mode .bg-slate-900\/90,
+      html.day-mode .bg-black\/80,
+      html.day-mode .bg-black\/85 {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode .border-\[\#1A2940\],
+      html.day-mode .border-\[\#24344D\],
+      html.day-mode .border-slate-800,
+      html.day-mode .border-slate-700 {
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode .text-\[\#F4F7FF\],
+      html.day-mode .text-white,
+      html.day-mode h1,
+      html.day-mode h2,
+      html.day-mode h3,
+      html.day-mode h4,
+      html.day-mode h5 {
+        color: #0f172a !important;
+      }
+      html.day-mode .text-\[\#B5C2D6\],
+      html.day-mode .text-\[\#8293AD\],
+      html.day-mode .text-slate-400,
+      html.day-mode .text-slate-300,
+      html.day-mode p {
+        color: #334155 !important;
+      }
+      html.day-mode .text-\[\#E1E9F7\] {
+        color: #1e293b !important;
+      }
+      html.day-mode aside {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode input,
+      html.day-mode textarea,
+      html.day-mode select {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode #afterlight-3d-cosmic-canvas {
+        opacity: 0.18 !important;
+        filter: invert(0.92) contrast(1.2);
+      }
+      html.day-mode .astronomical-photon-grain {
+        opacity: 0.1 !important;
+      }
+      html.day-mode .bg-\[\#070B14\]\/90,
+      html.day-mode .bg-\[\#070B14\]\/85,
+      html.day-mode .bg-\[\#070B14\]\/75 {
+        background-color: rgba(255, 255, 255, 0.94) !important;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Hardware-accelerated 4D Relativistic Spacetime Canvas -->
+    <canvas id="afterlight-3d-cosmic-canvas"></canvas>
+
+    <!-- Floating 4D Spacetime Telemetry Widget -->
+    <div
+      id="spacetime-4d-hud"
+      class="fixed bottom-3 left-4 z-40 hidden sm:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-[#070B14]/85 text-xs font-mono text-cyan-300 backdrop-blur-md shadow-lg pointer-events-none select-none transition-all duration-300"
+    >
+      <span class="flex h-2 w-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+      </span>
+      <span class="text-cyan-200 font-semibold tracking-wider">4D SPACETIME:</span>
+      <span id="spacetime-t-val" class="text-slate-300">τ = +0.00s</span>
+      <span class="text-slate-500">•</span>
+      <span id="spacetime-gamma-val" class="text-cyan-400">γ = 1.000</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-purple-300">SPHEREx 102λ</span>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- 4D Relativistic Minkowski Spacetime Physics Engine -->
+    <script>
+      (function() {
+        const canvas = document.getElementById('afterlight-3d-cosmic-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const numStars = 340;
+        const stars = [];
+        const focalLength = 420;
+        let mouseX = 0, mouseY = 0;
+        let targetAngleX = 0, targetAngleY = 0;
+        let angleX = 0, angleY = 0;
+        let velocity = 0;
+        let properTime = 0; // The 4th Dimension: Time (tau)
+        let lastScrollY = window.scrollY;
+
+        const hudT = document.getElementById('spacetime-t-val');
+        const hudGamma = document.getElementById('spacetime-gamma-val');
+
+        const baseStarColors = [
+          '#ffffff', // Core white
+          '#bae6fd', // Blueshifted cyan (Doppler approaching)
+          '#7dd3fc', // Relativistic sky (Doppler approaching)
+          '#c084fc', // Temporal ultraviolet
+          '#fde047', // Solar rest frame
+          '#f472b6'  // Redshifted infrared (Doppler receding)
+        ];
+
+        for (let i = 0; i < numStars; i++) {
+          stars.push({
+            x: (Math.random() - 0.5) * 2400,
+            y: (Math.random() - 0.5) * 2400,
+            z: Math.random() * 1100 + 1,
+            w: Math.random() * Math.PI * 2, // 4th coordinate (hyper-temporal phase)
+            size: Math.random() * 1.8 + 0.6,
+            color: baseStarColors[Math.floor(Math.random() * baseStarColors.length)],
+            speed: Math.random() * 0.4 + 0.25,
+            twinkle: Math.random() * 0.03 + 0.01,
+            phase: Math.random() * Math.PI * 2
+          });
+        }
+
+        window.addEventListener('resize', () => {
+          width = canvas.width = window.innerWidth;
+          height = canvas.height = window.innerHeight;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = (e.clientX - width / 2) / (width / 2);
+          mouseY = (e.clientY - height / 2) / (height / 2);
+          targetAngleX = mouseX * 0.35;
+          targetAngleY = mouseY * 0.25;
+        });
+
+        window.addEventListener('scroll', () => {
+          const dy = Math.abs(window.scrollY - lastScrollY);
+          lastScrollY = window.scrollY;
+          velocity = Math.min(velocity + dy * 0.05, 8);
+        }, { passive: true });
+
+        // Gravitational spacetime ripple on click
+        const ripples = [];
+        window.addEventListener('click', (e) => {
+          ripples.push({
+            x: e.clientX,
+            y: e.clientY,
+            radius: 10,
+            maxRadius: 280,
+            alpha: 0.65
+          });
+        });
+
+        let lastTime = performance.now();
+
+        function animate(time) {
+          const delta = Math.min((time - lastTime) / 1000, 0.1);
+          lastTime = time;
+
+          // 4th Dimension temporal flow
+          properTime += delta;
+          velocity *= 0.94; // Velocity damping
+
+          // Relativistic Lorentz Factor gamma = 1 / sqrt(1 - v^2/c^2)
+          const beta = Math.min(velocity / 12, 0.75); // v/c
+          const gamma = 1 / Math.sqrt(1 - beta * beta);
+
+          // Update HUD telemetry
+          if (hudT && (Math.floor(properTime * 10) % 2 === 0)) {
+            hudT.textContent = 'τ = +' + properTime.toFixed(2) + 's';
+          }
+          if (hudGamma) {
+            hudGamma.textContent = 'γ = ' + gamma.toFixed(3);
+          }
+
+          // Smooth lerp for 3D camera rotation
+          angleX += (targetAngleX - angleX) * 0.06;
+          angleY += (targetAngleY - angleY) * 0.06;
+
+          ctx.clearRect(0, 0, width, height);
+
+          const cx = width / 2;
+          const cy = height / 2;
+
+          // 4D Geodesic Spacetime Mesh (connect nearby guide stars in 4D Minkowski space)
+          const projectedStars = [];
+
+          for (let i = 0; i < numStars; i++) {
+            const star = stars[i];
+
+            // 4th-dimensional time evolution: warp along z with Lorentz dilation
+            const effectiveSpeed = star.speed * gamma;
+            star.z -= effectiveSpeed * (delta * 60);
+            star.w += star.twinkle * gamma;
+
+            if (star.z <= 1) {
+              star.z = 1100;
+              star.x = (Math.random() - 0.5) * 2400;
+              star.y = (Math.random() - 0.5) * 2400;
+            }
+
+            // 3D Rotation with mouse angle
+            const cosX = Math.cos(angleX);
+            const sinX = Math.sin(angleX);
+            const cosY = Math.cos(angleY);
+            const sinY = Math.sin(angleY);
+
+            // Rotate around Y then X
+            let rx = star.x * cosX - star.z * sinX;
+            let rz = star.x * sinX + star.z * cosX;
+            let ry = star.y * cosY - rz * sinY;
+            rz = star.y * sinY + rz * cosY;
+
+            if (rz <= 10) continue;
+
+            // 3D/4D Perspective Projection
+            const k = focalLength / rz;
+            const px = rx * k + cx;
+            const py = ry * k + cy;
+
+            if (px < -30 || px > width + 30 || py < -30 || py > height + 30) continue;
+
+            // Depth + 4th-dimensional temporal twinkle
+            const depthRatio = 1 - (rz / 1100);
+            star.phase += star.twinkle;
+            const twinkleAlpha = 0.6 + Math.sin(star.phase + star.w) * 0.4;
+            const alpha = Math.max(0.1, Math.min(1, depthRatio * twinkleAlpha));
+            const size = Math.max(0.6, star.size * k * 0.45);
+
+            // Doppler Blueshift / Redshift based on velocity
+            let renderColor = star.color;
+            if (beta > 0.08) {
+              renderColor = depthRatio > 0.5 ? '#7dd3fc' : '#f472b6';
+            }
+
+            ctx.save();
+            ctx.globalAlpha = alpha;
+            ctx.fillStyle = renderColor;
+            ctx.shadowBlur = depthRatio > 0.65 ? 8 : 0;
+            ctx.shadowColor = renderColor;
+
+            ctx.beginPath();
+            ctx.arc(px, py, size, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Optical diffraction spike on bright close stars
+            if (depthRatio > 0.78 && star.size > 1.35) {
+              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = renderColor;
+              ctx.beginPath();
+              ctx.moveTo(px - size * 3.2, py);
+              ctx.lineTo(px + size * 3.2, py);
+              ctx.moveTo(px, py - size * 3.2);
+              ctx.lineTo(px, py + size * 3.2);
+              ctx.stroke();
+            }
+
+            ctx.restore();
+
+            if (depthRatio > 0.72 && projectedStars.length < 45) {
+              projectedStars.push({ px, py, alpha });
+            }
+          }
+
+          // Render faint 4D Spacetime Geodesic Worldlines between close guide stars
+          ctx.save();
+          ctx.lineWidth = 0.4;
+          for (let i = 0; i < projectedStars.length; i++) {
+            for (let j = i + 1; j < projectedStars.length; j++) {
+              const dx = projectedStars[i].px - projectedStars[j].px;
+              const dy = projectedStars[i].py - projectedStars[j].py;
+              const distSq = dx * dx + dy * dy;
+              if (distSq < 13000) { // ~114px apart
+                const lineAlpha = (1 - distSq / 13000) * 0.16 * Math.min(projectedStars[i].alpha, projectedStars[j].alpha);
+                ctx.strokeStyle = '#45D5F2';
+                ctx.globalAlpha = lineAlpha;
+                ctx.beginPath();
+                ctx.moveTo(projectedStars[i].px, projectedStars[i].py);
+                ctx.lineTo(projectedStars[j].px, projectedStars[j].py);
+                ctx.stroke();
+              }
+            }
+          }
+          ctx.restore();
+
+          // Render Gravitational Spacetime Wave Ripples
+          for (let i = ripples.length - 1; i >= 0; i--) {
+            const r = ripples[i];
+            r.radius += (r.maxRadius - r.radius) * 0.08;
+            r.alpha *= 0.93;
+
+            ctx.save();
+            ctx.strokeStyle = '#38bdf8';
+            ctx.globalAlpha = r.alpha;
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.restore();
+
+            if (r.alpha < 0.02) {
+              ripples.splice(i, 1);
+            }
+          }
+
+          requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+      })();
+    </script>
+  </body>
+</html>

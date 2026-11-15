@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <rect width="500" height="500" fill="#04060e" />
+  <!-- Astrometric Grid -->
+  <g stroke="#1e293b" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="0" y1="125" x2="500" y2="125" />
+    <line x1="0" y1="250" x2="500" y2="250" />
+    <line x1="0" y1="375" x2="500" y2="375" />
+    <line x1="125" y1="0" x2="125" y2="500" />
+    <line x1="250" y1="0" x2="250" y2="500" />
+    <line x1="375" y1="0" x2="375" y2="500" />
+  </g>
+  <!-- Outer Field Boundary -->
+  <rect x="40" y="75" width="420" height="350" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="5 5" />
+  <!-- Subtracted Invariant Sources (Zeroed Residuals) -->
+  <g stroke="#475569" stroke-width="1" fill="none">
+    <circle cx="140" cy="160" r="4" stroke-dasharray="2 2" />
+    <circle cx="360" cy="175" r="4" stroke-dasharray="2 2" />
+    <circle cx="170" cy="340" r="4" stroke-dasharray="2 2" />
+    <circle cx="345" cy="330" r="4" stroke-dasharray="2 2" />
+  </g>
+  <!-- Residual Difference Feature (T1 - T0) -->
+  <g>
+    <circle cx="268" cy="214" r="32" fill="#f59e0b" fill-opacity="0.12" stroke="#f59e0b" stroke-width="1.2" stroke-dasharray="4 2" />
+    <circle cx="268" cy="214" r="14" fill="#38bdf8" fill-opacity="0.3" stroke="#38bdf8" stroke-width="1.5" />
+    <circle cx="268" cy="214" r="5" fill="#ffffff" />
+    <line x1="268" y1="172" x2="268" y2="194" stroke="#fbbf24" stroke-width="1.2" />
+    <line x1="268" y1="234" x2="268" y2="256" stroke="#fbbf24" stroke-width="1.2" />
+    <line x1="226" y1="214" x2="248" y2="214" stroke="#fbbf24" stroke-width="1.2" />
+    <line x1="288" y1="214" x2="310" y2="214" stroke="#fbbf24" stroke-width="1.2" />
+    <text x="268" y="162" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="10" font-weight="bold">
+      SCHEMATIC RESIDUAL (Δ = T1 − T0)
+    </text>
+  </g>
+  <!-- Top Explicit Disclosure Banner -->
+  <rect x="20" y="16" width="460" height="44" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="250" y="34" text-anchor="middle" fill="#fbbf24" font-family="monospace" font-size="11" font-weight="bold">
+    DEMONSTRATION PLACEHOLDER — DIFFERENCE MAP (T1 − T0)
+  </text>
+  <text x="250" y="50" text-anchor="middle" fill="#94a3b8" font-family="monospace" font-size="9.5">
+    SYNTHETIC SCHEMATIC DIAGRAM • NOT GENUINE NASA SPHEREx TELEMETRY
+  </text>
+  <!-- Bottom Status Bar -->
+  <rect x="40" y="442" width="420" height="36" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+  <text x="250" y="464" text-anchor="middle" fill="#cbd5e1" font-family="monospace" font-size="10.5">
+    MODE: SCHEMATIC SUBTRACTION RESIDUAL PLACEHOLDER
+  </text>
+</svg>
