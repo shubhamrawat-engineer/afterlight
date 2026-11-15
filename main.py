@@ -14,6 +14,7 @@ from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 from models import (
+    AIQueryRequest,
     CaseCreate,
     CaseRecord,
     CompatibilityReport,
@@ -22,6 +23,7 @@ from models import (
     MeasurementResult,
     TaskType,
 )
+from ai_engine import get_cosmos_ai_status, query_cosmos_ai
 from science_engine import (
     BUNDLE_DIR,
     CASES_DIR,
@@ -735,6 +737,25 @@ def run_autonomous_sifter(target_id: str = Query(default="demo-deepfield-01")):
         "execution_time_ms": 142.5,
         "timestamp_utc": datetime.now(timezone.utc).isoformat()
     }
+
+
+@app.get("/api/ai/status")
+def get_ai_status():
+    """
+    Status of the Cosmos AI Autonomous Astronomical Reasoning Gateway.
+    Reports LLM configuration, available spectral channels, and knowledge coverage.
+    """
+    return get_cosmos_ai_status()
+
+
+@app.post("/api/ai/query")
+def post_ai_query(body: AIQueryRequest):
+    """
+    Context-aware scientific reasoning query for Cosmos AI.
+    Answers inquiries regarding SPHEREx mission architecture, 102-band infrared spectroscopy,
+    difference subtraction mathematics, epistemic uncertainty, and classified celestial candidates.
+    """
+    return query_cosmos_ai(prompt=body.prompt, context=body.context)
 
 
 DIST_DIR = Path(__file__).resolve().parent / "dist"

@@ -123,3 +123,9 @@ class CaseRecord(BaseModel):
     guardrail_warnings: List[str] = Field(default_factory=list)
     limitations: List[str] = Field(default_factory=list)
     provenance: Dict[str, Any] = Field(default_factory=dict)
+
+
+class AIQueryRequest(BaseModel):
+    prompt: str
+    context: Optional[Dict[str, Any]] = None
+    conversationId: Optional[str] = None

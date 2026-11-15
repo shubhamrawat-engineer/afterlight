@@ -175,3 +175,51 @@ def test_target_evidence_and_pipeline_verification():
     assert ver["stages_completed"] == 7
     assert ver["fits_wcs_status"] == "AVAILABLE"
 
+
+def test_cosmos_ai_reasoning_gateway():
+    """Verify Cosmos AI status gateway and contextual multi-topic reasoning engine"""
+    client = TestClient(app)
+
+    # 1. AI Status
+    stat = client.get("/api/ai/status")
+    assert stat.status_code == 200
+    stat_data = stat.json()
+    assert stat_data["configured"] is True
+    assert stat_data["status"] == "available"
+    assert "NASA Cosmos AI" in stat_data["provider"]
+
+    # 2. Black Holes Query
+    r_bh = client.post("/api/ai/query", json={"prompt": "What are black holes?"})
+    assert r_bh.status_code == 200
+    bh_data = r_bh.json()
+    assert "Schwarzschild" in bh_data["directAnswer"]
+    assert len(bh_data["observationalEvidence"]) >= 2
+    assert len(bh_data["measurements"]) >= 2
+
+    # 3. SPHEREx Mission Query
+    r_spx = client.post("/api/ai/query", json={"prompt": "Tell me about SPHEREx and its 102 bands"})
+    assert r_spx.status_code == 200
+    spx_data = r_spx.json()
+    assert "Linear Variable Filter" in spx_data["directAnswer"]
+    assert any("ref-spx" in s["id"] for s in spx_data["sourceReferences"])
+
+    # 4. Galaxy Glow & Cosmic Infrared Background
+    r_glow = client.post("/api/ai/query", json={"prompt": "Why do galaxies glow?"})
+    assert r_glow.status_code == 200
+    assert "thermonuclear fusion" in r_glow.json()["directAnswer"].lower()
+
+    # 5. Cosmic Inflation & f_NL
+    r_inf = client.post("/api/ai/query", json={"prompt": "How does SPHEREx test cosmic inflation and primordial non-Gaussianity?"})
+    assert r_inf.status_code == 200
+    assert "Non-Gaussianity" in r_inf.json()["directAnswer"]
+
+    # 6. Interstellar Ices
+    r_ice = client.post("/api/ai/query", json={"prompt": "What water ice absorption features are detected?"})
+    assert r_ice.status_code == 200
+    assert "3.05" in r_ice.json()["directAnswer"]
+
+    # 7. JWST Synergy
+    r_jwst = client.post("/api/ai/query", json={"prompt": "How does SPHEREx compare to JWST?"})
+    assert r_jwst.status_code == 200
+    assert "NIRCam" in r_jwst.json()["directAnswer"]
+
