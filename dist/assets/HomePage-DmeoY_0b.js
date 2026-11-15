@@ -522,7 +522,7 @@ function MultiEpochSection(){
               (0,h.jsx)("p",{className:"text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed",children:"Witness celestial motion in action: toggle between Epoch 1, Epoch 2, and the subtracted Difference Map, or watch the 650ms auto-blink reveal moving worlds."})
             ]
           }),
-          (0,h.jsx)(n,{
+          (0,h.jsx)(LinkComponent,{
             to: `/objects/${current.id}`,
             className: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-500 hover:to-sky-500 text-white text-xs font-semibold shadow-lg shadow-blue-500/25 transition-all cursor-pointer",
             children: [
