@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "AFTERLIGHT Temporal Difference Statistics",
+    "generation_timestamp_utc": "2026-11-14T10:10:04.838008+00:00",
+    "pipeline_stage": "Stage 8: Scientific Temporal Difference Imaging",
+    "difference_method": "later_background_subtracted minus earlier_background_subtracted",
+    "variance_propagation_method": "Var(diff) = Var(later) + Var(earlier) [statistically independent epochs]"
+  },
+  "pixel_counts": {
+    "total_pixels": 4161600,
+    "valid_overlap_pixels": 4149246,
+    "valid_overlap_percentage": 99.7031,
+    "invalid_masked_pixels": 12354,
+    "invalid_masked_percentage": 0.2969
+  },
+  "difference_surface_brightness_mjy_sr": {
+    "units": "MJy / sr",
+    "minimum": -14483.1005859375,
+    "maximum": 43138.125,
+    "mean": 0.007047530263662338,
+    "median": -0.007763625122606754,
+    "standard_deviation": 26.81341552734375,
+    "nmad_robust_sigma": 0.017795581365935502,
+    "percentiles": {
+      "p01": -0.08928862027823924,
+      "p05": -0.039447675459086895,
+      "p16": -0.025629496946930883,
+      "p50": -0.007763625122606754,
+      "p84": 0.010323844477534294,
+      "p95": 0.02538036135956645,
+      "p99": 0.11432850509881834
+    }
+  },
+  "snr_statistics": {
+    "minimum_snr": -2208.30419921875,
+    "maximum_snr": 3649.9345703125,
+    "mean_snr": -0.332864373922348,
+    "median_snr": -0.4895835220813751,
+    "standard_deviation_snr": 10.41623592376709,
+    "nmad_robust_sigma_snr": 1.1178133393049239
+  },
+  "target_pixel_metrics": {
+    "target_ra": 151.80047329765688,
+    "target_dec": 2.8105167080158853,
+    "pixel_x": 1019.4999999999941,
+    "pixel_y": 1019.5000000000057,
+    "grid_index": [
+      1020,
+      1019
+    ],
+    "earlier_value_mjy_sr": 0.03262896090745926,
+    "later_value_mjy_sr": 0.016803765669465065,
+    "difference_mjy_sr": -0.015825195237994194,
+    "propagated_variance_mjy2_sr2": 0.00021302103414200246,
+    "propagated_sigma_mjy_sr": 0.014595240354537964,
+    "snr": -1.08427095413208,
+    "composite_flag": 0
+  },
+  "output_files": {
+    "temporal_difference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\temporal_difference.fits",
+    "difference_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_preview.png",
+    "difference_statistics_json": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_statistics.json",
+    "difference_processing_report_md": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_processing_report.md"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "status": "SUCCESS",
+  "identifier": "Luhman 16",
+  "canonical_name": "NAME Luhman 16",
+  "category": "BROWN_DWARF",
+  "classification_label": "CATALOGUE MATCH",
+  "coordinates": {
+    "ra_deg": 162.32831408976122,
+    "dec_deg": -53.31842579713822,
+    "coordinate_system": "ICRS (J2000)",
+    "proper_motion": {
+      "pm_ra_mas_yr": -4.983847507411008,
+      "pm_dec_mas_yr": 1.0015393537538204
+    }
+  },
+  "astrometry_and_distance": {
+    "parallax_mas": 0.17641327132147597,
+    "parallax_error_mas": 0.037434094,
+    "distance_parsecs": 5668.51,
+    "distance_light_years": 18488.19
+  },
+  "photometry": {
+    "gaia_g_mag": 16.18484,
+    "gaia_bp_mag": 16.423521,
+    "gaia_rp_mag": 15.800033,
+    "effective_temperature_k": 10395.428
+  },
+  "classification": {
+    "sesame_type": "**",
+    "astronomical_class": "Brown Dwarf Candidate / Substellar",
+    "gaia_source_id": "5353625847691839488"
+  },
+  "provenance": {
+    "primary_resolver": "CDS Sesame (Strasbourg Astronomical Data Center)",
+    "astrometry_provider": "ESA Gaia Data Release 3 (Gaia DR3)",
+    "retrieval_timestamp_utc": "2026-11-14T14:54:08Z",
+    "retrieval_status": "LIVE"
+  }
+}

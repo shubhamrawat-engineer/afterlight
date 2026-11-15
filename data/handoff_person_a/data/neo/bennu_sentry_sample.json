@@ -1,0 +1,118 @@
+{
+  "status": "SUCCESS",
+  "object_designation": "101955",
+  "fullname": "101955 Bennu (1999 RQ36)",
+  "risk_state": "PUBLISHED_IMPACT_RISK",
+  "scientific_explanation": "Active Sentry monitoring record. Cumulative impact probability: 5.72e-04 across 157 potential impact dates between unknown.",
+  "impact_probability_cumulative": 0.000571699999999996,
+  "palermo_scale_cumulative": -1.4,
+  "palermo_scale_max": -1.58,
+  "torino_scale_max": null,
+  "estimated_diameter_km": 0.490000000000006,
+  "estimated_mass_kg": 74200000000.0,
+  "impact_velocity_km_s": 12.68,
+  "potential_impact_solutions_count": 157,
+  "impact_date_range": null,
+  "potential_impacts_sample": [
+    {
+      "impact_date_utc": "2290-09-25.12",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.38,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1425.0
+    },
+    {
+      "impact_date_utc": "2281-09-24.57",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.36,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1420.0
+    },
+    {
+      "impact_date_utc": "2272-09-24.38",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.35,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1420.0
+    },
+    {
+      "impact_date_utc": "2257-09-24.58",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.32,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1417.0
+    },
+    {
+      "impact_date_utc": "2254-09-24.85",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.31,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1420.0
+    },
+    {
+      "impact_date_utc": "2231-09-25.85",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.27,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1422.0
+    },
+    {
+      "impact_date_utc": "2231-09-25.66",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.27,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1421.0
+    },
+    {
+      "impact_date_utc": "2231-09-25.59",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.27,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1420.0
+    },
+    {
+      "impact_date_utc": "2228-09-24.73",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.26,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1421.0
+    },
+    {
+      "impact_date_utc": "2228-09-24.68",
+      "impact_probability": 1e-07,
+      "palermo_scale": -5.26,
+      "torino_scale": null,
+      "v_impact_km_s": null,
+      "estimated_energy_megatons": 1419.0
+    }
+  ],
+  "palermo_scale_guide": {
+    "less_than_minus_2": "No practical consequences (background hazard level)",
+    "minus_2_to_0": "Merits careful monitoring by astronomers",
+    "greater_than_0": "Concern; hazard is greater than background level"
+  },
+  "torino_scale_guide": {
+    "0": "No hazard (white zone)",
+    "1": "Normal / Routine discovery (green zone)",
+    "2_to_4": "Meriting attention by astronomers (yellow zone)",
+    "5_to_7": "Threatening (orange zone)",
+    "8_to_10": "Certain collision (red zone)"
+  },
+  "disclaimer": "Do NOT interpret missing risk data as zero risk. Display published official solutions only.",
+  "provenance": {
+    "source_name": "NASA/JPL Sentry Earth Impact Monitoring API",
+    "source_version": "2.0",
+    "source_url": "https://ssd-api.jpl.nasa.gov/sentry.api?des=101955",
+    "retrieval_timestamp_utc": "2026-11-14T14:54:57Z",
+    "retrieval_status": "LIVE"
+  }
+}

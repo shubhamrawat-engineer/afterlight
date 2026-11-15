@@ -1,0 +1,146 @@
+{
+  "status": "SUCCESS",
+  "query_parameters": {
+    "dist-max": "5LD",
+    "limit": "10",
+    "sort": "date"
+  },
+  "total_matches": 6,
+  "returned_count": 6,
+  "scientific_disclaimer": "A close approach is NOT automatically an impact threat. Miss distances represent nominal orbit solutions.",
+  "close_approaches": [
+    {
+      "object_designation": "2026 VV15",
+      "close_approach_date_utc": "2026-Nov-14 07:16",
+      "miss_distance_au": 0.010558206903424,
+      "miss_distance_ld": 4.109,
+      "miss_distance_min_au": 0.0105300875842233,
+      "miss_distance_max_au": 0.010586325886266,
+      "relative_velocity_km_s": 14.9763748727029,
+      "v_infinity_km_s": 14.9595147778012,
+      "absolute_magnitude_h": 26.029,
+      "estimated_diameter_range_meters": {
+        "min_meters": 16.5,
+        "max_meters": 37.0,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VV8",
+      "close_approach_date_utc": "2026-Nov-14 23:24",
+      "miss_distance_au": 0.00921911108019568,
+      "miss_distance_ld": 3.588,
+      "miss_distance_min_au": 0.00920569426509738,
+      "miss_distance_max_au": 0.00923252731865494,
+      "relative_velocity_km_s": 6.28119067224384,
+      "v_infinity_km_s": 6.23500780810697,
+      "absolute_magnitude_h": 26.185,
+      "estimated_diameter_range_meters": {
+        "min_meters": 15.4,
+        "max_meters": 34.4,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VJ13",
+      "close_approach_date_utc": "2026-Nov-17 05:36",
+      "miss_distance_au": 0.00900580958148943,
+      "miss_distance_ld": 3.505,
+      "miss_distance_min_au": 0.00897758786725425,
+      "miss_distance_max_au": 0.00903403032322367,
+      "relative_velocity_km_s": 10.4350155693776,
+      "v_infinity_km_s": 10.4066241104947,
+      "absolute_magnitude_h": 27.254,
+      "estimated_diameter_range_meters": {
+        "min_meters": 9.4,
+        "max_meters": 21.0,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2019 XF2",
+      "close_approach_date_utc": "2026-Dec-04 00:35",
+      "miss_distance_au": 0.00795386356544704,
+      "miss_distance_ld": 3.095,
+      "miss_distance_min_au": 0.00305445074486126,
+      "miss_distance_max_au": 0.0637616731325908,
+      "relative_velocity_km_s": 10.2034308257869,
+      "v_infinity_km_s": 10.1705465413561,
+      "absolute_magnitude_h": 27.1,
+      "estimated_diameter_range_meters": {
+        "min_meters": 10.1,
+        "max_meters": 22.6,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2010 VQ",
+      "close_approach_date_utc": "2026-Dec-12 04:55",
+      "miss_distance_au": 0.011715191719348,
+      "miss_distance_ld": 4.559,
+      "miss_distance_min_au": 0.0117120336103266,
+      "miss_distance_max_au": 0.0117183501267047,
+      "relative_velocity_km_s": 4.29956615577849,
+      "v_infinity_km_s": 4.24633879976312,
+      "absolute_magnitude_h": 27.72,
+      "estimated_diameter_range_meters": {
+        "min_meters": 7.6,
+        "max_meters": 17.0,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 QQ8",
+      "close_approach_date_utc": "2026-Dec-13 13:41",
+      "miss_distance_au": 0.00903690900471368,
+      "miss_distance_ld": 3.517,
+      "miss_distance_min_au": 0.00903665404132898,
+      "miss_distance_max_au": 0.00903716396651518,
+      "relative_velocity_km_s": 0.796699770186411,
+      "v_infinity_km_s": 0.212231750410368,
+      "absolute_magnitude_h": 31.367,
+      "estimated_diameter_range_meters": {
+        "min_meters": 1.4,
+        "max_meters": 3.2,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    }
+  ],
+  "provenance": {
+    "source_name": "NASA/JPL CNEOS Close Approach Data API",
+    "source_version": "1.5",
+    "source_url": "https://ssd-api.jpl.nasa.gov/cad.api",
+    "retrieval_timestamp_utc": "2026-11-14T14:54:58Z",
+    "retrieval_status": "LIVE"
+  }
+}

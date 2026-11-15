@@ -1,0 +1,20 @@
+{
+  "status": "SUCCESS",
+  "query_parameters": {
+    "dist-max": "10LD",
+    "limit": "10",
+    "sort": "date",
+    "des": "99942"
+  },
+  "total_matches": 0,
+  "returned_count": 0,
+  "scientific_disclaimer": "A close approach is NOT automatically an impact threat. Miss distances represent nominal orbit solutions.",
+  "close_approaches": [],
+  "provenance": {
+    "source_name": "NASA/JPL CNEOS Close Approach Data API",
+    "source_version": "1.5",
+    "source_url": "https://ssd-api.jpl.nasa.gov/cad.api",
+    "retrieval_timestamp_utc": "2026-11-14T15:28:15Z",
+    "retrieval_status": "LIVE"
+  }
+}

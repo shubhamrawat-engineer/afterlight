@@ -1,0 +1,439 @@
+{
+  "status": "SUCCESS",
+  "query": {
+    "identifier": "99942",
+    "category": "ASTEROID",
+    "target_timestamp_utc": "2025-04-20T00:00:00Z"
+  },
+  "scientific_match_verdict": {
+    "coverage_status": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "scientific_rule": "POSSIBLE MATCH indicates coordinates fall within SPHEREx field of view. IMAGE DETECTION requires verified local point-spread flux excess in actual FITS pixels."
+  },
+  "target_coordinates": {
+    "ra_deg": 44.8325,
+    "dec_deg": 15.828805555555554,
+    "coordinate_type": "PREDICTED"
+  },
+  "catalogue_record": {
+    "status": "SUCCESS",
+    "object_id": "99942",
+    "category": "ASTEROID",
+    "dwarf_planet_status": "NOT_APPLICABLE",
+    "classification_label": "CATALOGUE MATCH",
+    "identification": {
+      "fullname": "99942 Apophis (2004 MN4)",
+      "shortname": "99942 Apophis",
+      "designation": "99942",
+      "spkid": "20099942",
+      "kind": "an",
+      "orbit_class_name": "Aten",
+      "orbit_class_code": "ATE"
+    },
+    "hazard_assessment": {
+      "is_neo": true,
+      "is_pha": true,
+      "hazard_note": "Officially designated Potentially Hazardous Asteroid (PHA)"
+    },
+    "orbital_elements": {
+      "epoch_mjd": 2461200.5,
+      "semi_major_axis_au": 0.922,
+      "eccentricity": 0.191,
+      "inclination_deg": 3.34,
+      "perihelion_distance_au": 0.746,
+      "aphelion_distance_au": 1.1,
+      "orbital_period_years": null,
+      "mean_anomaly_deg": 175.0,
+      "condition_code": "0",
+      "data_arc_days": "6599",
+      "rms": "0.26",
+      "orbit_id": "220",
+      "first_obs": "2004-03-15",
+      "last_obs": "2022-04-09",
+      "raw_elements": {
+        "e": {
+          "value": 0.191,
+          "sigma": 1.8e-09,
+          "title": "eccentricity",
+          "units": null
+        },
+        "a": {
+          "value": 0.922,
+          "sigma": 1.6e-09,
+          "title": "semi-major axis",
+          "units": "au"
+        },
+        "q": {
+          "value": 0.746,
+          "sigma": 2.9e-09,
+          "title": "perihelion distance",
+          "units": "au"
+        },
+        "i": {
+          "value": 3.34,
+          "sigma": 9.9e-08,
+          "title": "inclination; angle with respect to x-y ecliptic plane",
+          "units": "deg"
+        },
+        "om": {
+          "value": 204.0,
+          "sigma": 3.1e-06,
+          "title": "longitude of the ascending node",
+          "units": "deg"
+        },
+        "w": {
+          "value": 127.0,
+          "sigma": 3.3e-06,
+          "title": "argument of perihelion",
+          "units": "deg"
+        },
+        "ma": {
+          "value": 175.0,
+          "sigma": 5.3e-07,
+          "title": "mean anomaly",
+          "units": "deg"
+        },
+        "tp": {
+          "value": 2461042.919,
+          "sigma": 7.1e-07,
+          "title": "time of perihelion passage",
+          "units": "TDB"
+        },
+        "per": {
+          "value": 324.0,
+          "sigma": 8.2e-07,
+          "title": "sidereal orbital period",
+          "units": "d"
+        },
+        "n": {
+          "value": 1.11,
+          "sigma": 2.8e-09,
+          "title": "mean motion",
+          "units": "deg/d"
+        },
+        "ad": {
+          "value": 1.1,
+          "sigma": 1.9e-09,
+          "title": "aphelion distance",
+          "units": "au"
+        }
+      }
+    },
+    "physical_parameters": {
+      "absolute_magnitude_h": 19.09,
+      "diameter_km": 0.34,
+      "geometric_albedo": 0.35,
+      "rotation_period_hours": 30.56,
+      "spectral_type_tholen": null,
+      "spectral_type_smass": "Sq",
+      "raw_phys_params": {
+        "H": {
+          "value": 19.09,
+          "sigma": 0.19,
+          "title": "absolute magnitude",
+          "units": null
+        },
+        "G": {
+          "value": 0.24,
+          "sigma": 0.11,
+          "title": "magnitude slope",
+          "units": null
+        },
+        "diameter": {
+          "value": 0.34,
+          "sigma": 0.04,
+          "title": "diameter",
+          "units": "km"
+        },
+        "rot_per": {
+          "value": 30.56,
+          "sigma": 0.01,
+          "title": "rotation period",
+          "units": "h"
+        },
+        "albedo": {
+          "value": 0.35,
+          "sigma": 0.1,
+          "title": "geometric albedo",
+          "units": null
+        },
+        "I": {
+          "value": "50-500",
+          "sigma": null,
+          "title": "thermal inertia",
+          "units": "J/m^2/s^0.5/K"
+        },
+        "spec_B": {
+          "value": "Sq",
+          "sigma": null,
+          "title": "SMASSII spectral type",
+          "units": null
+        }
+      }
+    },
+    "discovery": {
+      "discovery_date": "2004-Jun-19",
+      "discoverer": "Tholen, D. J.",
+      "discovery_site": null
+    },
+    "provenance": {
+      "source_name": "NASA/JPL Small-Body Database (SBDB) API",
+      "source_version": "1.3",
+      "source_url": "https://ssd-api.jpl.nasa.gov/sbdb.api",
+      "retrieval_timestamp_utc": "2026-11-14T14:52:30Z",
+      "retrieval_status": "CACHED"
+    }
+  },
+  "ephemeris_record": {
+    "status": "SUCCESS",
+    "object_id": "99942",
+    "resolved_command": "99942;",
+    "position_label": "PREDICTED",
+    "observer_center": "500@399",
+    "start_time_utc": "2025-04-20",
+    "stop_time_utc": "2025-04-21",
+    "step_size": "1d",
+    "point_count": 2,
+    "ephemeris_points": [
+      {
+        "timestamp_utc": "2025-Apr-20 00:00",
+        "ra_hms": "02 59 19.80",
+        "dec_dms": "+15 49 43.7",
+        "ra_deg": 44.8325,
+        "dec_deg": 15.828805555555554,
+        "apparent_v_magnitude": 21.034,
+        "distance_to_earth_au": 2.801,
+        "distance_to_sun_au": 1.81511063206455,
+        "dra_cosd_arcsec_hr": 157.0694,
+        "ddec_arcsec_hr": 41.67058
+      },
+      {
+        "timestamp_utc": "2025-Apr-21 00:00",
+        "ra_hms": "03 03 40.74",
+        "dec_dms": "+16 06 18.7",
+        "ra_deg": 45.91974999999999,
+        "dec_deg": 16.105194444444447,
+        "apparent_v_magnitude": 21.047,
+        "distance_to_earth_au": 2.811,
+        "distance_to_sun_au": 1.81784858101259,
+        "dra_cosd_arcsec_hr": 156.6757,
+        "ddec_arcsec_hr": 40.69251
+      }
+    ],
+    "provenance": {
+      "source_name": "NASA/JPL Horizons API",
+      "source_version": "1.2",
+      "source_url": "https://ssd.jpl.nasa.gov/api/horizons.api",
+      "retrieval_timestamp_utc": "2026-11-14T14:52:30Z",
+      "retrieval_status": "CACHED"
+    }
+  },
+  "close_approach_record": {
+    "status": "SUCCESS",
+    "query_parameters": {
+      "dist-max": "10LD",
+      "limit": "5",
+      "sort": "date",
+      "des": "99942"
+    },
+    "total_matches": 0,
+    "returned_count": 0,
+    "scientific_disclaimer": "A close approach is NOT automatically an impact threat. Miss distances represent nominal orbit solutions.",
+    "close_approaches": [],
+    "provenance": {
+      "source_name": "NASA/JPL CNEOS Close Approach Data API",
+      "source_version": "1.5",
+      "source_url": "https://ssd-api.jpl.nasa.gov/cad.api",
+      "retrieval_timestamp_utc": "2026-11-14T12:22:35Z",
+      "retrieval_status": "CACHED"
+    }
+  },
+  "impact_risk_record": {
+    "status": "SUCCESS",
+    "object_designation": "99942",
+    "risk_state": "REMOVED_FROM_SENTRY",
+    "removal_date_utc": "2021-02-21 08:22:28",
+    "scientific_explanation": "Object was previously monitored by Sentry but was officially removed on 2021-02-21 08:22:28 after updated observations ruled out all potential impacts.",
+    "impact_probability": 0.0,
+    "palermo_scale_max": null,
+    "torino_scale_max": 0,
+    "provenance": {
+      "source_name": "NASA/JPL Sentry Earth Impact Monitoring API",
+      "source_version": "2.0",
+      "source_url": "https://ssd-api.jpl.nasa.gov/sentry.api",
+      "retrieval_timestamp_utc": "2026-11-14T14:52:30Z",
+      "retrieval_status": "CACHED"
+    }
+  },
+  "spherex_observations": {
+    "match_count": 274,
+    "observations": [
+      {
+        "obs_id": "2025W31_2A_0314_4",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/4/level2_2025W31_2A_0314_4D4_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.190029,
+        "t_max_mjd": 60889.191362,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.85051700579314 12.56603336799653 44.44649734990065 11.5529907037398 43.48920124037163 14.913932341600846 46.9671474125432 15.95361865191008 47.85051700579314 12.56603336799653",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_1",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/4/level2_2025W31_2A_0328_1D4_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.253166,
+        "t_max_mjd": 60889.254498,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.346172410519415 14.257341348742159 43.9189268797962 13.244526645465848 42.950700086930496 16.604535387025756 46.458397704931414 17.645658808390547 47.346172410519415 14.257341348742159",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_1",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/1/level2_2025W31_2A_0328_1D1_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.253166,
+        "t_max_mjd": 60889.254498,
+        "wavelength_min_m": 7.455e-07,
+        "wavelength_max_m": 1.1167e-06,
+        "footprint_region": "POLYGON ICRS 47.345370537598654 14.241470803841848 43.92314956362394 13.223586580073613 42.949121490200085 16.578570378199412 46.450886482940426 17.624398724160056 47.345370537598654 14.241470803841848",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_2",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/1/level2_2025W31_2A_0328_2D1_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.254658,
+        "t_max_mjd": 60889.255991,
+        "wavelength_min_m": 7.455e-07,
+        "wavelength_max_m": 1.1167e-06,
+        "footprint_region": "POLYGON ICRS 47.29187346849159 14.430609792890237 43.86695724336097 13.412738384941672 42.89169713413443 16.767636926418128 46.39698007088478 17.813621804795083 47.29187346849159 14.430609792890237",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_2",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/4/level2_2025W31_2A_0328_2D4_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.254658,
+        "t_max_mjd": 60889.255991,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.292817980632236 14.446539563076415 43.862841790458575 13.43368766642136 42.893268040720436 16.793502982017127 46.40441033282265 17.834994422495413 47.292817980632236 14.446539563076415",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_3",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/4/level2_2025W31_2A_0328_3D4_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.256151,
+        "t_max_mjd": 60889.257483,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.238671469766416 14.635459207890271 43.80583167185175 13.622647594278904 42.83481430612367 16.98241915544449 46.34943787717948 18.02396320306656 47.238671469766416 14.635459207890271",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_3",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/1/level2_2025W31_2A_0328_3D1_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.256151,
+        "t_max_mjd": 60889.257483,
+        "wavelength_min_m": 7.455e-07,
+        "wavelength_max_m": 1.1167e-06,
+        "footprint_region": "POLYGON ICRS 47.237739885842416 14.619539383553843 43.810053779038775 13.601714197824624 42.83341226027915 16.956536686477502 46.34210558974431 18.0025212472543 47.237739885842416 14.619539383553843",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_4",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/1/level2_2025W31_2A_0328_4D1_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.257661,
+        "t_max_mjd": 60889.258993,
+        "wavelength_min_m": 7.455e-07,
+        "wavelength_max_m": 1.1167e-06,
+        "footprint_region": "POLYGON ICRS 47.18296533141485 14.80806761384646 43.75244806930699 13.790308261801648 42.774227296741344 17.145064050715494 46.28658763276494 18.191325221008597 47.18296533141485 14.80806761384646",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W31_2A_0328_4",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W31_2A/l2b-v27-2026-225/4/level2_2025W31_2A_0328_4D4_spx_l2b-v27-2026-225.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60889.257661,
+        "t_max_mjd": 60889.258993,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.18393689985256 14.82419209098243 43.74825798770894 13.811310232331902 42.7757918720127 17.17086633604243 46.29429496579722 18.21267312186602 47.18393689985256 14.82419209098243",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      },
+      {
+        "obs_id": "2025W32_2D_0011_1",
+        "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W32_2D/l2b-v27-2026-226/4/level2_2025W32_2D_0011_1D4_spx_l2b-v27-2026-226.fits",
+        "collection": "spherex_dr1",
+        "format": "image/fits",
+        "t_min_mjd": 60894.551487,
+        "t_max_mjd": 60894.55282,
+        "wavelength_min_m": 2.4027e-06,
+        "wavelength_max_m": 3.8473e-06,
+        "footprint_region": "POLYGON ICRS 47.12274814149174 15.01009892737444 43.68430472176425 13.996950071947017 42.710370756812644 17.356346571046213 46.23224235046217 18.398810272292803 47.12274814149174 15.01009892737444",
+        "provenance": {
+          "archive_service": "NASA/IPAC Infrared Science Archive (IRSA) SIA2",
+          "retrieval_timestamp_utc": "2026-11-14T14:52:34Z",
+          "retrieval_status": "LIVE"
+        }
+      }
+    ]
+  },
+  "image_evidence": null,
+  "provenance": {
+    "cross_reference_engine": "AFTERLIGHT CrossReferenceService v2.1",
+    "execution_timestamp_utc": "2026-11-14T14:52:34Z",
+    "retrieval_status": "LIVE"
+  }
+}

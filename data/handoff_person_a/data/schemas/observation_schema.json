@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AFTERLIGHT SPHEREx Observation Record",
+  "type": "object",
+  "required": [
+    "obs_id",
+    "access_url",
+    "collection",
+    "provenance"
+  ],
+  "properties": {
+    "obs_id": { "type": "string" },
+    "access_url": { "type": "string" },
+    "collection": {
+      "type": "string",
+      "enum": ["spherex_dr1", "spherex_dr1_deep", "spherex_qr3", "spherex_qr3_deep"]
+    },
+    "format": { "type": ["string", "null"] },
+    "t_min_mjd": { "type": ["number", "null"] },
+    "t_max_mjd": { "type": ["number", "null"] },
+    "wavelength_min_m": { "type": ["number", "null"] },
+    "wavelength_max_m": { "type": ["number", "null"] },
+    "footprint_region": { "type": ["string", "null"] },
+    "provenance": { "$ref": "provenance_schema.json" }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "pipeline_version": "2.0-modular",
+  "execution_timestamp_utc": "2026-11-14T09:36:51.271060+00:00",
+  "elapsed_seconds": 38.07,
+  "target": {
+    "id": "COSMOS",
+    "ra_deg": 150.1,
+    "dec_deg": 2.2
+  },
+  "observations": {
+    "earlier": {
+      "obs_id": "2025W17_4B_0486_3",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W17_4B/l2b-v27-2026-196/5/level2_2025W17_4B_0486_3D5_spx_l2b-v27-2026-196.fits",
+      "local_path": "data/raw/selected_pair\\level2_2025W17_4B_0486_3D5_spx_l2b-v27-2026-196.fits",
+      "sha256": "988e5ac51809ddeeb9325ee339500c02fa912ed60aa3932bbdcc8d8532eda4cf",
+      "source_status": "CACHED"
+    },
+    "later": {
+      "obs_id": "2026W19_2A_0619_1",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2026W19_2A/l2b-v27-2026-245/5/level2_2026W19_2A_0619_1D5_spx_l2b-v27-2026-245.fits",
+      "local_path": "data/raw/selected_pair\\level2_2026W19_2A_0619_1D5_spx_l2b-v27-2026-245.fits",
+      "sha256": "32a37705195e6809a56c4976c2473a26e2d0b15fee401ef36c1f78c435407f1e",
+      "source_status": "CACHED"
+    }
+  },
+  "validation": {
+    "validation_verdict": "SCIENTIFICALLY_VERIFIED",
+    "all_criteria_passed": true,
+    "detector": {
+      "f1_detector": 5,
+      "f2_detector": 5,
+      "pass": true
+    },
+    "wavelength": {
+      "f1_wavelength_um": 3.9839,
+      "f2_wavelength_um": 3.98351,
+      "f1_fwhm_um": 0.03651,
+      "f2_fwhm_um": 0.0365,
+      "delta_nm": 0.392,
+      "percent_of_bandpass": 1.07,
+      "pass": true
+    },
+    "roll_angle": {
+      "f1_roll_deg": 0.0,
+      "f2_roll_deg": 0.0,
+      "delta_deg": 0.0,
+      "pass": true
+    },
+    "psf_model": {
+      "max_epsf_diff": 0.0,
+      "identical": true,
+      "convolution_required": false
+    },
+    "target_alignment": {
+      "f1_pixel": [
+        1821.093,
+        1442.241
+      ],
+      "f2_pixel": [
+        1817.123,
+        1443.224
+      ],
+      "pixel_separation": 4.09
+    }
+  },
+  "reprojection_and_overlap": {
+    "total_pixels": 4161600,
+    "full_overlap_pixels": 4145656,
+    "full_overlap_percent": 99.61687812379853,
+    "uncovered_pixels": 15944,
+    "target_in_overlap": true
+  },
+  "target_values": {
+    "f1_image_sub": 0.08679720759391785,
+    "f2_reprojected_sub": -8.889519268174336e-05,
+    "f1_flags": 268435456,
+    "f2_flags": 0
+  },
+  "temporal_difference_summary": {
+    "valid_overlap_pixels": 4144192,
+    "median_difference_mjy_sr": -0.009127632714807987,
+    "nmad_robust_sigma_mjy_sr": 0.05141658117771149,
+    "nmad_robust_sigma_snr": 1.0462889949202536,
+    "target_pixel_difference_mjy_sr": -0.08688610047101974,
+    "target_pixel_snr": -1.8111497163772583
+  },
+  "outputs": {
+    "earlier_reference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\earlier_reference.fits",
+    "later_reprojected_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\later_reprojected.fits",
+    "earlier_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\earlier_aligned.png",
+    "later_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\later_aligned.png",
+    "alignment_preview_diagnostic_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\alignment_preview.png",
+    "temporal_difference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\temporal_difference.fits",
+    "difference_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_preview.png",
+    "difference_statistics_json": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_statistics.json",
+    "difference_processing_report_md": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_processing_report.md"
+  }
+}

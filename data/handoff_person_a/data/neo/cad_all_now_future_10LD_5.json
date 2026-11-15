@@ -1,0 +1,125 @@
+{
+  "status": "SUCCESS",
+  "query_parameters": {
+    "dist-max": "10LD",
+    "limit": "5",
+    "sort": "date"
+  },
+  "total_matches": 17,
+  "returned_count": 5,
+  "scientific_disclaimer": "A close approach is NOT automatically an impact threat. Miss distances represent nominal orbit solutions.",
+  "close_approaches": [
+    {
+      "object_designation": "2026 VV15",
+      "close_approach_date_utc": "2026-Nov-14 07:16",
+      "miss_distance_au": 0.010558206903424,
+      "miss_distance_ld": 4.109,
+      "miss_distance_min_au": 0.0105300875842233,
+      "miss_distance_max_au": 0.010586325886266,
+      "relative_velocity_km_s": 14.9763748727029,
+      "v_infinity_km_s": 14.9595147778012,
+      "absolute_magnitude_h": 26.029,
+      "estimated_diameter_range_meters": {
+        "min_meters": 16.5,
+        "max_meters": 37.0,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VF7",
+      "close_approach_date_utc": "2026-Nov-14 17:58",
+      "miss_distance_au": 0.0244833789168842,
+      "miss_distance_ld": 9.528,
+      "miss_distance_min_au": 0.024411354543047,
+      "miss_distance_max_au": 0.0245554016246779,
+      "relative_velocity_km_s": 7.44085215125045,
+      "v_infinity_km_s": 7.42621199259115,
+      "absolute_magnitude_h": 25.068,
+      "estimated_diameter_range_meters": {
+        "min_meters": 25.8,
+        "max_meters": 57.6,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VV8",
+      "close_approach_date_utc": "2026-Nov-14 23:24",
+      "miss_distance_au": 0.00921911108019568,
+      "miss_distance_ld": 3.588,
+      "miss_distance_min_au": 0.00920569426509738,
+      "miss_distance_max_au": 0.00923252731865494,
+      "relative_velocity_km_s": 6.28119067224384,
+      "v_infinity_km_s": 6.23500780810697,
+      "absolute_magnitude_h": 26.185,
+      "estimated_diameter_range_meters": {
+        "min_meters": 15.4,
+        "max_meters": 34.4,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VK13",
+      "close_approach_date_utc": "2026-Nov-15 19:57",
+      "miss_distance_au": 0.0206668080977635,
+      "miss_distance_ld": 8.043,
+      "miss_distance_min_au": 0.0204871210124935,
+      "miss_distance_max_au": 0.0208464836521069,
+      "relative_velocity_km_s": 8.59424923577915,
+      "v_infinity_km_s": 8.57923474746471,
+      "absolute_magnitude_h": 26.515,
+      "estimated_diameter_range_meters": {
+        "min_meters": 13.2,
+        "max_meters": 29.6,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    },
+    {
+      "object_designation": "2026 VW15",
+      "close_approach_date_utc": "2026-Nov-16 05:26",
+      "miss_distance_au": 0.0131392541619584,
+      "miss_distance_ld": 5.113,
+      "miss_distance_min_au": 0.0130907057861682,
+      "miss_distance_max_au": 0.0131877985276191,
+      "relative_velocity_km_s": 6.06068543422993,
+      "v_infinity_km_s": 6.02713302501224,
+      "absolute_magnitude_h": 27.073,
+      "estimated_diameter_range_meters": {
+        "min_meters": 10.2,
+        "max_meters": 22.9,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    }
+  ],
+  "provenance": {
+    "source_name": "NASA/JPL CNEOS Close Approach Data API",
+    "source_version": "1.5",
+    "source_url": "https://ssd-api.jpl.nasa.gov/cad.api",
+    "retrieval_timestamp_utc": "2026-11-14T14:58:30Z",
+    "retrieval_status": "LIVE"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "pipeline_version": "2.0-modular",
+  "execution_timestamp_utc": "2026-11-14T10:10:04.845836+00:00",
+  "elapsed_seconds": 64.65,
+  "target": {
+    "id": "SPHEREx-D4-COSMOS",
+    "ra_deg": 151.80047329765688,
+    "dec_deg": 2.8105167080158853
+  },
+  "observations": {
+    "earlier": {
+      "obs_id": "2025W17_4B_0043_1",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W17_4B/l2b-v27-2026-196/4/level2_2025W17_4B_0043_1D4_spx_l2b-v27-2026-196.fits",
+      "local_path": "data/raw/cache\\level2_2025W17_4B_0043_1D4_spx_l2b-v27-2026-196.fits",
+      "sha256": "e0e6e8a4dbccb93b41a6d10a025a5f2e2f9c1c9d5412333688fc16920c6bc1df",
+      "source_status": "CACHED_REUSE"
+    },
+    "later": {
+      "obs_id": "2025W19_2B_0103_1",
+      "access_url": "https://irsa.ipac.caltech.edu/ibe/data/spherex/dr1/level2/2025W19_2B/l2b-v27-2026-198/4/level2_2025W19_2B_0103_1D4_spx_l2b-v27-2026-198.fits",
+      "local_path": "data/raw/cache\\level2_2025W19_2B_0103_1D4_spx_l2b-v27-2026-198.fits",
+      "sha256": "e9be43d8fde023e7664767bb09c8ffe536f3fee1e76b1d18b29720092107ad9f",
+      "source_status": "CACHED_REUSE"
+    }
+  },
+  "validation": {
+    "validation_verdict": "SCIENTIFICALLY_VERIFIED",
+    "all_criteria_passed": true,
+    "detector": {
+      "f1_detector": 4,
+      "f2_detector": 4,
+      "pass": true
+    },
+    "wavelength": {
+      "f1_wavelength_um": 3.01064,
+      "f2_wavelength_um": 3.01061,
+      "f1_fwhm_um": 0.0875,
+      "f2_fwhm_um": 0.08749,
+      "delta_nm": 0.036,
+      "percent_of_bandpass": 0.04,
+      "pass": true
+    },
+    "roll_angle": {
+      "f1_roll_deg": 0.0,
+      "f2_roll_deg": 0.0,
+      "delta_deg": 0.0,
+      "pass": true
+    },
+    "psf_model": {
+      "max_epsf_diff": 0.0,
+      "identical": true,
+      "convolution_required": false
+    },
+    "target_alignment": {
+      "f1_pixel": [
+        1019.5,
+        1019.5
+      ],
+      "f2_pixel": [
+        1018.108,
+        1019.565
+      ],
+      "pixel_separation": 1.394
+    }
+  },
+  "reprojection_and_overlap": {
+    "total_pixels": 4161600,
+    "full_overlap_pixels": 4151292,
+    "full_overlap_percent": 99.75230680507498,
+    "uncovered_pixels": 10308,
+    "target_in_overlap": true
+  },
+  "target_values": {
+    "f1_image_sub": 0.03262896090745926,
+    "f2_reprojected_sub": 0.016803765532601888,
+    "f1_flags": 0,
+    "f2_flags": 0
+  },
+  "temporal_difference_summary": {
+    "valid_overlap_pixels": 4149246,
+    "median_difference_mjy_sr": -0.007763625122606754,
+    "nmad_robust_sigma_mjy_sr": 0.017795581365935502,
+    "nmad_robust_sigma_snr": 1.1178133393049239,
+    "target_pixel_difference_mjy_sr": -0.015825195237994194,
+    "target_pixel_snr": -1.08427095413208
+  },
+  "outputs": {
+    "earlier_reference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\earlier_reference.fits",
+    "later_reprojected_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\later_reprojected.fits",
+    "earlier_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\earlier_aligned.png",
+    "later_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\later_aligned.png",
+    "alignment_preview_diagnostic_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\alignment_preview.png",
+    "temporal_difference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\temporal_difference.fits",
+    "difference_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_preview.png",
+    "difference_statistics_json": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_statistics.json",
+    "difference_processing_report_md": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\sessions\\live_stage10_fresh_pair\\difference_processing_report.md"
+  }
+}

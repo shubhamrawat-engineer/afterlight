@@ -1,0 +1,90 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AFTERLIGHT Unified Astronomical Object Record",
+  "description": "Standardized schema for comets, asteroids, dwarf planets, stars, brown dwarfs, and planets.",
+  "type": "object",
+  "required": [
+    "status",
+    "object_id",
+    "category",
+    "classification_label",
+    "identification",
+    "provenance"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["SUCCESS", "NOT_FOUND", "ERROR"]
+    },
+    "object_id": {
+      "type": "string",
+      "description": "Primary user-supplied identifier or search query."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["COMET", "ASTEROID", "DWARF_PLANET", "STAR", "BROWN_DWARF", "SOLAR_SYSTEM_PLANET"]
+    },
+    "dwarf_planet_status": {
+      "type": "string",
+      "enum": ["CONFIRMED_IAU_DWARF_PLANET", "CANDIDATE_DWARF_PLANET", "NOT_APPLICABLE"]
+    },
+    "classification_label": {
+      "type": "string",
+      "enum": ["CATALOGUE MATCH", "PREDICTED", "POSSIBLE MATCH", "IMAGE DETECTION"]
+    },
+    "identification": {
+      "type": "object",
+      "properties": {
+        "fullname": { "type": "string" },
+        "shortname": { "type": "string" },
+        "designation": { "type": "string" },
+        "spkid": { "type": "string" },
+        "orbit_class_name": { "type": ["string", "null"] },
+        "orbit_class_code": { "type": ["string", "null"] }
+      }
+    },
+    "hazard_assessment": {
+      "type": "object",
+      "properties": {
+        "is_neo": { "type": "boolean" },
+        "is_pha": { "type": "boolean" },
+        "hazard_note": { "type": "string" }
+      }
+    },
+    "orbital_elements": {
+      "type": "object",
+      "properties": {
+        "epoch_mjd": { "type": ["number", "null"] },
+        "semi_major_axis_au": { "type": ["number", "null"] },
+        "eccentricity": { "type": ["number", "null"] },
+        "inclination_deg": { "type": ["number", "null"] },
+        "perihelion_distance_au": { "type": ["number", "null"] },
+        "aphelion_distance_au": { "type": ["number", "null"] },
+        "orbital_period_years": { "type": ["number", "null"] },
+        "condition_code": { "type": ["string", "null"] }
+      }
+    },
+    "physical_parameters": {
+      "type": "object",
+      "properties": {
+        "absolute_magnitude_h": { "type": ["number", "null"] },
+        "diameter_km": { "type": ["number", "null"] },
+        "geometric_albedo": { "type": ["number", "null"] },
+        "rotation_period_hours": { "type": ["number", "null"] },
+        "spectral_type_tholen": { "type": ["string", "null"] },
+        "spectral_type_smass": { "type": ["string", "null"] }
+      }
+    },
+    "coordinates": {
+      "type": "object",
+      "properties": {
+        "ra_deg": { "type": "number" },
+        "dec_deg": { "type": "number" },
+        "coordinate_system": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "$ref": "provenance_schema.json"
+    }
+  }
+}

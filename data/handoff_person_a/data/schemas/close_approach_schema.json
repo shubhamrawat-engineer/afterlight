@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AFTERLIGHT NEO Close Approach Record",
+  "type": "object",
+  "required": [
+    "status",
+    "close_approaches",
+    "scientific_disclaimer",
+    "provenance"
+  ],
+  "properties": {
+    "status": { "type": "string" },
+    "scientific_disclaimer": { "type": "string" },
+    "returned_count": { "type": "integer" },
+    "close_approaches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["object_designation", "close_approach_date_utc", "miss_distance_au"],
+        "properties": {
+          "object_designation": { "type": "string" },
+          "close_approach_date_utc": { "type": "string" },
+          "miss_distance_au": { "type": "number" },
+          "miss_distance_ld": { "type": ["number", "null"] },
+          "relative_velocity_km_s": { "type": ["number", "null"] },
+          "absolute_magnitude_h": { "type": ["number", "null"] },
+          "estimated_diameter_range_meters": {
+            "type": "object",
+            "properties": {
+              "min_meters": { "type": ["number", "null"] },
+              "max_meters": { "type": ["number", "null"] }
+            }
+          }
+        }
+      }
+    },
+    "provenance": { "$ref": "provenance_schema.json" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "status": "SUCCESS",
+  "object_designation": "1P",
+  "risk_state": "NO_PUBLISHED_IMPACT_SOLUTION",
+  "scientific_explanation": "This object is not currently listed in the JPL Sentry Risk Table. No published potential impact solutions exist for its current orbit solution.",
+  "impact_probability": null,
+  "palermo_scale_max": null,
+  "torino_scale_max": null,
+  "provenance": {
+    "source_name": "NASA/JPL Sentry Earth Impact Monitoring API",
+    "source_version": "2.0",
+    "source_url": "https://ssd-api.jpl.nasa.gov/sentry.api?des=1P",
+    "retrieval_timestamp_utc": "2026-11-14T12:22:30Z",
+    "retrieval_status": "LIVE"
+  }
+}

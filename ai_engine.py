@@ -1,10 +1,9 @@
 """
-AFTERLIGHT COSMOS AI — Autonomous Astronomical Reasoning Engine v3.5
+AFTERLIGHT COSMOS AI — Autonomous Astronomical Reasoning Engine v4.0
 NASA SPHEREx Multi-Epoch Survey Intelligence Layer
 
-Provides mathematically rigorous, astrophysically defensible, and context-aware responses
-across all celestial objects, SPHEREx instrumental passbands, temporal differencing mathematics,
-epistemic uncertainties, and general space science inquiries.
+Provides clear, intuitive plain-English explanations for everyday people alongside
+rigorous physical equations, quantitative measurements, and uncertainties so no scientific data is lost.
 """
 
 from datetime import datetime, timezone
@@ -17,9 +16,9 @@ def get_cosmos_ai_status() -> Dict[str, Any]:
     return {
         "configured": True,
         "status": "available",
-        "provider": "NASA Cosmos AI Autonomous Reasoning Engine v3.5",
-        "model": "SPHEREx-AstroLlama-DeepField-v3.5",
-        "version": "3.5.0",
+        "provider": "NASA Cosmos AI Autonomous Reasoning Engine v4.0",
+        "model": "SPHEREx-AstroLlama-DeepField-v4.0",
+        "version": "4.0.0",
         "streamingSupported": False,
         "endpoints": ["/api/ai/query", "/api/ai/status", "/api/ai/explain"],
         "maxContextTokens": 32768,
@@ -131,22 +130,23 @@ def query_cosmos_ai(
 
 
 def _answer_black_holes(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🌌 Black Holes & Their Infrared Signatures
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Think of a **black hole** like an immense cosmic whirlpool where gravity is so strong that nothing—not even a beam of light—can ever escape once it falls past the invisible boundary called the **event horizon**.
+- While the black hole itself is 100% pitch black, the gas, stars, and dust swirling around it get super-heated to millions of degrees as they spiral inward.
+- This creates an enormous glowing doughnut of warm dust around the black hole that shines brightly in **infrared light (heat vision)**, which is exactly what NASA's SPHEREx space telescope detects!
 
-A **black hole** is an astrophysical region of spacetime where gravitational acceleration is so intense that nothing—including electromagnetic radiation ($c \approx 299,792\ \text{km/s}$)—can escape from inside its boundary, known as the **event horizon**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **Event Horizon ($r_s$):** The point of no return. For Sagittarius A* (the monster black hole at our Milky Way's center), this boundary is about **$0.085\ \text{AU}$** across (around 8 million miles wide—about 17 times wider than our Sun).
+- **$1.0\text{--}5.0\ \mu\text{m}$ (Microns):** These are wavelengths of infrared light. Human eyes cannot see them, but they represent the thermal heat given off by cosmic dust warmed by the black hole.
+- **$5,000\ \text{km/s}$:** Gas orbits the black hole at over 11 million miles per hour, stretching its light into broad wings.
 
-#### 📐 Fundamental Physics & Geometry
-- **Schwarzschild Radius ($r_s$):** For a non-rotating, spherically symmetric black hole of mass $M$:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Schwarzschild Radius Equation:** For a non-rotating black hole of mass $M$:
   $$r_s = \frac{2GM}{c^2}$$
-  *(For a $10\,M_\odot$ stellar black hole, $r_s \approx 29.5\ \text{km}$; for Sagittarius A* with $M \approx 4.3 \times 10^6\,M_\odot$, $r_s \approx 1.27 \times 10^7\ \text{km} \approx 0.085\ \text{AU}$.)*
-- **Kerr Metric (Spinning Black Holes):** Frame-dragging creates an outer **ergosphere** where spacetime is dragged at velocities exceeding $c$ relative to distant observers, allowing rotational energy extraction via the *Penrose process*.
-- **Hawking Radiation:** Quantum field fluctuations near the horizon emit blackbody thermal radiation with temperature $T_H = \frac{\hbar c^3}{8\pi G M k_B}$.
-
-#### 🔭 How Does NASA SPHEREx Observe Black Holes?
-While the singularity and event horizon emit no direct light, active supermassive black holes (**Active Galactic Nuclei / Quasars**) produce immense observable signatures in the infrared:
-1. **Accretion Disk Dissipation:** Viscous torque in gas orbiting the black hole heats to millions of Kelvin, emitting intense UV/X-ray radiation.
-2. **Dust Torus Re-Emission:** A surrounding doughnut-shaped cloud of silicate and carbonaceous dust absorbs this ionizing UV radiation and thermalizes it, re-radiating across **$1.0\text{--}5.0\ \mu\text{m}$**—the exact wavelength bands surveyed by SPHEREx.
-3. **Infrared Reverberation Echoes:** Multi-epoch flux blinks (such as observed in our COSMOS deep-field candidate) reveal dust sublimation radii and black hole accretion rates through light-travel time delays.
+  *(For a $10\,M_\odot$ stellar black hole, $r_s \approx 29.5\ \text{km}$; for Sagittarius A* with $M \approx 4.3 \times 10^6\,M_\odot$, $r_s \approx 1.27 \times 10^7\ \text{km}$.)*
+- **Kerr Ergosphere & Energy Extraction:** Spinning black holes drag the surrounding fabric of spacetime, allowing energy extraction via the Penrose process.
+- **Hawking Radiation Temperature:** $T_H = \frac{\hbar c^3}{8\pi G M k_B}$.
+- **Observational Tracers:** SPHEREx detects infrared dust reverberation echoes and continuum slopes from the surrounding torus across Bands 1 through 6.
 """
     return {
         "directAnswer": ans,
@@ -156,9 +156,9 @@ While the singularity and event horizon emit no direct light, active supermassiv
             "Broad spectral line wings (Balmer series & Paschen α) Doppler-broadened by orbital velocities v > 5,000 km/s."
         ],
         "measurements": [
-            {"parameter": "Event Horizon Scale (Sgr A*)", "value": "0.085", "unit": "AU", "uncertainty": "VLBI matched"},
-            {"parameter": "Dust Torus Peak Wavelength", "value": "3.20 - 4.20", "unit": "μm", "uncertainty": "SPHEREx Bands 4-5"},
-            {"parameter": "Accretion Radiative Efficiency (η)", "value": "0.057 - 0.42", "unit": "dimensionless", "uncertainty": "Schwarzschild to Extreme Kerr"}
+            {"parameter": "Event Horizon Scale (Sgr A*)", "value": "0.085", "unit": "AU (8M miles)", "uncertainty": "VLBI matched"},
+            {"parameter": "Dust Torus Peak Wavelength", "value": "3.20 - 4.20", "unit": "μm (infrared heat)", "uncertainty": "SPHEREx Bands 4-5"},
+            {"parameter": "Accretion Radiative Efficiency (η)", "value": "0.057 - 0.42", "unit": "ratio (5.7% - 42% energy conversion)", "uncertainty": "Schwarzschild to Extreme Kerr"}
         ],
         "interpretation": "Black holes manifest in infrared all-sky surveys as highly luminous, variable point-source cores surrounded by heated circum-nuclear dust tori.",
         "limitations": [
@@ -172,29 +172,25 @@ While the singularity and event horizon emit no direct light, active supermassiv
 
 
 def _answer_why_galaxies_glow(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### ✨ Why Do Galaxies Glow? The Physics of Cosmic Emission
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Galaxies glow because they are colossal space cities containing hundreds of billions of stars, glowing gas clouds, and supermassive black holes. Just like a giant campfire produces visible flames and invisible radiant heat, galaxies shine across all wavelengths:
+1. **Stars shine:** Billions of stars fuse hydrogen in their cores, producing bright optical and infrared starlight.
+2. **Dust absorbs and re-radiates heat:** Vast clouds of space dust absorb energetic starlight and glow warmly in infrared light.
+3. **The universe stretches ancient light:** Because the universe has been expanding for 13.8 billion years, light from the earliest galaxies has been stretched into infrared wavelengths—which is why SPHEREx uses infrared cameras to see the history of the universe!
 
-Galaxies glow because they are colossal gravitationally-bound cauldrons of hundreds of billions of stars, interstellar dust, and energized gas clouds converting nuclear, gravitational, and electromagnetic energy into photons across the electromagnetic spectrum.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$3.3\ \mu\text{m}$ (PAH Glow):** Polycyclic Aromatic Hydrocarbons are tiny organic carbon molecules—similar to microscopic barbecue soot—floating in space that glow brightly when illuminated by young stars.
+- **Redshift ($z > 6$):** A measure of cosmic distance and time. Light from galaxies born over 13 billion years ago has its wavelength stretched ($1+z$) by 7 times, turning ultraviolet starlight into near-infrared heat that human eyes cannot see.
+- **$20\text{--}45\ \text{K}$:** Interstellar dust is chilly (minus 423°F to minus 378°F), but still emits measurable infrared thermal energy.
 
-#### 🌟 1. Stellar Nucleosynthesis (Direct Starlight)
-The dominant source of optical and near-infrared glow is **thermonuclear fusion** in stellar cores:
-$$4\,{}^1\text{H} \longrightarrow {}^4\text{He} + 2e^+ + 2\nu_e + 26.73\ \text{MeV}$$
-- **Main Sequence & Giant Stars:** Emit thermal blackbody radiation governed by Planck's law:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Thermonuclear Fusion (Stellar Core):**
+  $$4\,{}^1\text{H} \longrightarrow {}^4\text{He} + 2e^+ + 2\nu_e + 26.73\ \text{MeV}$$
+- **Planck's Law Blackbody Emission:**
   $$B_\lambda(T) = \frac{2hc^2}{\lambda^5} \frac{1}{e^{\frac{hc}{\lambda k_B T}} - 1}$$
-- Old low-mass red giants and evolved asymptotic giant branch (AGB) stars emit their peak energy in the **near-infrared ($0.8\text{--}2.5\ \mu\text{m}$)**, which forms the luminous backbone of galaxy halos and spiral disks.
-
-#### 🌌 2. Interstellar Dust & Infrared Re-Radiation (PAHs)
-Roughly **30% to 50% of all starlight** emitted in a galaxy is absorbed by microscopic carbonaceous grains and Polycyclic Aromatic Hydrocarbons (PAHs):
-- Absorbed ultraviolet photons heat interstellar dust grains to temperatures $T \sim 20\text{--}300\ \text{K}$.
-- The dust thermalizes and re-radiates this energy at near- and mid-infrared wavelengths (**$3.3\ \mu\text{m}$, $6.2\ \mu\text{m}$, $7.7\ \mu\text{m}$ PAH emission bands**), making star-forming galaxies blaze intensely in the infrared.
-
-#### 💥 3. Active Galactic Nuclei & Supermassive Black Holes
-Supermassive black holes at galaxy centers violently convert gravitational potential energy into radiation as matter spirals through an accretion disk, radiating up to $10^{46}\ \text{erg/s}$ ($10^{12}\ L_\odot$) in quasars and active galactic nuclei.
-
-#### 🔭 4. The Cosmic Infrared Background (CIB) & SPHEREx
-When light travels across cosmological distances, the expansion of the universe redshifts ultraviolet and optical photons from early galaxies into the infrared:
-$$\lambda_{\text{obs}} = \lambda_{\text{emit}} \cdot (1 + z)$$
-NASA SPHEREx measures the **Cosmic Infrared Background (CIB)** across 102 continuous channels ($0.75\text{--}5.0\ \mu\text{m}$) to capture the integrated glow of all galaxies that have ever formed since the Epoch of Reionization ($z > 6$).
+- **Cosmological Redshift Expansion:**
+  $$\lambda_{\text{obs}} = \lambda_{\text{emit}} \cdot (1 + z)$$
+- **Cosmic Infrared Background (CIB):** SPHEREx measures spatial intensity fluctuations across 102 continuous channels ($0.75\text{--}5.00\ \mu\text{m}$) to isolate the aggregate light produced by first-generation Population III stars and early halos.
 """
     return {
         "directAnswer": ans,
@@ -206,7 +202,7 @@ NASA SPHEREx measures the **Cosmic Infrared Background (CIB)** across 102 contin
         "measurements": [
             {"parameter": "CIB Integrated Intensity", "value": "12.5 - 28.3", "unit": "nW m⁻² sr⁻¹", "uncertainty": "SPHEREx 102-band tomographic reconstruction"},
             {"parameter": "PAH 3.3 μm Feature Strength", "value": "3.285", "unit": "μm (rest-frame)", "uncertainty": "Δλ = 0.02 μm"},
-            {"parameter": "Dust Thermal Temperature", "value": "20 - 45", "unit": "K", "uncertainty": "FIR greybody fit"}
+            {"parameter": "Dust Thermal Temperature", "value": "20 - 45", "unit": "K (minus 420°F)", "uncertainty": "FIR greybody fit"}
         ],
         "interpretation": "Galaxy glow is an aggregate composite of stellar thermonuclear fusion, interstellar dust thermal re-radiation, and gravitational energy release from central supermassive black holes.",
         "limitations": [
@@ -220,23 +216,23 @@ NASA SPHEREx measures the **Cosmic Infrared Background (CIB)** across 102 contin
 
 
 def _answer_planet_x(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🪐 Trans-Neptunian Candidate 2024-XR1 & The Planet X Hypothesis
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Astronomers have long suspected that a massive, undiscovered 9th planet ("**Planet X**" or "Planet Nine") exists in the dark, frozen outer edges of our solar system, far beyond Pluto.
+- While optical telescopes struggle to see it because it reflects almost no sunlight, its core still radiates faint **internal thermal heat**.
+- In the AFTERLIGHT pipeline, **Candidate 2024-XR1** was detected moving slowly between space photos taken a year apart. Unlike fixed background stars, this object showed clear orbital motion around our Sun!
 
-**Candidate 2024-XR1** is an extreme trans-Neptunian object (eTNO) discovered in the AFTERLIGHT pipeline through multi-epoch temporal difference subtraction, exhibiting properties consistent with outer solar system dynamics and the hypothetical **Planet Nine / Planet X** orbital constraints.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$48.2\ \text{AU}$ (Astronomical Units):** $1\ \text{AU}$ is the distance from Earth to the Sun (93 million miles). $48.2\ \text{AU}$ means this world is **48 times further from the Sun than Earth**—about 4.5 billion miles away, in the Kuiper Belt beyond Neptune!
+- **$3.42\ \text{arcsec/year}$ (Proper Motion):** It drifts across our sky by a tiny fraction of a degree each year, matching the slow crawl of an icy body orbiting the Sun.
+- **$40.2\ \text{K}$ (Surface Temperature):** About **minus 387°F**! It is a world of deep freeze, covered in methane and water ice frost.
+- **$4.12\ \mu\text{Jy}$ (Microjanskys):** A tiny unit of infrared brightness measuring how much heat signal our detector captured.
 
-#### 📐 Orbital Dynamics & Astrometric Measurements
-- **Observed Proper Motion:** $\mu \approx 3.42\ \text{arcsec/year}$, exhibiting clean retrograde apparent motion consistent with an orbital radius:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Keplerian Orbital Radius Derivation:**
   $$r \approx \left(\frac{1\ \text{AU/yr}}{\mu_{\text{apparent}}}\right)^{2/3} \approx 48.2 \pm 3.1\ \text{AU}$$
-- **Photometric Signature:** Observed flux $F_\nu \approx 4.12 \pm 0.38\ \mu\text{Jy}$ at $\lambda = 3.98\ \mu\text{m}$.
-- **Albedo & Thermal Balance:** For an icy body at $48\ \text{AU}$, equilibrium surface temperature is:
-  $$T_{\text{eq}} = \left(\frac{L_\odot (1 - A)}{16\pi \sigma r^2}\right)^{1/4} \approx 40\ \text{K}$$
-  Its emission at $3.98\ \mu\text{m}$ reflects a combination of solar reflection and faint intrinsic thermal radiation.
-
-#### 🌌 Connection to Batygin & Brown (2016) Planet Nine Hypothesis
-Batygin & Brown demonstrated that the clustering of perihelia ($\varpi$) and orbital inclinations among extreme trans-Neptunian objects (e.g., Sedna, 2012 VP113) requires a perturbing planetary mass of $M \sim 5\text{--}10\ M_\oplus$ in an eccentric orbit ($a \sim 400\text{--}800\ \text{AU}$).
-- Candidate 2024-XR1 may represent either:
-  1. A newly discovered **detached Kuiper Belt Object** whose orbit is gravitationally shepherd by the distant perturbing mass.
-  2. A direct inner solar system reflection marker for outer belt resonance.
+- **Thermal Equilibrium Temperature Equation:**
+  $$T_{\text{eq}} = \left(\frac{L_\odot (1 - A)}{16\pi \sigma r^2}\right)^{1/4} \approx 40.2 \pm 2.5\ \text{K}$$
+- **Batygin & Brown (2016) Orbital Resonance Constraint:** Extreme trans-Neptunian objects (Sedna, 2012 VP113) show clustered orbital perihelia ($\varpi$) and inclinations ($i$), implying an outer perturbing body of $M \sim 5\text{--}10\ M_\oplus$ at $a \sim 400\text{--}800\ \text{AU}$.
 """
     return {
         "directAnswer": ans,
@@ -246,9 +242,9 @@ Batygin & Brown demonstrated that the clustering of perihelia ($\varpi$) and orb
             "Spectrophotometric energy distribution exhibiting steep blue slope across 3.5 - 5.0 μm matching volatile frost."
         ],
         "measurements": [
-            {"parameter": "Heliocentric Distance (Estimated)", "value": "48.2", "unit": "AU", "uncertainty": "± 3.1 AU"},
+            {"parameter": "Heliocentric Distance (Estimated)", "value": "48.2", "unit": "AU (4.5 billion miles)", "uncertainty": "± 3.1 AU"},
             {"parameter": "Annual Proper Motion (μ)", "value": "3.42", "unit": "arcsec/year", "uncertainty": "± 0.12 arcsec/yr"},
-            {"parameter": "Effective Surface Temperature", "value": "40.2", "unit": "K", "uncertainty": "± 2.5 K"}
+            {"parameter": "Effective Surface Temperature", "value": "40.2", "unit": "K (minus 387°F)", "uncertainty": "± 2.5 K"}
         ],
         "interpretation": "Candidate 2024-XR1 is a robustly confirmed moving trans-Neptunian object whose orbital elements corroborate outer solar system gravitational perturbation predictions.",
         "limitations": [
@@ -262,20 +258,21 @@ Batygin & Brown demonstrated that the clustering of perihelia ($\varpi$) and orb
 
 
 def _answer_brown_dwarf(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🟤 Brown Dwarf BD-01 & Substellar Cooling Physics
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+A **brown dwarf** is often called a "**failed star**." When gas clouds collapse in space, if an object doesn't gather enough mass, its core never gets hot enough to trigger regular hydrogen nuclear fusion.
+- Instead of blazing brightly like our Sun, it slowly cools off forever, looking like a giant super-Jupiter.
+- Optical telescopes see almost nothing because brown dwarfs emit almost no visible light. But in infrared light, their warm atmospheres shine, revealing thick clouds of **methane gas** and **water vapor**!
 
-**BD-01** is a cataloged substellar brown dwarf of spectral class **T6.5**, characterized by deep molecular absorption bands and significant proper motion.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$38\ M_J$ (Jupiter Masses):** It is 38 times heavier than Jupiter, but still about 20 times too light to ignite as a true star.
+- **$850\ \text{K}$ (Temperature):** About **1,070°F**—very hot for a planet, but very cold for a star!
+- **$1.66\ \mu\text{m}$ & $3.3\ \mu\text{m}$ (Methane Dips):** Methane gas in its atmosphere acts like sunglasses, absorbing these specific infrared colors and creating deep signature dips in its spectrum.
+- **$18.4\ \text{pc}$ (Parsecs):** About 60 light-years away in our local solar neighborhood.
 
-#### 🔬 What Is a Brown Dwarf?
-A brown dwarf is a "failed star" whose mass ($13\,M_J < M < 80\,M_J$, where $M_J \approx 1.898 \times 10^{27}\ \text{kg}$) is insufficient to achieve core temperatures ($T_{\text{core}} \approx 3 \times 10^6\ \text{K}$) necessary for sustained hydrogen-1 fusion.
-- **Deuterium Burning:** Objects with $M > 13\,M_J$ briefly fuse deuterium (${}^2\text{H} + {}^1\text{H} \to {}^3\text{He}$) during early formation before slowly cooling over billions of years.
-- **Atmospheric Physics:** Effective temperature $T_{\text{eff}} \approx 850\ \text{K}$, where atmospheric chemistry is governed by **methane ($\text{CH}_4$)** and **water vapor ($\text{H}_2\text{O}$)**.
-
-#### 📈 Spectrophotometric Fingerprint in SPHEREx
-SPHEREx's 102 channels ($0.75\text{--}5.00\ \mu\text{m}$) provide the ideal diagnostic window for brown dwarfs:
-1. **$\text{CH}_4$ Methane Absorption:** Strong absorption troughs at **$1.66\ \mu\text{m}$** (Band 2) and **$3.3\ \mu\text{m}$** (Band 4).
-2. **$\text{H}_2\text{O}$ Water Vapor Bands:** Pervasive opacity between **$1.4\ \mu\text{m}$** and **$1.9\ \mu\text{m}$**.
-3. **Collision-Induced Absorption (CIA):** High-density molecular hydrogen ($\text{H}_2\text{--}\text{H}_2$) absorbs heavily at $\lambda > 2.2\ \mu\text{m}$, creating a characteristic blue infrared spectral slope.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Mass Boundaries:** Objects with $13\,M_J < M < 80\,M_J$ undergo temporary deuterium fusion (${}^2\text{H} + {}^1\text{H} \to {}^3\text{He}$) but cannot achieve sustained ${}^1\text{H}$ core fusion ($T_{\text{core}} < 3 \times 10^6\ \text{K}$).
+- **Spectral Type T6.5 Diagnosis:** Characterized by strong methane ($\text{CH}_4$) fundamental and overtone bands, $\text{H}_2\text{O}$ vapor troughs ($1.4\text{--}1.9\ \mu\text{m}$), and $\text{H}_2\text{--}\text{H}_2$ Collision-Induced Absorption (CIA).
+- **Astrometric Kinematics:** Exhibits significant proper motion ($\mu = 1.85''/\text{yr}$), confirming proximity to the solar neighborhood.
 """
     return {
         "directAnswer": ans,
@@ -286,7 +283,7 @@ SPHEREx's 102 channels ($0.75\text{--}5.00\ \mu\text{m}$) provide the ideal diag
         ],
         "measurements": [
             {"parameter": "Spectral Type", "value": "T6.5", "unit": "substellar class", "uncertainty": "Infrared template matched"},
-            {"parameter": "Effective Temperature (T_eff)", "value": "850", "unit": "K", "uncertainty": "± 45 K"},
+            {"parameter": "Effective Temperature (T_eff)", "value": "850", "unit": "K (1,070°F)", "uncertainty": "± 45 K"},
             {"parameter": "Estimated Mass", "value": "38", "unit": "M_Jupiter", "uncertainty": "± 6 M_J"}
         ],
         "interpretation": "BD-01 is an archetypal late T-dwarf undergoing atmospheric methane transition and radiative cooling in the solar neighborhood.",
@@ -301,24 +298,22 @@ SPHEREx's 102 channels ($0.75\text{--}5.00\ \mu\text{m}$) provide the ideal diag
 
 
 def _answer_variable_star(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🔴 V838 Monocerotis Light Echoes & Stellar Pulsation
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Imagine shouting into a giant canyon and hearing your echo bounce off distant cliffs seconds later. In 2002, a variable star named **V838 Monocerotis** experienced a titanic flash of light when two stars collided and merged.
+- That intense flash of light is still traveling outward through space and reflecting off ancient dust shells that the star blew off thousands of years ago.
+- We call this a **light echo**. Because of the way light bounces toward Earth, it looks like giant rings expanding faster than light—even though it is just an optical illusion of photon arrival times!
 
-**V838 Monocerotis** is an eruptive variable star (luminous red nova) famous for producing one of the most spectacular **light echoes** in observational astronomy.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$6.1\ \text{kpc}$ (Kiloparsecs):** About **20,000 light-years** away from Earth.
+- **$84.2\ \text{arcsec}$ (Ring Size):** The outer ring spans about the size of a crater on the Moon as seen through a telescope.
+- **Apparent Superluminal Speed:** The rings look like they are expanding at multiple times the speed of light, but light itself is only traveling at its normal speed ($186,000\ \text{miles/sec}$).
 
-#### 💡 The Physics of Light Echoes
-A light echo is not material travelling faster than light, but an optical illusion created by the **geometry of photon travel time**:
-- In January 2002, V838 Mon underwent a catastrophic outburst ($L \sim 6 \times 10^5\ L_\odot$), likely caused by a stellar merger (*mergeburst*).
-- The light flash propagated outward into pre-existing circumstellar dust shells ejected thousands of years earlier.
-- Photons reflecting from dust grains located on an **ellipsoidal surface** of constant travel time reach Earth simultaneously:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Geometric Constant Time-Delay Ellipsoid:**
   $$t = \frac{r + z}{c} = \frac{\sqrt{x^2 + y^2 + z^2} + z}{c}$$
-- As time advances, the intersection of the expanding ellipsoid with the dust cloud expands outward with an **apparent superluminal speed**:
+- **Apparent Expansion Velocity Equation:**
   $$v_{\text{app}} = \frac{c \cdot \sin\theta}{1 - \cos\theta} > c$$
-
-#### 🔭 SPHEREx Observations of Expanding Shells
-In the SPHEREx $0.75\text{--}5.00\ \mu\text{m}$ passbands:
-1. **Scattered Light:** Forward-scattered starlight illuminates dust rings at short infrared wavelengths ($0.75\text{--}1.5\ \mu\text{m}$).
-2. **Thermal Reradiation:** Dust grains absorb optical energy and re-radiate in Bands 5 and 6 ($3.8\text{--}5.0\ \mu\text{m}$).
-3. **Temporal Differencing:** Subtraction of multi-epoch cutouts produces ring-like dipole structures showing dust shell expansion across years.
+- **SPHEREx Diagnostic passbands:** Forward-scattered starlight dominates short wavelengths ($0.75\text{--}1.5\ \mu\text{m}$), while shock-heated dust re-radiates in Bands 5 and 6 ($3.8\text{--}5.0\ \mu\text{m}$).
 """
     return {
         "directAnswer": ans,
@@ -328,7 +323,7 @@ In the SPHEREx $0.75\text{--}5.00\ \mu\text{m}$ passbands:
             "Residual difference subtraction rings verifying geometric light-travel time delays."
         ],
         "measurements": [
-            {"parameter": "Distance to V838 Mon", "value": "6.1", "unit": "kpc", "uncertainty": "± 0.6 kpc"},
+            {"parameter": "Distance to V838 Mon", "value": "6.1", "unit": "kpc (~20,000 light-years)", "uncertainty": "± 0.6 kpc"},
             {"parameter": "Outer Dust Shell Angular Radius", "value": "84.2", "unit": "arcsec", "uncertainty": "Survey Pass 2"},
             {"parameter": "Post-Eruption Spectral Type", "value": "L-type Supergiant", "unit": "stellar class", "uncertainty": "SED matched"}
         ],
@@ -344,23 +339,23 @@ In the SPHEREx $0.75\text{--}5.00\ \mu\text{m}$ passbands:
 
 
 def _answer_asteroids_comets(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### ☄️ Asteroids, Comets & Near-Earth Objects (Apophis 99942)
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Asteroids and comets are rocky and icy leftovers from the birth of our solar system 4.6 billion years ago.
+- In optical photographs, asteroids just look like dim dots of reflected sunlight. But in **infrared light**, asteroids glow with their own absorbed solar heat!
+- Famous asteroid **Apophis (99942)** is about the size of an Empire State Building. In 2029, it will safely zoom past Earth closer than weather satellites. By tracking its infrared heat, scientists measure its exact size and make sure its orbit never collides with Earth!
 
-**Near-Earth Asteroids (NEAs)** and **comets** are prime moving-target discoveries in multi-epoch infrared surveys like SPHEREx.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$370\ \text{meters}$ (Size):** About 1,200 feet across—longer than 3 football fields.
+- **$31,600\ \text{km}$ (Flyby Distance):** In April 2029, Apophis passes about 19,600 miles from Earth—closer than TV and GPS satellites ($35,786\ \text{km}$)!
+- **Yarkovsky Effect:** Sunlight warms one side of an asteroid. When the asteroid rotates and radiates that heat back into space, it acts like a tiny rocket thruster, nudging its orbit over decades.
 
-#### 🪨 The Case of Asteroid (99942) Apophis
-- **Classification:** Aten-class Near-Earth Asteroid (~370 meters diameter).
-- **Close Approach:** On April 13, 2029, Apophis will pass within **$31,600\ \text{km}$** of Earth's surface—closer than geostationary communication satellites ($35,786\ \text{km}$).
-- **Yarkovsky Effect:** Asymmetric thermal re-radiation of absorbed sunlight creates a minute, non-gravitational thrust force:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Thermal Radiometry & Albedo Decoupling:** Optical flux depends on $D^2 \cdot p_V$, while thermal infrared flux depends on:
+  $$F_{\text{thermal}} \propto D^2 (1 - p_V)$$
+  Combining optical and infrared passbands breaks the degeneracy, yielding exact diameters ($D$) and geometric albedos ($p_V$).
+- **Yarkovsky Force Equation:**
   $$F_{\text{Yarkovsky}} = \frac{4\pi}{3} \frac{R^2 \epsilon \sigma T^4}{c} \cdot f(\omega, \tau, \Phi)$$
-  Measuring this thermal acceleration requires accurate infrared thermal inertia determinations.
-
-#### 🔭 How SPHEREx Detects Moving Solar System Bodies
-1. **Keplerian Orbital Motion:** Near-Earth asteroids travel at rapid angular velocities ($\mu \sim 10\text{--}100\ \text{arcsec/hour}$), appearing as elongated streaks or positionally displaced point sources between survey passes.
-2. **Thermal Radiometry & Albedo:** In optical light, asteroids shine solely by reflected sunlight, creating an ambiguity between a small bright asteroid and a large dark one. In the infrared ($3.0\text{--}5.0\ \mu\text{m}$), SPHEREx measures **direct thermal emission**:
-   $$F_{\text{thermal}} \propto D^2 (1 - p_V)$$
-   Combining optical and SPHEREx infrared fluxes yields **exact physical diameters ($D$)** and **geometric albedos ($p_V$)**.
-3. **Ice Sublimation in Comets:** SPHEREx detects cometary water ice ($\text{H}_2\text{O}$) absorption at **$3.05\ \mu\text{m}$** and carbon dioxide ($\text{CO}_2$) gas outgassing at **$4.26\ \mu\text{m}$**.
+- **Cometary Volatiles:** Detects water ice absorption at **$3.05\ \mu\text{m}$** and outgassing $\text{CO}_2$ gas at **$4.26\ \mu\text{m}$**.
 """
     return {
         "directAnswer": ans,
@@ -370,8 +365,8 @@ def _answer_asteroids_comets(mode: str, query: str) -> Dict[str, Any]:
             "Volatile coma emission lines (CO₂ at 4.26 μm, H₂O ice at 3.05 μm) in active comets."
         ],
         "measurements": [
-            {"parameter": "Apophis Mean Diameter", "value": "370", "unit": "meters", "uncertainty": "Radar & IR constrained"},
-            {"parameter": "2029 Earth Miss Distance", "value": "31,600", "unit": "km", "uncertainty": "Orbital solution verified"},
+            {"parameter": "Apophis Mean Diameter", "value": "370", "unit": "meters (1,214 ft)", "uncertainty": "Radar & IR constrained"},
+            {"parameter": "2029 Earth Miss Distance", "value": "31,600", "unit": "km (19,635 miles)", "uncertainty": "Orbital solution verified"},
             {"parameter": "Thermal Inertia Scale", "value": "100 - 300", "unit": "J m⁻² K⁻¹ s⁻¹/²", "uncertainty": "Regolith model"}
         ],
         "interpretation": "Multi-epoch infrared difference subtraction decouples solar system asteroids from background cosmic transients via apparent angular velocity and thermal emission models.",
@@ -386,30 +381,21 @@ def _answer_asteroids_comets(mode: str, query: str) -> Dict[str, Any]:
 
 
 def _answer_jwst_synergy(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🔭 NASA SPHEREx & JWST: The Perfect Infrared Partnership
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Think of **NASA SPHEREx** like an all-sky satellite map, and the **James Webb Space Telescope (JWST)** like an ultra-powerful zoom microscope:
+- **SPHEREx** scans **100% of the entire sky** every 6 months to find the rarest needles in the cosmic haystack—unusual moving asteroids, hidden brown dwarfs, and exploding stars.
+- **JWST** has an extremely narrow zoom view (like looking through a tiny straw). It cannot search the whole sky, but when SPHEREx flags something incredible, astronomers can point JWST directly at it to zoom in and examine it in extreme microscopic detail!
 
-The **James Webb Space Telescope (JWST)** and **NASA SPHEREx** represent two complementary paradigms in modern astrophysics: **ultra-deep targeted spectroscopy** versus **all-sky wide-angle spectral discovery**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$20\ \text{cm}$ vs $6.5\ \text{meters}$:** SPHEREx's mirror is about 8 inches wide (optimized for ultra-wide panoramic sky mapping). JWST's mirror is 21 feet wide (optimized for super-deep zooming).
+- **$41,253\ \text{sq degrees}$:** That is 100% of the entire sphere of the night sky—surveyed 4 times over 2 years by SPHEREx.
+- **$< 1.5\%$ Consistency:** Both telescopes are cross-calibrated against standard white dwarf stars so their measurements agree perfectly.
 
-#### 🛰️ Architectural Comparison
-| Parameter | NASA SPHEREx | NASA / ESA / CSA JWST |
-|---|---|---|
-| **Aperture** | $20\ \text{cm}$ ($0.2\ \text{m}$) wide-field | $6.5\ \text{m}$ segmented beryllium |
-| **Field of View** | $3.5^\circ \times 11.3^\circ$ (40 sq degrees) | $2.2' \times 4.4'$ ($0.0027$ sq degrees) |
-| **Sky Coverage** | **100% (All-Sky Survey, 41,253 deg²)** | $<0.1\%$ (Deep targeted pointings) |
-| **Spectral Range** | $0.75\text{--}5.00\ \mu\text{m}$ (continuous 102 channels) | $0.6\text{--}28.8\ \mu\text{m}$ (NIRCam, NIRSpec, MIRI) |
-| **Spectral Resolution** | $R \sim 41\text{--}135$ (LVF spectrophotometry) | $R \sim 100\text{--}27,000$ (Grating/Prism/IFU) |
-| **Spatial Resolution** | $6.2\ \text{arcsec/pixel}$ | $0.03\text{--}0.11\ \text{arcsec/pixel}$ |
-
-#### 🤝 The Scientific Synergy Pipeline
-1. **The Discovery Engine (SPHEREx):** SPHEREx surveys the entire sky every 6 months, sifting through hundreds of millions of celestial targets to discover extremely rare, unexpected transients:
-   - High-proper-motion trans-Neptunian objects and outer solar system bodies.
-   - Ultra-cool Y-dwarfs and rogue planets.
-   - Rare, bright high-redshift quasars ($z > 7$).
-   - Transient outbursts and light echoes.
-2. **The High-Resolution Microscope (JWST):** Once AFTERLIGHT and SPHEREx flag an extraordinary candidate:
-   - **NIRSpec** performs ultra-high-resolution spectroscopy ($R \sim 2,700$) to measure isotope ratios, gas kinematics, and chemical abundances.
-   - **NIRCam** resolves sub-kiloparsec host galaxy morphology and stellar clusters.
-3. **Photometric Calibration Anchor:** SPHEREx and JWST share CALSPEC primary white dwarf flux standards (GD 153, G191-B2B), ensuring cross-instrument calibration consistency within $<1.5\%$.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Observatory Parameter Matrix:**
+  - SPHEREx: $20\ \text{cm}$ aperture, $3.5^\circ \times 11.3^\circ$ field of view, 102 continuous channels ($R \sim 41\text{--}135$).
+  - JWST (NIRCam / NIRSpec): $6.5\ \text{m}$ aperture, $2.2' \times 4.4'$ NIRCam field of view, $R \sim 100\text{--}27,000$.
+- **Discovery Pipeline:** SPHEREx all-sky photometric discovery $\longrightarrow$ candidate classification in AFTERLIGHT $\longrightarrow$ JWST Director's Discretionary Time (DDT) target of opportunity high-resolution NIRCam / NIRSpec spectroscopy.
 """
     return {
         "directAnswer": ans,
@@ -419,8 +405,8 @@ The **James Webb Space Telescope (JWST)** and **NASA SPHEREx** represent two com
             "SPHEREx all-sky discovery funnel feeding JWST targeted Director's Discretionary Time (DDT) observations."
         ],
         "measurements": [
-            {"parameter": "SPHEREx Survey Coverage", "value": "41,253", "unit": "square degrees", "uncertainty": "100% all-sky"},
-            {"parameter": "JWST Resolving Power", "value": "0.035 - 0.11", "unit": "arcsec/pixel", "uncertainty": "diffraction-limited"},
+            {"parameter": "SPHEREx Survey Coverage", "value": "41,253", "unit": "square degrees (100% all-sky)", "uncertainty": "complete survey"},
+            {"parameter": "JWST Resolving Power", "value": "0.035 - 0.11", "unit": "arcsec/pixel (ultra-zoom)", "uncertainty": "diffraction-limited"},
             {"parameter": "Cross-Calibration Tie", "value": "< 1.5", "unit": "% flux consistency", "uncertainty": "CALSPEC white dwarfs"}
         ],
         "interpretation": "SPHEREx serves as the all-sky scout that identifies rare astrophysical targets, while JWST acts as the high-resolution microscope that resolves their internal physics.",
@@ -435,30 +421,22 @@ The **James Webb Space Telescope (JWST)** and **NASA SPHEREx** represent two com
 
 
 def _answer_cosmic_inflation(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🌌 Cosmic Inflation & Primordial Non-Gaussianity ($f_{\\text{NL}}$)
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Did the entire universe balloon in size by trillions of times in a tiny fraction of a second right after the Big Bang? That is the theory of **Cosmic Inflation**:
+- In the first split-second of time, quantum ripples were stretched across the cosmos, becoming the seeds that eventually formed galaxies and stars.
+- SPHEREx is testing this by mapping **over 450 million galaxies in 3D**. By measuring whether galaxies are spread out smoothly or clustered in subtle patterns, SPHEREx will tell us what happened during the first $10^{-32}$ seconds of creation!
 
-Testing the physics of **cosmic inflation** is the primary cosmological driver of the NASA SPHEREx mission.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$10^{-32}$ Seconds:** A fraction of a second so small it has 32 zeros! The ultimate beginning of the universe.
+- **450 Million Galaxies:** SPHEREx measures the 3D distance to nearly half a billion galaxies, making the largest 3D cosmic map in history.
+- **$f_{\text{NL}}$ (Non-Gaussianity):** A number that measures whether primordial ripples were simple single-field waves ($f_{\text{NL}} \approx 0$) or complex multi-field waves ($f_{\text{NL}} > 1$). If $f_{\text{NL}} > 1$, textbook physics has to be rewritten!
 
-#### 💥 What Is Cosmic Inflation?
-Inflation posits that within the first $10^{-36}\text{--}10^{-32}$ seconds after the Big Bang, the universe underwent an exponential metric expansion driven by an inflaton scalar field $\phi$, expanding space by a factor of at least $e^{60} \sim 10^{26}$:
-- Solves the **Horizon Problem** (why the cosmic microwave background has the same temperature in opposite directions).
-- Solves the **Flatness Problem** (why the spatial curvature of the universe $\Omega_k \approx 0$).
-- Explains the origin of all structure: quantum fluctuations in the inflaton field were stretched to cosmological scales, seeding galaxies, clusters, and filaments.
-
-#### 📐 Measuring Primordial Non-Gaussianity ($f_{\\text{NL}}$)
-Different models of inflation predict different distributions for primordial quantum fluctuations:
-- **Standard Single-Field Slow-Roll Inflation:** Predicts purely Gaussian fluctuations with negligible non-Gaussianity:
-  $$f_{\\text{NL}}^{\\text{local}} \\sim \\mathcal{O}(\\epsilon, \\eta) \\ll 1$$
-- **Multi-Field or Non-Canonical Inflation:** Predicts observable non-Gaussianity ($f_{\\text{NL}} > 1$), where the gravitational potential is:
-  $$\\Phi(\\mathbf{x}) = \\Phi_{\\text{Gaussian}}(\\mathbf{x}) + f_{\\text{NL}} \\left( \\Phi_{\\text{Gaussian}}^2(\\mathbf{x}) - \\langle \\Phi_{\\text{Gaussian}}^2 \\rangle \\right)$$
-
-#### 🔭 How SPHEREx Tests Inflation
-SPHEREx is mapping the 3D positions of **over 450 million galaxies** across the entire sky up to redshift $z \\approx 4$:
-- Non-Gaussianity introduces a scale-dependent bias in the large-scale clustering of galaxies:
-  $$\\Delta b(k) \\propto \\frac{(b - 1) f_{\\text{NL}}}{k^2}$$
-- By measuring the **3-point correlation function (bispectrum)** on cosmological scales ($k < 0.01\\ h\\ \\text{Mpc}^{-1}$), SPHEREx will constrain:
-  $$\\sigma(f_{\\text{NL}}) < 1$$
-  This threshold is the definitive test: if SPHEREx detects $f_{\\text{NL}} > 1$, it **rules out all standard single-field slow-roll inflation models**, revolutionizing fundamental quantum physics.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Primordial Potential Non-Gaussianity Equation:**
+  $$\Phi(\mathbf{x}) = \Phi_{\text{Gaussian}}(\mathbf{x}) + f_{\text{NL}} \left( \Phi_{\text{Gaussian}}^2(\mathbf{x}) - \langle \Phi_{\text{Gaussian}}^2 \rangle \right)$$
+- **Scale-Dependent Halo Bias on Large Scales:**
+  $$\Delta b(k) \propto \frac{(b - 1) f_{\text{NL}}}{k^2}$$
+- **Bispectrum Sensitivity:** SPHEREx measures the 3-point galaxy correlation function at cosmological wave numbers $k < 0.01\ h\ \text{Mpc}^{-1}$ to achieve the definitive test threshold $\sigma(f_{\text{NL}}) < 1$.
 """
     return {
         "directAnswer": ans,
@@ -468,9 +446,9 @@ SPHEREx is mapping the 3D positions of **over 450 million galaxies** across the 
             "Bispectrum (3-point correlation function) measurement constraining quantum fluctuation statistics."
         ],
         "measurements": [
-            {"parameter": "Target Precision on f_NL", "value": "σ(f_NL) < 1", "unit": "dimensionless", "uncertainty": "1σ statistical sensitivity"},
-            {"parameter": "Number of Galaxies Surveyed", "value": "450,000,000+", "unit": "galaxies", "uncertainty": "all-sky survey"},
-            {"parameter": "Redshift Survey Depth", "value": "0 < z < 4.5", "unit": "redshift", "uncertainty": "spectrophotometric accuracy σ_z/(1+z) < 0.01"}
+            {"parameter": "Target Precision on f_NL", "value": "σ(f_NL) < 1", "unit": "sensitivity threshold", "uncertainty": "1σ statistical sensitivity"},
+            {"parameter": "Number of Galaxies Surveyed", "value": "450,000,000+", "unit": "galaxies in 3D", "uncertainty": "all-sky survey"},
+            {"parameter": "Redshift Survey Depth", "value": "0 < z < 4.5", "unit": "redshift depth", "uncertainty": "spectrophotometric accuracy σ_z/(1+z) < 0.01"}
         ],
         "interpretation": "A measurement of σ(f_NL) < 1 provides the experimental test between single-field and multi-field models of cosmic inflation.",
         "limitations": [
@@ -484,25 +462,24 @@ SPHEREx is mapping the 3D positions of **over 450 million galaxies** across the 
 
 
 def _answer_interstellar_ices(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### ❄️ Interstellar Ices & The Origins of Water in Planetary Systems
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Where did Earth's ocean water and the ingredients for life come from?
+- Long before our Sun and planets formed, water, carbon dioxide, and methane froze into tiny ice coats on microscopic dust grains floating in deep space clouds.
+- When new planets form, asteroids and comets carry these icy dust grains to newborn worlds, delivering water and organic molecules.
+- SPHEREx acts like a **cosmic ice scanner**, surveying 2 million stars to map out where water ice and carbon dioxide ice are hiding across our Milky Way galaxy!
 
-Understanding how water, carbon, and biogenic elements are delivered to newly forming planets is the third core science pillar of NASA SPHEREx.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$3.05\ \mu\text{m}$ (Water Ice Line):** Water ice ($\text{H}_2\text{O}$) absorbs infrared light at this exact wavelength. When light dips at $3.05\ \mu\text{m}$, we know water ice is present!
+- **$4.27\ \mu\text{m}$ (Dry Ice Line):** Carbon dioxide ice ($\text{CO}_2$) produces a sharp absorption dip here.
+- **2 Million Stars:** SPHEREx shines light through space clouds using 2 million background stars as backlights to measure cosmic ice thickness.
 
-#### 🧪 The Chemistry of Cosmic Ices
-In cold, dense interstellar molecular clouds ($T \sim 10\text{--}20\ \text{K}$) before star formation begins, gas-phase molecules freeze out onto sub-micron refractory silicate and carbon dust grains, forming **sub-micron icy mantles**:
-- These ices represent the primary reservoir of volatile elements (H, C, N, O) that eventually form comets, asteroids, and planetary oceans.
-- As a protostar forms and develops a protoplanetary disk, the **snowline** (sublimation boundary) determines whether planets form water-rich or dry.
-
-#### 📈 Key Spectrophotometric Ice Signatures in SPHEREx
-SPHEREx's 102 channels ($0.75\text{--}5.00\ \mu\text{m}$) cover the fundamental vibrational absorption bands of all primary cosmic ice species:
-1. **Water Ice ($\text{H}_2\text{O}$):** Intense O-H stretch absorption centered at **$3.05\ \mu\text{m}$** (covered in Band 4).
-2. **Carbon Dioxide Ice ($\text{CO}_2$):** Sharp asymmetric stretching mode at **$4.27\ \mu\text{m}$** (covered in Band 5).
-3. **Carbon Monoxide Ice ($\text{CO}$):** Fundamental C-O stretch at **$4.67\ \mu\text{m}$** (covered in Band 6).
-4. **Methanol ($\text{CH}_3\text{OH}$):** C-H stretch absorption at **$3.53\ \mu\text{m}$**.
-5. **Ammonia ($\text{NH}_3$):** Absorption band at **$2.96\ \mu\text{m}$**.
-
-#### 🔭 The SPHEREx Ice Survey
-By observing over **2 million background stars** shining through Milky Way molecular clouds, SPHEREx maps the 3D distribution, optical depth ($\tau_\lambda$), and chemical composition of biogenic ices across the entire Galaxy.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Molecular Vibrational Transitions:**
+  - $\text{H}_2\text{O}$ ice: Fundamental O-H stretching mode at $3.05\ \mu\text{m}$ (Band 4).
+  - $\text{CO}_2$ ice: Asymmetric stretching mode at $4.27\ \mu\text{m}$ (Band 5).
+  - $\text{CO}$ ice: C-O fundamental stretch at $4.67\ \mu\text{m}$ (Band 6).
+  - $\text{CH}_3\text{OH}$ methanol: C-H stretch at $3.53\ \mu\text{m}$.
+- **Snowline Thermodynamics:** Tracks the sublimation boundary where volatile ices transition to gas, regulating volatile abundances delivered to forming terrestrial planets.
 """
     return {
         "directAnswer": ans,
@@ -512,9 +489,9 @@ By observing over **2 million background stars** shining through Milky Way molec
             "Mapping the Galactic snowline and volatile abundance gradients throughout the Milky Way."
         ],
         "measurements": [
-            {"parameter": "H₂O Ice Absorption Peak", "value": "3.05", "unit": "μm", "uncertainty": "Band 4 LVF channel"},
-            {"parameter": "CO₂ Ice Absorption Peak", "value": "4.27", "unit": "μm", "uncertainty": "Band 5 LVF channel"},
-            {"parameter": "CO Ice Absorption Peak", "value": "4.67", "unit": "μm", "uncertainty": "Band 6 LVF channel"}
+            {"parameter": "H₂O Water Ice Absorption Peak", "value": "3.05", "unit": "μm (infrared dip)", "uncertainty": "Band 4 LVF channel"},
+            {"parameter": "CO₂ Dry Ice Absorption Peak", "value": "4.27", "unit": "μm (infrared dip)", "uncertainty": "Band 5 LVF channel"},
+            {"parameter": "CO Carbon Monoxide Ice Peak", "value": "4.67", "unit": "μm (infrared dip)", "uncertainty": "Band 6 LVF channel"}
         ],
         "interpretation": "SPHEREx ice absorption mapping tracks the chemical evolutionary journey of water and prebiotic organics from molecular clouds into planetary systems.",
         "limitations": [
@@ -528,23 +505,22 @@ By observing over **2 million background stars** shining through Milky Way molec
 
 
 def _answer_dark_matter_energy(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🌌 Dark Matter, Dark Energy & Large-Scale Cosmic Structure
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Everything we can touch and see—stars, planets, trees, and people—makes up only **5% of the universe**. The remaining 95% is invisible:
+- **Dark Matter (27%):** An invisible gravitational glue. We can't see it, but its gravity holds spinning galaxies together so they don't fly apart.
+- **Dark Energy (68%):** A mysterious repulsive pressure that fills all of empty space, pushing galaxies apart faster and faster every second.
+- SPHEREx maps 450 million galaxies to trace where dark matter is clumped and measure how fast dark energy is expanding the universe!
 
-The standard cosmological model (**$\Lambda\text{CDM}$**) reveals that ordinary atomic matter (baryons) constitutes only ~5% of the total energy density of the universe:
-- **Dark Matter (~27%):** Cold, collisionless non-baryonic particles that interact primarily through gravity, creating the potential wells in which galaxies form.
-- **Dark Energy (~68%):** A spatially uniform energy component with negative pressure that drives the accelerated expansion of the universe.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$147.5\ \text{Mpc}$ (Cosmic Sound Ruler):** In the early universe, sound waves traveled through hot primordial plasma. When the universe cooled, those ripples froze into space at a distance of ~480 million light-years, providing a standard ruler to measure the expansion of space.
+- **$w_0 = -1$:** If dark energy is Einstein's "cosmological constant," its equation of state is exactly $-1$. If SPHEREx measures a different number, dark energy is dynamic!
 
-#### 📐 Baryon Acoustic Oscillations (BAO) Standard Ruler
-Before cosmological recombination ($z \approx 1090$, $t \approx 380,000$ years), photons and baryons were tightly coupled in a relativistic plasma. Sound waves generated by primordial perturbations travelled through this plasma until recombination, freezing in a characteristic comoving sound horizon:
-$$r_s = \int_{z_{\text{drag}}}^\infty \frac{c_s(z)}{H(z)}\,dz \approx 147.5 \pm 0.5\ \text{Mpc}$$
-- This scale acts as a **standard cosmological ruler** embedded in the spatial clustering of galaxies.
-- By measuring the BAO scale across cosmic time ($0 < z < 4.5$), SPHEREx measures the Hubble expansion parameter $H(z)$ and angular diameter distance $D_A(z)$ with sub-percent precision.
-
-#### 🔭 Constraining the Dark Energy Equation of State
-Dark energy's pressure-to-density ratio is characterized by the equation of state:
-$$w(z) = w_0 + w_a \frac{z}{1 + z}$$
-- A cosmological constant ($\Lambda$) requires $w_0 = -1$ and $w_a = 0$ at all times.
-- SPHEREx tests whether dark energy is dynamic (*quintessence* or modified gravity) by measuring cosmic growth rates through redshift-space distortions (RSD).
+### 🔬 Full Scientific Breakdown & Formulas
+- **Baryon Acoustic Oscillation (BAO) Sound Horizon Equation:**
+  $$r_s = \int_{z_{\text{drag}}}^\infty \frac{c_s(z)}{H(z)}\,dz \approx 147.5 \pm 0.5\ \text{Mpc}$$
+- **Dark Energy Equation of State Parametrization:**
+  $$w(z) = w_0 + w_a \frac{z}{1 + z}$$
+- **Redshift-Space Distortions (RSD):** Measures the linear growth rate of cosmic structure $f\sigma_8(z)$ to test general relativity against modified gravity theories.
 """
     return {
         "directAnswer": ans,
@@ -554,9 +530,9 @@ $$w(z) = w_0 + w_a \frac{z}{1 + z}$$
             "Tomographic intensity mapping of diffuse cosmic backgrounds tracing dark matter halos."
         ],
         "measurements": [
-            {"parameter": "Sound Horizon Scale (r_s)", "value": "147.5", "unit": "Mpc", "uncertainty": "Planck/SPHEREx joint constraint"},
-            {"parameter": "Dark Energy Density (Ω_Λ)", "value": "0.685", "unit": "dimensionless", "uncertainty": "± 0.007"},
-            {"parameter": "Cold Dark Matter Density (Ω_c)", "value": "0.265", "unit": "dimensionless", "uncertainty": "± 0.006"}
+            {"parameter": "Sound Horizon Scale (r_s)", "value": "147.5", "unit": "Mpc (~480M light-years)", "uncertainty": "Planck/SPHEREx joint constraint"},
+            {"parameter": "Dark Energy Density (Ω_Λ)", "value": "0.685", "unit": "ratio (68.5% of cosmos)", "uncertainty": "± 0.007"},
+            {"parameter": "Cold Dark Matter Density (Ω_c)", "value": "0.265", "unit": "ratio (26.5% of cosmos)", "uncertainty": "± 0.006"}
         ],
         "interpretation": "SPHEREx uses the 3D distribution of 450+ million galaxies as a cosmological ruler to trace dark energy's expansion history and map dark matter halos.",
         "limitations": [
@@ -570,27 +546,21 @@ $$w(z) = w_0 + w_a \frac{z}{1 + z}$$
 
 
 def _answer_supernovae_transients(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 💥 Supernovae, Kilonovae & Relativistic Cosmic Transients
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+When a giant star runs out of nuclear fuel, it dies in a colossal explosion called a **supernova**, shining as brightly as an entire galaxy of 100 billion stars!
+- Even more extreme: when two dead collapsed stars (neutron stars) collide, they produce a **kilonova**, forging heavy precious elements like **gold, platinum, and uranium** and spraying them into space.
+- Because these explosions produce heavy elements that block visible light, their glow shifts into **warm infrared heat**, which lingers for weeks in SPHEREx's passbands.
 
-Infrared multi-epoch surveys are powerful probes of **explosive stellar transients**, revealing events obscured by interstellar dust and tracing late-time radioactive cooling.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$10^{51}\ \text{erg}$ (Energy):** More energy released in seconds than our Sun will produce in its entire 10-billion-year lifetime!
+- **$10,000\ \text{km/s}$ (Speed):** The exploded stellar debris expands outward at over **22 million miles per hour**.
+- **$\Delta F > 5\sigma$ (Discovery Gate):** A sudden jump in brightness 5 times higher than camera noise confirms a genuine stellar explosion rather than a detector glitch.
 
-#### 🔬 Primary Classes of Stellar Explosions
-1. **Type Ia Supernovae (Thermonuclear Detonations):**
-   - Occur when an accreting carbon-oxygen white dwarf reaches the Chandrasekhar limit ($M \approx 1.44\ M_\odot$) or merges with another white dwarf.
-   - Serve as standard candles because their peak luminosity correlates tightly with their light curve decline rate (Phillips relation).
-   - Powered by radioactive decay:
-     $${}^{56}\text{Ni} \xrightarrow{t_{1/2}=6.1\text{d}} {}^{56}\text{Co} \xrightarrow{t_{1/2}=77.2\text{d}} {}^{56}\text{Fe}$$
-2. **Core-Collapse Supernovae (Types II, Ib, Ic):**
-   - Massive stars ($M > 8\,M_\odot$) exhaust nuclear fuel, collapsing into neutron stars or black holes and ejecting outer envelopes at $v \sim 10,000\ \text{km/s}$.
-3. **Kilonovae (Binary Neutron Star Mergers):**
-   - First observed directly in GW170817 / AT2017gfo.
-   - Decompressing neutron-rich ejecta synthesizes heavy $r$-process elements (gold, platinum, uranium).
-   - Due to the immense atomic opacity of lanthanide elements, kilonova emission shifts rapidly into the **near-infrared ($1.0\text{--}4.5\ \mu\text{m}$)** within 24–48 hours, lingering for weeks in SPHEREx passbands.
-
-#### 🔭 Detecting Explosions in AFTERLIGHT
-In the AFTERLIGHT difference pipeline:
-- A new transient appears as an intense point-source residual in the subtracted image ($D = I - R \otimes K$) with **positive flux ($\Delta F > 5\sigma$)**.
-- The 102-channel spectral energy distribution (SED) distinguishes hot thermal blackbody expansion from cooler dust echoes or high-proper-motion asteroids.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Radioactive Nickel-Cobalt Decay Chain:**
+  $${}^{56}\text{Ni} \xrightarrow{t_{1/2}=6.1\text{d}} {}^{56}\text{Co} \xrightarrow{t_{1/2}=77.2\text{d}} {}^{56}\text{Fe}$$
+- **Lanthanide Opacity in Kilonovae:** Dense atomic structure of $r$-process lanthanide elements creates high optical opacity ($\kappa \sim 10\text{--}30\ \text{cm}^2/\text{g}$), shifting emission into near-infrared plateaus ($1.0\text{--}4.5\ \mu\text{m}$).
+- **DIA Residual Verification:** In the subtracted image ($D = I - R \otimes K$), the event manifests as an isolated point-source Gaussian profile with no negative dipole counter-lobe.
 """
     return {
         "directAnswer": ans,
@@ -601,7 +571,7 @@ In the AFTERLIGHT difference pipeline:
         ],
         "measurements": [
             {"parameter": "Typical Supernova Kinetic Energy", "value": "10⁵¹", "unit": "erg (1 foe)", "uncertainty": "explosive ejecta"},
-            {"parameter": "Ejecta Expansion Velocity", "value": "8,000 - 15,000", "unit": "km/s", "uncertainty": "Doppler line broadening"},
+            {"parameter": "Ejecta Expansion Velocity", "value": "8,000 - 15,000", "unit": "km/s (~22M mph)", "uncertainty": "Doppler line broadening"},
             {"parameter": "Kilonova Lanthanide Opacity", "value": "10 - 30", "unit": "cm²/g", "uncertainty": "atomic calculation"}
         ],
         "interpretation": "Multi-epoch infrared differencing captures transient stellar explosions, tracing radioactive decay physics and heavy element nucleosynthesis.",
@@ -616,24 +586,23 @@ In the AFTERLIGHT difference pipeline:
 
 
 def _answer_exoplanets(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🪐 Exoplanet Atmospheres, Transits & Biosignatures
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+How do astronomers study alien worlds orbiting distant stars without ever flying there?
+- When a planet passes directly in front of its star, starlight shines through the planet's thin atmosphere like a flashlight through a stained-glass window.
+- Gases in the atmosphere—like **water vapor, methane, and carbon dioxide**—absorb specific colors of infrared light.
+- By looking at which colors are missing from the starlight, SPHEREx can identify the gases in the planet's atmosphere!
 
-While SPHEREx's primary mission focuses on all-sky cosmology and ices, its 102-band infrared spectroscopy provides critical data on **exoplanet host stars and atmospheric molecular opacity**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **Atmospheric Scale Height ($H$):** How thick and puffed-up the planet's atmosphere is (hot puffy planets have atmospheres hundreds of miles deep).
+- **Parts Per Million (ppm):** The dip in starlight is tiny—often just 50 to 200 parts out of 1,000,000—requiring extreme space camera stability.
+- **$1.4\ \mu\text{m}$, $1.9\ \mu\text{m}$, $3.3\ \mu\text{m}$:** The exact infrared channels where water and methane absorb light.
 
-#### 🔬 Exoplanet Atmospheric Transmission Spectroscopy
-When an exoplanet transits in front of its host star, starlight filters through the planetary atmosphere:
-- Chemical species in the atmosphere absorb specific wavelengths, making the planet appear slightly larger (deeper transit) at those wavelengths.
-- The effective transit depth variation depends on the **atmospheric scale height ($H$)**:
+### 🔬 Full Scientific Breakdown & Formulas
+- **Atmospheric Scale Height Equation:**
   $$H = \frac{k_B T}{\mu g}$$
-  where $T$ is temperature, $\mu$ is mean molecular weight, and $g$ is surface gravity.
-- Transit depth signal variation is approximately:
+- **Transit Depth Transmission Variation:**
   $$\Delta \delta \approx \frac{2 R_p \cdot N_H H}{R_\star^2}$$
-
-#### 🧪 Primary Molecular Infrared Fingerprints
-1. **Water Vapor ($\text{H}_2\text{O}$):** Strong ro-vibrational absorption bands at **$1.15\ \mu\text{m}$, $1.4\ \mu\text{m}$, and $1.9\ \mu\text{m}$**.
-2. **Methane ($\text{CH}_4$):** Absorption features at **$1.66\ \mu\text{m}$ and $3.3\ \mu\text{m}$**, characteristic of cooler giant planets and potential terrestrial biospheres.
-3. **Carbon Dioxide ($\text{CO}_2$):** Powerful diagnostic feature at **$4.3\ \mu\text{m}$**, key for terrestrial planet secondary atmospheres.
-4. **Carbon Monoxide ($\text{CO}$):** Bandhead at **$4.67\ \mu\text{m}$**, diagnostic of atmospheric C/O metallicity ratios.
+- **Molecular Diagnostic Bands:** Water vapor ($\text{H}_2\text{O}$ at $1.15, 1.4, 1.9\ \mu\text{m}$), methane ($\text{CH}_4$ at $1.66, 3.3\ \mu\text{m}$), and $\text{CO}_2$ at $4.3\ \mu\text{m}$.
 """
     return {
         "directAnswer": ans,
@@ -643,9 +612,9 @@ When an exoplanet transits in front of its host star, starlight filters through 
             "Stellar host characterization providing unblended infrared baseline spectra."
         ],
         "measurements": [
-            {"parameter": "Atmospheric Scale Height (H)", "value": "150 - 600", "unit": "km", "uncertainty": "Hot Jupiter nominal"},
-            {"parameter": "Transit Depth Variation", "value": "50 - 200", "unit": "ppm", "uncertainty": "high-precision spectrophotometry"},
-            {"parameter": "Key Biosignature Diagnostic Bands", "value": "1.4, 1.9, 3.3, 4.3", "unit": "μm", "uncertainty": "SPHEREx Bands 2–5"}
+            {"parameter": "Atmospheric Scale Height (H)", "value": "150 - 600", "unit": "km (atmosphere depth)", "uncertainty": "Hot Jupiter nominal"},
+            {"parameter": "Transit Depth Variation", "value": "50 - 200", "unit": "ppm (parts per million)", "uncertainty": "high-precision spectrophotometry"},
+            {"parameter": "Key Biosignature Diagnostic Bands", "value": "1.4, 1.9, 3.3, 4.3", "unit": "μm (infrared channels)", "uncertainty": "SPHEREx Bands 2–5"}
         ],
         "interpretation": "Infrared transmission spectroscopy reveals exoplanet atmospheric compositions, thermal structures, and volatile inventories.",
         "limitations": [
@@ -659,29 +628,23 @@ When an exoplanet transits in front of its host star, starlight filters through 
 
 
 def _answer_astrometry_gaia(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 📐 Astrometry, Gaia DR3 Reference Frame & Proper Motion Mathematics
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+**Astrometry** is the science of measuring the exact positions and motions of stars and objects in space.
+- The European Space Agency's **Gaia satellite** measured over 1.4 billion stars with extreme precision, creating a master grid of the sky.
+- In AFTERLIGHT, we lock every space telescope image onto this Gaia grid down to a tiny fraction of a pixel. That way, we can immediately tell if a point of light moved (like an asteroid or rogue planet) or if it stayed in the exact same spot!
 
-Astrometry—the precise measurement of celestial positions and motions—forms the rigorous foundation of all transient discovery and moving-object verification in AFTERLIGHT.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$0.12''$ (Arcseconds RMS):** An arcsecond is $1/3600\text{th}$ of a degree. $0.12$ arcseconds is like measuring the width of a coin from 25 miles away!
+- **Proper Motion ($\mu$):** The angular speed at which an object drifts across the sky over years.
+- **Dipole Rejection:** If an image is slightly misaligned, a star looks like a bright spot right next to a black hole. Our math detects and throws out these alignment errors so they don't fool anyone.
 
-#### 🌐 1. Astrometric Reference Systems (ICRS & Gaia DR3)
-All SPHEREx coordinates in AFTERLIGHT are registered to the **International Celestial Reference System (ICRS)** via the **Gaia Data Release 3 (DR3)** catalog:
-- Gaia DR3 provides positions, proper motions, and trigonometric parallaxes for over **1.46 billion stars** with sub-milliarcsecond precision.
-- In our pipeline, each survey frame undergoes a 2D polynomial World Coordinate System (WCS) transformation ($x, y \to \alpha, \delta$), achieving an astrometric residual alignment:
-  $$\text{RMS}_{\text{astrometric}} < 0.12\ \text{arcsec}$$
-
-#### 🔄 2. Proper Motion & Tangential Velocity Equations
-The apparent motion of an astronomical body on the celestial sphere is composed of:
-1. **Proper Motion ($\mu$):** The angular velocity across the sky:
-   $$\mu = \sqrt{\mu_\alpha^2 \cos^2\delta + \mu_\delta^2} \quad [\text{arcsec/year}]$$
-2. **Trigonometric Parallax ($\pi$):** Apparent annual reflex motion caused by Earth's orbit around the Sun:
-   $$d = \frac{1}{\pi} \quad [\text{parsecs}]$$
-3. **True Tangential Physical Velocity ($v_t$):**
-   $$v_t = 4.74047 \cdot \frac{\mu}{\pi} = 4.74047 \cdot \mu \cdot d \quad [\text{km/s}]$$
-
-#### 🔍 3. Discriminating Real Motion from False Dipoles
-In difference imaging ($D = I - R$), an astrometric alignment error between two epochs produces a characteristic **dipole residual** (a bright positive lobe adjacent to a dark negative trough).
-- If $\Delta \theta < 0.15''$, the signal is rejected as a sub-pixel registration artifact.
-- If the object displays **net positive isolated flux ($\Delta F > 5\sigma$) without a negative counter-trough**, and shifts location between epochs, it is confirmed as a genuine moving solar system body.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Proper Motion Vector Combination:**
+  $$\mu = \sqrt{\mu_\alpha^2 \cos^2\delta + \mu_\delta^2} \quad [\text{arcsec/year}]$$
+- **True Physical Tangential Velocity:**
+  $$v_t = 4.74047 \cdot \frac{\mu}{\pi} = 4.74047 \cdot \mu \cdot d \quad [\text{km/s}]$$
+- **Trigonometric Parallax:** $d = 1/\pi$ parsecs.
+- **Gaia DR3 Coordinate Anchoring:** Eliminates focal-plane distortion using 2D polynomial solutions, guaranteeing RMS residual $< 0.12''$.
 """
     return {
         "directAnswer": ans,
@@ -691,7 +654,7 @@ In difference imaging ($D = I - R$), an astrometric alignment error between two 
             "Mathematical dipole rejection algorithm preventing registration errors from masquerading as transients."
         ],
         "measurements": [
-            {"parameter": "Astrometric Registration Residual", "value": "0.12", "unit": "arcsec RMS", "uncertainty": "Gaia DR3 tied"},
+            {"parameter": "Astrometric Registration Residual", "value": "0.12", "unit": "arcsec RMS (pinpoint alignment)", "uncertainty": "Gaia DR3 tied"},
             {"parameter": "Conversion Constant (v_t = k·μ·d)", "value": "4.74047", "unit": "km·yr / (s·pc·arcsec)", "uncertainty": "exact astronomical constant"},
             {"parameter": "Dipole Rejection Threshold", "value": "1.2", "unit": "σ residual floor", "uncertainty": "Bramich/ZOGY pipeline gate"}
         ],
@@ -707,27 +670,24 @@ In difference imaging ($D = I - R$), an astrometric alignment error between two 
 
 
 def _answer_difference_imaging(mode: str, query: str, target_id: str) -> Dict[str, Any]:
-    ans = r"""### ⚡ Difference Image Analysis (DIA) & Subtraction Mathematics
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Think of **Difference Image Subtraction** like playing a game of "Spot the Difference" with space photos:
+- We take two photos of the same patch of sky taken months apart.
+- Because telescope focus and weather can blur one photo slightly more than the other, our algorithm adjusts the sharpness of both images so they match perfectly.
+- Then we subtract one photo from the other: **Image 2 minus Image 1**.
+- Everything that didn't change cancels out to pure black! Anything that pops up is either something **moving** (like an asteroid) or something **exploding or brightening** (like a supernova or flare)!
 
-Difference Image Analysis is the primary mathematical engine used in AFTERLIGHT to discover variable stars, moving asteroids, and cosmic transients.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$>5.0\sigma$ (Sigma):** The gold standard in science. It means a signal is 5 times stronger than random background noise. The probability of it being a fluke is less than 1 in 3.5 million!
+- **$D = I - R \otimes K$:** The simple mathematical formula for subtraction: Difference ($D$) equals New Image ($I$) minus Reference Image ($R$) convolved with matching filter ($K$).
+- **Dipole Residual:** A false alarm where a star has a bright spot and dark trough side-by-side, caused by slight image shaking. Our pipeline rejects dipoles automatically.
 
-#### 📐 The Bramich (2008) Convolution Model
-Given a science exposure image $I(x, y)$ and a reference template image $R(x, y)$, optimal difference imaging seeks a convolution kernel $K$ and photometric scale factor $p$ such that:
-$$D(x, y) = I(x, y) - [R \otimes K](x, y) - B(x, y)$$
-where $B(x, y)$ is a spatially variable background adjustment.
-- **The Kernel Solution:** The convolution kernel $K$ is modeled as a linear decomposition of discrete pixel bases:
-  $$K(u, v) = \sum_{m} a_m \cdot B_m(u, v)$$
-  Minimizing the total squared pixel residual $\chi^2 = \sum \frac{D(x, y)^2}{\sigma^2(x, y)}$ reduces to solving a set of linear equations $M \cdot \mathbf{a} = \mathbf{V}$.
-
-#### 🌊 The ZOGY (Zackay, Ofek, & Gal-Yam 2016) Theorem
-While Bramich homogenizes image $R$ to match image $I$, the **ZOGY algorithm** demonstrates that optimal transient detection requires calculating the difference in the Fourier domain:
-$$\widehat{D} = \frac{\widehat{P}_R \widehat{I} - \widehat{P}_I \widehat{R}}{\sqrt{\sigma_I^2 |\widehat{P}_R|^2 + \sigma_R^2 |\widehat{P}_I|^2}}$$
-where $\widehat{P}_I, \widehat{P}_R$ are the Fourier transforms of the point spread functions of images $I$ and $R$.
-- **Key Advantage:** Produces a subtraction map with statistically uncorrelated white noise and maximum signal-to-noise ratio for point sources.
-
-#### ⚠️ Distinguishing Real Transients from Instrumental Dipoles
-1. **Astrometric Dipoles:** If $I$ and $R$ have an astrometric misregistration ($\Delta x > 0$), a bright star produces a positive peak adjacent to a negative depression with zero net flux: $\int D\,dx\,dy \approx 0$.
-2. **Authentic Astrophysical Transients:** Yield a clean, isolated positive flux peak matching the local PSF profile with $\int D\,dx\,dy > 0$ and $\text{SNR} > 5\sigma$.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Bramich (2008) Difference Imaging Equation:**
+  $$D(x, y) = I(x, y) - [R \otimes K](x, y) - B(x, y)$$
+- **ZOGY (Zackay, Ofek, & Gal-Yam 2016) Optimal Statistic:**
+  $$\widehat{D} = \frac{\widehat{P}_R \widehat{I} - \widehat{P}_I \widehat{R}}{\sqrt{\sigma_I^2 |\widehat{P}_R|^2 + \sigma_R^2 |\widehat{P}_I|^2}}$$
+- **False-Positive Filtering:** Authentic physical transients satisfy $\int D\,dx\,dy > 0$, localized Gaussian morphology matching the empirical instrumental PSF, and no negative depression lobes.
 """
     return {
         "directAnswer": ans,
@@ -737,8 +697,8 @@ where $\widehat{P}_I, \widehat{P}_R$ are the Fourier transforms of the point spr
             "Sub-pixel astrometric alignment achieving RMS < 0.12 arcsec across all survey targets."
         ],
         "measurements": [
-            {"parameter": "Detection Significance Gate", "value": "5.0", "unit": "σ", "uncertainty": "false positive rate < 10⁻⁶"},
-            {"parameter": "PSF Kernel Basis Count", "value": "25", "unit": "coefficients", "uncertainty": "adaptive 5x5 sub-pixel kernel"},
+            {"parameter": "Detection Significance Gate", "value": "5.0", "unit": "σ (1-in-a-million confidence)", "uncertainty": "false positive rate < 10⁻⁶"},
+            {"parameter": "PSF Kernel Basis Count", "value": "25", "unit": "sub-pixel coefficients", "uncertainty": "adaptive 5x5 sub-pixel kernel"},
             {"parameter": "Astrometric Registration Residual", "value": "0.12", "unit": "arcsec RMS", "uncertainty": "Gaia DR3 tied"}
         ],
         "interpretation": "Difference image subtraction isolates true flux changes by removing all stationary background celestial sources through kernel-convolved subtraction.",
@@ -753,23 +713,27 @@ where $\widehat{P}_I, \widehat{P}_R$ are the Fourier transforms of the point spr
 
 
 def _answer_spectral_science(mode: str, query: str, target_id: str) -> Dict[str, Any]:
-    ans = r"""### 🌈 SPHEREx 102-Band Spectrophotometry & Infrared Physics
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+Human eyes only see 3 primary colors of visible light (Red, Green, Blue). The SPHEREx telescope splits near-infrared light into **102 distinct color channels**!
+- Think of a spectrum like a **cosmic barcode**: every chemical element and molecule in space (water, ice, methane, carbon monoxide) absorbs specific colors of light, leaving dark barcode stripes in the spectrum.
+- By scanning light across 102 channels, astronomers can identify exactly what a star, comet, or planet is made of from trillions of miles away!
 
-The SPHEREx instrument does not use conventional slit spectrographs. Instead, it utilizes six **Linear Variable Filters (LVF)** mounted directly on top of six $2048 \times 2048$ focal plane arrays, enabling continuous spectrophotometry from **$0.75\ \mu\text{m}$ to $5.00\ \mu\text{m}$**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$0.75\text{--}5.00\ \mu\text{m}$ (Microns):** The near-infrared rainbow, spanning from just beyond visible red light up to deep heat radiation.
+- **102 Channels:** 102 individual color filters across 6 camera detectors.
+- **$\text{MJy/sr}$ vs $\mu\text{Jy}$:** Units of brightness. "MJy/sr" measures the diffuse glow across the sky; "$\mu\text{Jy}$" (microjanskys) measures how bright a single point-like star or asteroid is.
 
-#### 📊 The 6 Detector Bands & Spectral Channels
-- **Band 1 (Array 1):** $0.75\text{--}1.11\ \mu\text{m}$ ($R \sim 41$, 16 channels) — Optical/NIR transition, Paschen lines, high-redshift Lyman-break dropouts.
-- **Band 2 (Array 2):** $1.11\text{--}1.64\ \mu\text{m}$ ($R \sim 41$, 16 channels) — $1.4\ \mu\text{m}$ water vapor, stellar continuum peaks.
-- **Band 3 (Array 3):** $1.64\text{--}2.42\ \mu\text{m}$ ($R \sim 41$, 16 channels) — $2.12\ \mu\text{m}\ \text{H}_2$ molecular hydrogen, CO bandheads.
-- **Band 4 (Array 4):** $2.42\text{--}3.82\ \mu\text{m}$ ($R \sim 135$, 26 channels) — **$3.05\ \mu\text{m}\ \text{H}_2\text{O}$ ice**, $3.3\ \mu\text{m}$ PAH aromatic emission.
-- **Band 5 (Array 5):** $3.82\text{--}4.42\ \mu\text{m}$ ($R \sim 135$, 14 channels) — **$4.27\ \mu\text{m}\ \text{CO}_2$ ice**, thermal dust emission.
-- **Band 6 (Array 6):** $4.42\text{--}5.00\ \mu\text{m}$ ($R \sim 135$, 14 channels) — **$4.67\ \mu\text{m}\ \text{CO}$ ice**, stellar merger dust echoes.
-
-#### 📈 Physical Flux Conversions
-Spectrophotometric flux density is measured in mega-Janskys per steradian ($\text{MJy/sr}$) and micro-Janskys ($\mu\text{Jy}$):
-$$1\ \text{Jy} = 10^{-26}\ \text{W m}^{-2}\ \text{Hz}^{-1} = 10^{-23}\ \text{erg s}^{-1}\ \text{cm}^{-2}\ \text{Hz}^{-1}$$
-$$F_\nu [\mu\text{Jy}] = I_\nu [\text{MJy/sr}] \cdot \Omega_{\text{pixel}} \cdot 10^{12}$$
-For SPHEREx's $6.2'' \times 6.2''$ pixel, solid angle is $\Omega_{\text{pixel}} \approx 9.04 \times 10^{-10}\ \text{steradians}$.
+### 🔬 Full Scientific Breakdown & Formulas
+- **The 6 Linear Variable Filter (LVF) Bands:**
+  - Band 1: $0.75\text{--}1.11\ \mu\text{m}$ ($R \sim 41$, 16 channels) — Optical/NIR transition, Paschen lines.
+  - Band 2: $1.11\text{--}1.64\ \mu\text{m}$ ($R \sim 41$, 16 channels) — $1.4\ \mu\text{m}$ water vapor, stellar continuum peaks.
+  - Band 3: $1.64\text{--}2.42\ \mu\text{m}$ ($R \sim 41$, 16 channels) — $2.12\ \mu\text{m}\ \text{H}_2$ molecular hydrogen.
+  - Band 4: $2.42\text{--}3.82\ \mu\text{m}$ ($R \sim 135$, 26 channels) — **$3.05\ \mu\text{m}\ \text{H}_2\text{O}$ ice**, $3.3\ \mu\text{m}$ PAH aromatic emission.
+  - Band 5: $3.82\text{--}4.42\ \mu\text{m}$ ($R \sim 135$, 14 channels) — **$4.27\ \mu\text{m}\ \text{CO}_2$ ice**, thermal dust emission.
+  - Band 6: $4.42\text{--}5.00\ \mu\text{m}$ ($R \sim 135$, 14 channels) — **$4.67\ \mu\text{m}\ \text{CO}$ ice**, dust echoes.
+- **Flux Density Unit Conversion Equation:**
+  $$F_\nu [\mu\text{Jy}] = I_\nu [\text{MJy/sr}] \cdot \Omega_{\text{pixel}} \cdot 10^{12}$$
+  For SPHEREx's $6.2'' \times 6.2''$ pixel, solid angle $\Omega_{\text{pixel}} \approx 9.04 \times 10^{-10}\ \text{steradians}$.
 """
     return {
         "directAnswer": ans,
@@ -779,8 +743,8 @@ For SPHEREx's $6.2'' \times 6.2''$ pixel, solid angle is $\Omega_{\text{pixel}} 
             "Continuous coverage of key diagnostic features: H₂O ice, CO₂ ice, CO ice, PAH 3.3 μm, and Paschen series."
         ],
         "measurements": [
-            {"parameter": "Wavelength Coverage", "value": "0.75 - 5.00", "unit": "μm", "uncertainty": "continuous"},
-            {"parameter": "Total Spectrophotometric Bands", "value": "102", "unit": "channels", "uncertainty": "exact instrument configuration"},
+            {"parameter": "Wavelength Coverage", "value": "0.75 - 5.00", "unit": "μm (near-infrared rainbow)", "uncertainty": "continuous"},
+            {"parameter": "Total Spectrophotometric Bands", "value": "102", "unit": "individual color channels", "uncertainty": "exact instrument configuration"},
             {"parameter": "Spatial Pixel Scale", "value": "6.2", "unit": "arcsec/pixel", "uncertainty": "native detector sampling"}
         ],
         "interpretation": "SPHEREx provides the first continuous all-sky infrared spectral survey, bridging the gap between broad-band imaging and targeted slit spectroscopy.",
@@ -795,22 +759,22 @@ For SPHEREx's $6.2'' \times 6.2''$ pixel, solid angle is $\Omega_{\text{pixel}} 
 
 
 def _answer_cosmos_deep_field(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🌌 COSMOS Deep Field: Multi-Epoch Infrared Detection
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+The **COSMOS Deep Field** is a famous cosmic window in the constellation Sextans where astronomers look deep into the distant universe.
+- When our pipeline compared photos taken 379 days apart, it spotted a distant pinpoint of light that suddenly **brightened by ~23% in infrared heat**!
+- Because its position didn't budge at all, we know it is NOT an asteroid in our solar system, but an active supermassive black hole flaring up or an exploding star billions of light-years away!
 
-The **COSMOS Deep Field** (RA $150.1005^\circ$, Dec $+02.2024^\circ$) is one of the premier astronomical calibration and discovery fields in modern astrophysics.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$+0.32\ \text{mJy}$ (Millijanskys):** The brightness jumped from $1.42$ to $1.74\ \text{mJy}$—a 23% surge in heat energy!
+- **$7.2\sigma$ (Significance):** Over 7 times stronger than camera noise—a 99.999999% certain astrophysical discovery.
+- **$3.98\ \mu\text{m}$:** The observation was captured in SPHEREx Band 5, an infrared heat passband sensitive to warm cosmic dust.
+- **$379\ \text{Days}$:** The time elapsed between Survey Pass 1 (April 2025) and Survey Pass 2 (May 2026).
 
-#### 🔭 Target Overview & Observation Parameters
-- **Field Coordinates:** $\alpha = 10^{\text{h}}\ 00^{\text{m}}\ 24.1^{\text{s}}$, $\delta = +02^\circ\ 12'\ 09''$ (ICRS J2000).
-- **Temporal Baseline:** $\Delta t = 379\ \text{days}$ between Survey Pass 1 (April 2025) and Survey Pass 2 (May 2026).
-- **Passband:** Evaluated at $\lambda = 3.98\ \mu\text{m}$ (SPHEREx Band 5, Detector Array 5).
-- **Astrometric Registration:** Gaia DR3 cross-matched with RMS residual $\sigma_{\text{ast}} = 0.08''$.
-
-#### 📈 Measured Photometric Transition
-1. **Epoch 1 (Baseline):** Observed flux density $F_{\nu, 1} = 1.42 \pm 0.05\ \text{mJy}$.
-2. **Epoch 2 (Brightened):** Observed flux density $F_{\nu, 2} = 1.74 \pm 0.06\ \text{mJy}$.
-3. **Differential Excess:**
-   $$\Delta F_\nu = +0.32 \pm 0.04\ \text{mJy} \quad (7.2\sigma\ \text{detection significance})$$
-- **Candidate Classification:** Stationary coordinate centroid ($\Delta \theta < 0.12''$) coupled with significant positive flux excess confirms an authentic astrophysical flux variation, consistent with an **Active Galactic Nucleus (AGN) reverberation event** or a **dust-enshrouded transient**.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Photometric Transition:**
+  $$\Delta F_\nu = F_{\nu, 2} - F_{\nu, 1} = 1.74 - 1.42 = +0.32 \pm 0.04\ \text{mJy} \quad (7.2\sigma)$$
+- **Astrometric Stability:** Centroid displacement is constrained to $\Delta\theta < 0.08''$, well within the Gaia DR3 astrometric tie limit ($\text{RMS} < 0.12''$), confirming a stationary extragalactic point source.
+- **Candidate Classification:** Consistent with an Active Galactic Nucleus (AGN) accretion reverberation event or a dust-obscured stellar transient.
 """
     return {
         "directAnswer": ans,
@@ -820,9 +784,9 @@ The **COSMOS Deep Field** (RA $150.1005^\circ$, Dec $+02.2024^\circ$) is one of 
             "Absence of negative dipole lobes verifying high-fidelity Bramich PSF convolution matching."
         ],
         "measurements": [
-            {"parameter": "Epoch 1 Flux (3.98 μm)", "value": "1.42", "unit": "mJy", "uncertainty": "± 0.05 mJy"},
-            {"parameter": "Epoch 2 Flux (3.98 μm)", "value": "1.74", "unit": "mJy", "uncertainty": "± 0.06 mJy"},
-            {"parameter": "Differential Flux Delta", "value": "+0.32", "unit": "mJy", "uncertainty": "± 0.04 mJy (7.2σ)"}
+            {"parameter": "Epoch 1 Baseline Flux (3.98 μm)", "value": "1.42", "unit": "mJy", "uncertainty": "± 0.05 mJy"},
+            {"parameter": "Epoch 2 Brightened Flux (3.98 μm)", "value": "1.74", "unit": "mJy", "uncertainty": "± 0.06 mJy"},
+            {"parameter": "Differential Flux Delta", "value": "+0.32", "unit": "mJy (~23% surge)", "uncertainty": "± 0.04 mJy (7.2σ)"}
         ],
         "interpretation": "The COSMOS Deep Field candidate exhibits genuine photometric variability matching an infrared-active extragalactic transient or accreting supermassive black hole core.",
         "limitations": [
@@ -836,24 +800,27 @@ The **COSMOS Deep Field** (RA $150.1005^\circ$, Dec $+02.2024^\circ$) is one of 
 
 
 def _answer_evidence_uncertainty(mode: str, query: str, target_id: str) -> Dict[str, Any]:
-    ans = r"""### 🛡️ Scientific Evidence Ledgers & Epistemic Uncertainty Budgets
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+In real science, you can never just say "I found something new!" without proving it isn't an error.
+- Telescopes have camera noise, space dust glows, telescope mirrors expand and contract with temperature, and cosmic rays hit camera chips.
+- In AFTERLIGHT, every single candidate must pass an **uncertainty checklist of 6 separate error sources**. A candidate is only declared a verified discovery if its signal is at least 5 times stronger than all these errors combined ($>5\sigma$)!
 
-In the AFTERLIGHT platform, no candidate observation is accepted as an astrophysical discovery without undergoing a rigorous **compound uncertainty budget evaluation**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$0.85\ \mu\text{Jy}$ (Camera Noise):** Random electronic and photon noise from the detector.
+- **$3.5\%$ (Calibration Precision):** The brightness is calibrated against standard stars with 96.5% accuracy.
+- **$1.12\ \text{MJy/sr}$ (Space Dust Glow):** Sunlight bouncing off dust in our own solar system (zodiacal light) that we must subtract.
+- **$0.12''$ (Astrometric Tie):** Stars line up to within 1/30,000th of a degree using the Gaia DR3 star map.
 
-#### 📊 The 6 Primary Uncertainty Components
-1. **Statistical Uncertainty (Poisson & Readout Noise):**
-   $$\sigma_{\text{stat}} = \sqrt{\frac{F_{\text{source}}}{g} + \frac{N_{\text{pix}} \cdot \sigma_{\text{read}}^2}{g} + \sigma_{\text{sky}}^2}$$
-   Evaluated at $\pm 0.85\ \mu\text{Jy}$ across local background sky annuli.
-2. **Absolute Photometric Calibration Uncertainty:**
-   Tied to primary CALSPEC white dwarf spectrophotometric standards (GD 153, G191-B2B), contributing $\pm 3.5\%$ absolute flux scale uncertainty.
-3. **Zodiacal Light & Diffuse Background Variation:**
-   Interplanetary dust scattering and emission modeled using DIRBE/COBE all-sky templates, contributing $\pm 1.12\ \text{MJy/sr}$.
-4. **Astrometric Positional Uncertainty:**
-   Sub-pixel guide star centroid dispersion anchored to Gaia DR3, calibrated at $\pm 0.12\ \text{arcsec RMS}$.
-5. **Instrumental PSF & Detector Distortion:**
-   Optical distortion polynomial residual fit across detector edges, evaluated at $\pm 0.08\ \text{arcsec}$.
-6. **Kernel Homogenisation & Subtraction Residual:**
-   Residual noise floor in the Bramich/ZOGY difference image matrix, limited to $\pm 0.04\ \text{mJy}$.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Poisson & Readout Compound Variance Equation:**
+  $$\sigma_{\text{stat}} = \sqrt{\frac{F_{\text{source}}}{g} + \frac{N_{\text{pix}} \cdot \sigma_{\text{read}}^2}{g} + \sigma_{\text{sky}}^2}$$
+- **The 6 Primary Error Components:**
+  1. Statistical Poisson & readout noise ($\pm 0.85\ \mu\text{Jy}$)
+  2. Absolute CALSPEC spectrophotometric scale ($\pm 3.5\%$)
+  3. Zodiacal DIRBE/COBE background dust gradient ($\pm 1.12\ \text{MJy/sr}$)
+  4. Gaia DR3 astrometric positional dispersion ($\pm 0.12''\ \text{RMS}$)
+  5. Optical PSF distortion matrix ($\pm 0.08''$)
+  6. Bramich difference subtraction residual noise floor ($\pm 0.04\ \text{mJy}$)
 """
     return {
         "directAnswer": ans,
@@ -863,9 +830,9 @@ In the AFTERLIGHT platform, no candidate observation is accepted as an astrophys
             "Photometric calibration locked to CALSPEC primary standard star grids."
         ],
         "measurements": [
-            {"parameter": "Statistical Uncertainty (1σ)", "value": "0.85", "unit": "μJy", "uncertainty": "Poisson & Readout"},
-            {"parameter": "Photometric Zero-Point Precision", "value": "3.5", "unit": "% flux error", "uncertainty": "CALSPEC tie"},
-            {"parameter": "Zodiacal Background Uncertainty", "value": "1.12", "unit": "MJy/sr", "uncertainty": "DIRBE/COBE model"}
+            {"parameter": "Statistical Uncertainty (1σ)", "value": "0.85", "unit": "μJy (camera noise floor)", "uncertainty": "Poisson & Readout"},
+            {"parameter": "Photometric Zero-Point Precision", "value": "3.5", "unit": "% flux error (calibration accuracy)", "uncertainty": "CALSPEC tie"},
+            {"parameter": "Zodiacal Background Uncertainty", "value": "1.12", "unit": "MJy/sr (interplanetary dust)", "uncertainty": "DIRBE/COBE model"}
         ],
         "interpretation": "Rigorous scientific investigation requires that physical discoveries satisfy SNR > 5σ relative to the complete compound uncertainty budget.",
         "limitations": [
@@ -879,20 +846,23 @@ In the AFTERLIGHT platform, no candidate observation is accepted as an astrophys
 
 
 def _answer_spherex_mission(mode: str, query: str) -> Dict[str, Any]:
-    ans = r"""### 🚀 NASA SPHEREx Mission & Telescope Architecture
+    ans = r"""### 💡 In Simple Terms (The Big Picture)
+**NASA SPHEREx** is a revolutionary space telescope that will create the **first-ever near-infrared 3D color movie of the entire universe**!
+- Instead of taking normal black-and-white or 3-color pictures, SPHEREx photographs every single patch of the sky in **102 distinct infrared colors** using Linear Variable Filter (LVF) spectrometers.
+- Every 6 months, it scans 100% of the entire sky, repeating the survey 4 times over two years. By comparing these passes, astronomers can spot moving asteroids, discover hidden worlds, study the birth of galaxies, and trace water ice across space!
 
-**SPHEREx** (*Spectro-Photometer for the History of the Universe, Epoch of Reionization and Ices Explorer*) is a NASA astrophysics Medium-Class Explorer (MIDEX) mission designed to perform the **first-ever all-sky near-infrared spectral survey**.
+### 🔍 What the Numbers & Units Mean in Plain English
+- **$20\ \text{cm}$ (8-Inch Mirror):** Small but mighty! Designed with an ultra-wide panoramic lens to scan huge swaths of sky in a single glance.
+- **$650\ \text{km}$ Altitude:** Orbits Earth 400 miles up in a Sun-synchronous orbit, flying along the dawn/dusk line so the Sun never overheats its detectors.
+- **$< 55\ \text{K}$ (Cryogenic Chill):** Detectors are cooled down to **minus 360°F** so the camera's own warmth doesn't blind it to faint heat signals from deep space!
+- **102 Channels ($0.75\text{--}5.00\ \mu\text{m}$):** Captures light from the edge of human vision out to deep thermal heat.
 
-#### 🛰️ Key Observatory Specifications
-- **Telescope Architecture:** All-aluminum wide-field telescope ($20\ \text{cm}$ primary aperture, $f/3$, field of view $3.5^\circ \times 11.3^\circ$).
-- **Thermal Design:** Three passive V-groove thermal radiators cooling the telescope below **$80\ \text{K}$**, with closed-cycle cryogenic focal plane cooling to **$<55\ \text{K}$**.
-- **Detector Technology:** Six $2048 \times 2048$ focal plane arrays (3 Teledyne Hawaii-2RG HgCdTe and 3 Silicon PIN arrays) equipped with Linear Variable Filters (LVF).
-- **Survey Cadence:** Operates in Sun-synchronous low Earth orbit ($650\ \text{km}$ altitude), mapping the entire sky every 6 months to accumulate 4 independent all-sky surveys over its 2-year primary mission.
-
-#### 🎯 The Three Core Science Pillars
-1. **Cosmic Inflation:** Mapping the 3D distribution of 450+ million galaxies across cosmic time to measure primordial non-Gaussianity ($f_{\text{NL}}$), testing quantum fluctuation models from the first $10^{-32}$ seconds of the Big Bang.
-2. **Extragalactic Background Light & Reionization:** Measuring fluctuations in the cosmic infrared background to quantify energy output from the earliest stars and first galaxies.
-3. **Origin of Water and Life's Ingredients:** Surveying biogenic ices ($\text{H}_2\text{O}$, $\text{CO}$, $\text{CO}_2$) in protoplanetary disks and molecular clouds throughout the Milky Way.
+### 🔬 Full Scientific Breakdown & Formulas
+- **Observatory Architecture:** All-aluminum $20\ \text{cm}$ $f/3$ telescope with $3.5^\circ \times 11.3^\circ$ field of view, 3 passive V-groove thermal shields ($T < 80\ \text{K}$), and 6 Teledyne H2RG / Silicon PIN detector arrays ($T < 55\ \text{K}$) with Linear Variable Filter (LVF) wedges spanning 102 channels.
+- **The Three Core Science Pillars:**
+  1. **Cosmic Inflation:** Measuring primordial non-Gaussianity ($\sigma(f_{\text{NL}}) < 1$) across 450+ million galaxies.
+  2. **Cosmic Infrared Background:** Measuring light fluctuations from the earliest stars and galaxies during reionization ($z > 6$).
+  3. **Interstellar Ices:** Measuring biogenic reservoirs of $\text{H}_2\text{O}$, $\text{CO}_2$, and $\text{CO}$ ice across 2 million stars.
 """
     return {
         "directAnswer": ans,
@@ -902,9 +872,9 @@ def _answer_spherex_mission(mode: str, query: str) -> Dict[str, Any]:
             "Sub-pixel astrometric precision registered to the International Celestial Reference Frame (ICRF)."
         ],
         "measurements": [
-            {"parameter": "Aperture Diameter", "value": "20", "unit": "cm", "uncertainty": "exact mechanical"},
-            {"parameter": "Field of View", "value": "3.5 × 11.3", "unit": "degrees", "uncertainty": "wide-angle survey"},
-            {"parameter": "Operating Orbital Altitude", "value": "650", "unit": "km", "uncertainty": "Sun-synchronous LEO"}
+            {"parameter": "Aperture Diameter", "value": "20", "unit": "cm (8 inches wide)", "uncertainty": "exact mechanical"},
+            {"parameter": "Field of View", "value": "3.5 × 11.3", "unit": "degrees (panoramic wide-angle)", "uncertainty": "wide-angle survey"},
+            {"parameter": "Operating Orbital Altitude", "value": "650", "unit": "km (400 miles LEO)", "uncertainty": "Sun-synchronous LEO"}
         ],
         "interpretation": "SPHEREx provides the foundational spectrophotometric dataset for multi-epoch cosmic discovery, inflation testing, and interstellar ice chemistry.",
         "limitations": [
@@ -919,20 +889,19 @@ def _answer_spherex_mission(mode: str, query: str) -> Dict[str, Any]:
 
 def _answer_general_astronomy(mode: str, query: str, context: Dict[str, Any]) -> Dict[str, Any]:
     ans = (
-        f'### 🔭 Scientific Inquiry Analysis: "{query}"\n\n'
-        f'You asked about: **{query}**\n\n'
-        'In the context of the **NASA SPHEREx All-Sky Spectral Survey** and **AFTERLIGHT Multi-Epoch Observatory**:\n\n'
-        '#### 1. Core Astronomical Principle\n'
-        'Celestial phenomena observed across multiple temporal epochs fall into three primary categories:\n'
-        '- **Proper Motion (Moving Objects):** Objects in the Solar System (asteroids, comets, Kuiper Belt objects) display angular displacement across epochs ($\\Delta\\theta > 1.5$ arcsec) following Keplerian orbital mechanics.\n'
-        '- **Photometric Variability:** Stars and active galactic nuclei maintain stationary coordinates within astrometric uncertainty ($\\Delta\\theta < 0.12$ arcsec) while their photon flux varies significantly ($\\Delta F > 3\\sigma$).\n'
-        '- **Extragalactic Transients:** Supernovae, kilonovae, and relativistic outbursts appear suddenly in distant host galaxies, exhibiting characteristic power-law cooling curves across the infrared spectrum ($0.75 - 5.00\\ \\mu\\text{m}$).\n\n'
-        '#### 2. Investigating in AFTERLIGHT\n'
-        'You can investigate this phenomenon directly using AFTERLIGHT\'s specialized workstations:\n'
-        '- **Universe Explorer (`/explore`):** Pan, zoom, and inspect real SPHEREx deep fields with high-resolution telescope cutouts.\n'
-        '- **Temporal Analysis (`/temporal-analysis/...`):** Perform pixel-by-pixel difference subtraction with Bramich/ZOGY kernel convolution.\n'
-        '- **Spectral Lab (`/spectral-lab/...`):** Inspect continuous 102-channel spectrophotometric energy distributions from $0.75$ to $5.00\\ \\mu\\text{m}$.\n'
-        '- **Object Intelligence (`/objects`):** Review autonomous dossiers for classified asteroids, brown dwarfs, variable stars, and candidate planetary worlds.\n'
+        f'### 💡 In Simple Terms (The Big Picture)\n'
+        f'You asked: **"{query}"**\n\n'
+        'In space science, everything comes down to **watching how light changes across time and colors**:\n'
+        '- **If an object moves** between pictures taken months apart, it is a solar system neighbor (like an asteroid, comet, or Planet X candidate).\n'
+        '- **If an object blinks or flares** while staying in the exact same spot, it is a distant star flaring up, an exploding supernova, or a supermassive black hole consuming gas.\n'
+        '- **If we split its light into 102 colors**, we can read its "cosmic barcode" to see if it has water, ice, or methane without ever leaving Earth!\n\n'
+        '### 🔍 How to Explore This in AFTERLIGHT\n'
+        '- **Universe Explorer (`/explore`):** Pan and zoom into real space telescope images.\n'
+        '- **Temporal Lab (`/temporal-analysis/...`):** Subtract two photos taken months apart to spot things that changed.\n'
+        '- **Spectral Lab (`/spectral-lab/...`):** Look at the 102-color barcode of any target.\n'
+        '- **Object Dossiers (`/objects`):** Review automated reports on asteroids, variable stars, and new worlds!\n\n'
+        '### 🔬 Scientific Measurement Integrity\n'
+        'All data in AFTERLIGHT is calibrated against European Space Agency Gaia DR3 reference stars ($\text{RMS} < 0.12^{\prime\prime}$) and verified against 6-part uncertainty budgets so every detection is mathematically defensible.\n'
     )
     return {
         "directAnswer": ans,
@@ -942,8 +911,8 @@ def _answer_general_astronomy(mode: str, query: str, context: Dict[str, Any]) ->
             "Verified astrometric alignment anchored to Gaia DR3 reference stars."
         ],
         "measurements": [
-            {"parameter": "Spectral Passbands", "value": "102", "unit": "channels", "uncertainty": "SPHEREx Bands 1–6"},
-            {"parameter": "Astrometric Precision", "value": "0.12", "unit": "arcsec RMS", "uncertainty": "Gaia DR3 tie"}
+            {"parameter": "Spectral Passbands", "value": "102", "unit": "channels (infrared colors)", "uncertainty": "SPHEREx Bands 1–6"},
+            {"parameter": "Astrometric Precision", "value": "0.12", "unit": "arcsec RMS (pinpoint alignment)", "uncertainty": "Gaia DR3 tie"}
         ],
         "interpretation": "Astronomical phenomena are rigorously classified in AFTERLIGHT through combined temporal differencing, 102-band spectrophotometry, and astrometric tracking.",
         "limitations": [

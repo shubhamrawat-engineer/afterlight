@@ -1,0 +1,44 @@
+{
+  "status": "SUCCESS",
+  "query_parameters": {
+    "dist-max": "10LD",
+    "limit": "50",
+    "sort": "date",
+    "des": "99942",
+    "date-min": "2025-01-01",
+    "date-max": "2035-01-01"
+  },
+  "total_matches": 1,
+  "returned_count": 1,
+  "scientific_disclaimer": "A close approach is NOT automatically an impact threat. Miss distances represent nominal orbit solutions.",
+  "close_approaches": [
+    {
+      "object_designation": "99942",
+      "close_approach_date_utc": "2029-Apr-13 21:46",
+      "miss_distance_au": 0.000254090910419299,
+      "miss_distance_ld": 0.099,
+      "miss_distance_min_au": 0.000254068999976389,
+      "miss_distance_max_au": 0.000254112821017663,
+      "relative_velocity_km_s": 7.42253895678452,
+      "v_infinity_km_s": 5.84135589753103,
+      "absolute_magnitude_h": 19.09,
+      "estimated_diameter_range_meters": {
+        "min_meters": 404.2,
+        "max_meters": 903.7,
+        "assumed_albedo_range": [
+          0.05,
+          0.25
+        ],
+        "note": "Estimated from absolute magnitude H; not a physical radiometric measurement"
+      },
+      "classification_label": "CATALOGUE MATCH"
+    }
+  ],
+  "provenance": {
+    "source_name": "NASA/JPL CNEOS Close Approach Data API",
+    "source_version": "1.5",
+    "source_url": "https://ssd-api.jpl.nasa.gov/cad.api",
+    "retrieval_timestamp_utc": "2026-11-14T14:52:32Z",
+    "retrieval_status": "LIVE"
+  }
+}

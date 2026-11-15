@@ -1,0 +1,125 @@
+{
+  "report_metadata": {
+    "title": "AFTERLIGHT Stage 5 Preprocessing Report",
+    "generation_timestamp_utc": "2026-11-14T08:50:00.715038+00:00",
+    "pipeline_stage": "Stage 5: Scientific Image Processing",
+    "pipeline_version": "v1.0-reproducible",
+    "python_version": "3.13.7",
+    "astropy_version": "8.0.2"
+  },
+  "input_files": {
+    "earlier_epoch_f1": {
+      "filename": "level2_2025W17_4B_0486_3D5_spx_l2b-v27-2026-196.fits",
+      "local_path": "data\\raw\\selected_pair\\level2_2025W17_4B_0486_3D5_spx_l2b-v27-2026-196.fits",
+      "sha256": "988e5ac51809ddeeb9325ee339500c02fa912ed60aa3932bbdcc8d8532eda4cf",
+      "observation_date_utc": "2025-04-27T22:55:23.006",
+      "detector_id": 5,
+      "detector_name": "SPHEREx-D5",
+      "wavelength_um": 3.9839,
+      "bandwidth_um": 0.0365,
+      "exposure_sec": 112.5,
+      "roll_angle_deg": 243.321
+    },
+    "later_epoch_f2": {
+      "filename": "level2_2026W19_2A_0619_1D5_spx_l2b-v27-2026-245.fits",
+      "local_path": "data\\raw\\selected_pair\\level2_2026W19_2A_0619_1D5_spx_l2b-v27-2026-245.fits",
+      "sha256": "32a37705195e6809a56c4976c2473a26e2d0b15fee401ef36c1f78c435407f1e",
+      "observation_date_utc": "2026-05-09T02:47:50.285",
+      "detector_id": 5,
+      "detector_name": "SPHEREx-D5",
+      "wavelength_um": 3.98351,
+      "bandwidth_um": 0.0365,
+      "exposure_sec": 112.5,
+      "roll_angle_deg": 243.298
+    }
+  },
+  "astrometric_and_wcs_alignment": {
+    "reference_grid": "Epoch 1 (F1)",
+    "projection_type": "RA---TAN-SIP",
+    "target_coordinates_icrs": {
+      "ra_deg": 150.1,
+      "dec_deg": 2.2
+    },
+    "f1_target_pixel_0indexed": {
+      "x": 1821.0926814844995,
+      "y": 1442.2406834840451
+    },
+    "f2_target_pixel_0indexed": {
+      "x": 1817.122688952457,
+      "y": 1443.2240723437517
+    },
+    "pre_alignment_offset_pixels": {
+      "delta_x": -3.969992532042397,
+      "delta_y": 0.9833888597065652,
+      "total_separation_pixels": 4.0899748598087236
+    },
+    "reprojection_algorithm": "astropy.reproject.reproject_interp (bilinear for science/variance/zodi, nearest-neighbor for flags)",
+    "spatial_footprint": {
+      "total_pixels": 4161600,
+      "full_overlap_pixels": 4145656,
+      "full_overlap_percent": 99.61687812379853,
+      "partial_edge_pixels": 0,
+      "uncovered_pixels": 15944,
+      "target_in_overlap": true
+    }
+  },
+  "background_model_and_treatment": {
+    "hdu_location": "HDU 4 (ZODI)",
+    "units": "MJy / sr",
+    "model_type": "2D spatially varying zodiacal background array (2040 x 2040)",
+    "justification": "Level-2b IMAGE products contain total observed surface brightness (astrophysical sources + zodiacal foreground). HDU 4 provides the independent IPAC zodiacal light physical model sampled on the detector grid. Subtraction preserves astrophysical flux and prevents seasonal background gradients from biasing transient detection.",
+    "f1_zodi_statistics": {
+      "min": 0.11934711039066315,
+      "max": 0.2819657325744629,
+      "mean": 0.17783406376838684,
+      "median": 0.17014272511005402,
+      "std": 0.04229988530278206,
+      "count": 4161600
+    },
+    "f2_zodi_statistics": {
+      "min": 0.1418360322713852,
+      "max": 0.3512958884239197,
+      "mean": 0.2172861099243164,
+      "median": 0.20779207348823547,
+      "std": 0.053766895085573196,
+      "count": 4161600
+    },
+    "target_zodi_values": {
+      "f1_target_zodi_mjy_sr": 0.1417435258626938,
+      "f2_target_zodi_mjy_sr": 0.17087729275226593,
+      "delta_zodi_mjy_sr": 0.029133766889572144,
+      "ratio_f2_over_f1": 1.2055386304855347
+    },
+    "subtraction_effect_on_medians": {
+      "f1_image_raw_median": 0.2089570015668869,
+      "f1_image_sub_median": 0.03415869176387787,
+      "f2_image_raw_median": 0.23405684530735016,
+      "f2_image_sub_median": 0.025292955338954926
+    }
+  },
+  "psf_and_resolution_compatibility": {
+    "hdu_location": "HDU 5 (EPSF)",
+    "spatial_grid_shape": "21 x 21 bins (441 total models)",
+    "oversampled_kernel_shape": "33 x 33 pixels per bin",
+    "nominal_fwhm_arcsec": 8.6344,
+    "max_epsf_table_diff": 0.0,
+    "psf_matching_required": false,
+    "psf_matching_justification": "Both observation products utilize the exact same ePSF calibration reference file (epsf_5_20260507.fits), identical effective wavelength (3.984 um vs 3.984 um, delta=0.39 nm), identical detector optics (SPHEREx-D5), and identical nominal PSF FWHM. The maximum absolute difference across all 441 ePSF models is exactly 0.0. Therefore, cross-convolution or kernel degradation is scientifically unnecessary and would degrade image resolution."
+  },
+  "pixel_quality_and_masking": {
+    "hdu_location": "HDU 2 (FLAGS)",
+    "f1_target_pixel_flag": 268435456,
+    "f1_target_pixel_flag_interpretation": "Bit 28: HALO (transient halo flag). Critical data defect bits (NONFUNC bit 6, OVERFLOW bit 1, TRANSIENT bit 0) are 0.",
+    "f2_target_pixel_flag": 0,
+    "f2_target_pixel_flag_interpretation": "0 (Nominal clean pixel)",
+    "flag_propagation_method": "Nearest-neighbor reprojection to preserve exact integer bit flags without linear interpolation corruption."
+  },
+  "output_products": {
+    "earlier_reference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\earlier_reference.fits",
+    "later_reprojected_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\later_reprojected.fits",
+    "earlier_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\earlier_aligned.png",
+    "later_aligned_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\later_aligned.png",
+    "alignment_preview_diagnostic_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\alignment_preview.png",
+    "report_json": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\preprocessing_report.json"
+  }
+}

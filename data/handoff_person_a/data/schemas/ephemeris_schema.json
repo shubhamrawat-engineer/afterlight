@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AFTERLIGHT Horizons Ephemeris Record",
+  "type": "object",
+  "required": [
+    "status",
+    "object_id",
+    "position_label",
+    "ephemeris_points",
+    "provenance"
+  ],
+  "properties": {
+    "status": { "type": "string" },
+    "object_id": { "type": "string" },
+    "resolved_command": { "type": "string" },
+    "position_label": {
+      "type": "string",
+      "enum": ["PREDICTED"]
+    },
+    "observer_center": { "type": "string" },
+    "start_time_utc": { "type": "string" },
+    "stop_time_utc": { "type": "string" },
+    "point_count": { "type": "integer" },
+    "ephemeris_points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timestamp_utc", "ra_deg", "dec_deg"],
+        "properties": {
+          "timestamp_utc": { "type": "string" },
+          "ra_hms": { "type": "string" },
+          "dec_dms": { "type": "string" },
+          "ra_deg": { "type": "number" },
+          "dec_deg": { "type": "number" },
+          "apparent_v_magnitude": { "type": ["number", "null"] },
+          "distance_to_earth_au": { "type": ["number", "null"] },
+          "distance_to_sun_au": { "type": ["number", "null"] },
+          "dra_cosd_arcsec_hr": { "type": ["number", "null"] },
+          "ddec_arcsec_hr": { "type": ["number", "null"] }
+        }
+      }
+    },
+    "provenance": { "$ref": "provenance_schema.json" }
+  }
+}

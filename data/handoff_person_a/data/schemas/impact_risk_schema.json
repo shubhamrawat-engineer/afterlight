@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AFTERLIGHT Sentry Earth Impact Hazard Record",
+  "type": "object",
+  "required": [
+    "status",
+    "object_designation",
+    "risk_state",
+    "scientific_explanation",
+    "provenance"
+  ],
+  "properties": {
+    "status": { "type": "string" },
+    "object_designation": { "type": "string" },
+    "fullname": { "type": ["string", "null"] },
+    "risk_state": {
+      "type": "string",
+      "enum": [
+        "PUBLISHED_IMPACT_RISK",
+        "MONITORED_BY_SENTRY",
+        "REMOVED_FROM_SENTRY",
+        "NO_PUBLISHED_IMPACT_SOLUTION",
+        "INSUFFICIENT_OR_UNAVAILABLE_INFO"
+      ]
+    },
+    "scientific_explanation": { "type": "string" },
+    "impact_probability_cumulative": { "type": ["number", "null"] },
+    "palermo_scale_cumulative": { "type": ["number", "null"] },
+    "palermo_scale_max": { "type": ["number", "null"] },
+    "torino_scale_max": { "type": ["integer", "null"] },
+    "estimated_diameter_km": { "type": ["number", "null"] },
+    "impact_velocity_km_s": { "type": ["number", "null"] },
+    "potential_impact_solutions_count": { "type": ["integer", "null"] },
+    "impact_date_range": { "type": ["string", "null"] },
+    "disclaimer": { "type": "string" },
+    "provenance": { "$ref": "provenance_schema.json" }
+  }
+}

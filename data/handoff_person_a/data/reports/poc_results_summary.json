@@ -1,0 +1,62 @@
+[
+  {
+    "category": "COMET",
+    "object": "1P/Halley",
+    "catalogue_available": true,
+    "ephemeris_available": true,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "fits_retrievable": true,
+    "sample_file": "data/comets/halley_sample.json"
+  },
+  {
+    "category": "ASTEROID",
+    "object": "99942 Apophis",
+    "catalogue_available": true,
+    "ephemeris_available": true,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "fits_retrievable": true,
+    "sample_file": "data/asteroids/apophis_sample.json"
+  },
+  {
+    "category": "DWARF_PLANET",
+    "object": "1 Ceres",
+    "catalogue_available": true,
+    "ephemeris_available": true,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "fits_retrievable": true,
+    "sample_file": "data/dwarf_planets/ceres_sample.json"
+  },
+  {
+    "category": "STAR",
+    "object": "Gaia DR3 3836257882479792640",
+    "catalogue_available": true,
+    "ephemeris_available": false,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "IMAGE DETECTION",
+    "fits_retrievable": true,
+    "sample_file": "data/stars/cosmos_gaia_star_sample.json"
+  },
+  {
+    "category": "BROWN_DWARF",
+    "object": "Luhman 16",
+    "catalogue_available": true,
+    "ephemeris_available": false,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "fits_retrievable": true,
+    "sample_file": "data/brown_dwarfs/luhman16_sample.json"
+  },
+  {
+    "category": "SOLAR_SYSTEM_PLANET",
+    "object": "Jupiter",
+    "catalogue_available": true,
+    "ephemeris_available": true,
+    "spherex_coverage": "COVERAGE_AVAILABLE",
+    "detection_label": "POSSIBLE MATCH",
+    "fits_retrievable": true,
+    "sample_file": "data/spherex/jupiter_ephemeris_sample.json"
+  }
+]

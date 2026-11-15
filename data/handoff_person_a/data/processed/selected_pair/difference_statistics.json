@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "title": "AFTERLIGHT Temporal Difference Statistics",
+    "generation_timestamp_utc": "2026-11-14T09:36:51.264540+00:00",
+    "pipeline_stage": "Stage 8: Scientific Temporal Difference Imaging",
+    "difference_method": "later_background_subtracted minus earlier_background_subtracted",
+    "variance_propagation_method": "Var(diff) = Var(later) + Var(earlier) [statistically independent epochs]"
+  },
+  "pixel_counts": {
+    "total_pixels": 4161600,
+    "valid_overlap_pixels": 4144192,
+    "valid_overlap_percentage": 99.5817,
+    "invalid_masked_pixels": 17408,
+    "invalid_masked_percentage": 0.4183
+  },
+  "difference_surface_brightness_mjy_sr": {
+    "units": "MJy / sr",
+    "minimum": -29033.787109375,
+    "maximum": 26637.1875,
+    "mean": -0.2074085921049118,
+    "median": -0.009127632714807987,
+    "standard_deviation": 35.71139907836914,
+    "nmad_robust_sigma": 0.05141658117771149,
+    "percentiles": {
+      "p01": -0.3893797069787979,
+      "p05": -0.12454645223915575,
+      "p16": -0.06376566231250763,
+      "p50": -0.009127632714807987,
+      "p84": 0.04127361327409744,
+      "p95": 0.07882460467517367,
+      "p99": 0.18136077165603615
+    }
+  },
+  "snr_statistics": {
+    "minimum_snr": -304.8901672363281,
+    "maximum_snr": 2941.209716796875,
+    "mean_snr": -0.2815590500831604,
+    "median_snr": -0.18568354845046997,
+    "standard_deviation_snr": 5.141491889953613,
+    "nmad_robust_sigma_snr": 1.0462889949202536
+  },
+  "target_pixel_metrics": {
+    "target_ra": 150.1,
+    "target_dec": 2.2,
+    "pixel_x": 1821.0926814844995,
+    "pixel_y": 1442.2406834840451,
+    "grid_index": [
+      1442,
+      1821
+    ],
+    "earlier_value_mjy_sr": 0.08679720759391785,
+    "later_value_mjy_sr": -8.88951908564195e-05,
+    "difference_mjy_sr": -0.08688610047101974,
+    "propagated_variance_mjy2_sr2": 0.002301399130374193,
+    "propagated_sigma_mjy_sr": 0.0479728989303112,
+    "snr": -1.8111497163772583,
+    "composite_flag": 268435456
+  },
+  "output_files": {
+    "temporal_difference_fits": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\temporal_difference.fits",
+    "difference_preview_png": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_preview.png",
+    "difference_statistics_json": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_statistics.json",
+    "difference_processing_report_md": "C:\\Users\\shivp\\Downloads\\Afterlight\\data\\processed\\selected_pair\\difference_processing_report.md"
+  }
+}
