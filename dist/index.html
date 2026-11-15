@@ -12,8 +12,53 @@
       rel="stylesheet"
     />
     <title>AFTERLIGHT | Astronomical Exploration Platform</title>
-    <script type="module" crossorigin src="/assets/index-Caqz24Pb.js"></script>
+    <script type="module" crossorigin src="/assets/index-4D.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DENrO33d.css">
+
+    <!-- Immediate Theme & Day/Night Controller -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('afterlight_theme');
+          if (t === 'day') {
+            document.documentElement.classList.add('day-mode');
+            document.documentElement.classList.remove('night-mode');
+          } else {
+            document.documentElement.classList.add('night-mode');
+            document.documentElement.classList.remove('day-mode');
+          }
+        } catch (e) {}
+
+        // Global capture listener to ensure Day/Night toggle ALWAYS switches classes immediately
+        document.addEventListener('click', function(e) {
+          var btn = e.target.closest('button');
+          if (btn) {
+            var aria = (btn.getAttribute('aria-label') || '').toLowerCase();
+            var title = (btn.getAttribute('title') || '').toLowerCase();
+            if (aria.includes('theme') || aria.includes('mode') || title.includes('theme') || title.includes('mode')) {
+              var isDay = document.documentElement.classList.contains('day-mode');
+              if (isDay) {
+                document.documentElement.classList.remove('day-mode');
+                document.documentElement.classList.add('night-mode');
+                if (document.body) {
+                  document.body.classList.remove('day-mode');
+                  document.body.classList.add('night-mode');
+                }
+                localStorage.setItem('afterlight_theme', 'night');
+              } else {
+                document.documentElement.classList.add('day-mode');
+                document.documentElement.classList.remove('night-mode');
+                if (document.body) {
+                  document.body.classList.add('day-mode');
+                  document.body.classList.remove('night-mode');
+                }
+                localStorage.setItem('afterlight_theme', 'day');
+              }
+            }
+          }
+        }, true);
+      })();
+    </script>
 
     <style>
       /* --- Smooth 3D & Global Transitions --- */
@@ -54,7 +99,15 @@
         background: #38bdf8;
       }
 
-      /* 3D Cosmic Background Canvas */
+      /* Hide user/astronomer profile login buttons permanently */
+      button[aria-label*="Profile"],
+      button[title*="Profile"],
+      button[aria-label*="Astronomer"],
+      button[title*="Astronomer"] {
+        display: none !important;
+      }
+
+      /* 4D Relativistic Spacetime Canvas */
       #afterlight-3d-cosmic-canvas {
         position: fixed;
         top: 0;
@@ -63,7 +116,8 @@
         height: 100vh;
         pointer-events: none;
         z-index: 0;
-        opacity: 0.85;
+        opacity: 0.9;
+        transition: opacity 0.4s ease;
       }
 
       #root {
@@ -166,14 +220,210 @@
         z-index: 2;
       }
 
+      /* --- 4D Interactivity & Temporal Hover Depth --- */
+      .spacetime-4d-card {
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        transform-style: preserve-3d;
+      }
+      .spacetime-4d-card:hover {
+        transform: perspective(1000px) translateY(-3px) translateZ(8px);
+        box-shadow: 0 12px 35px rgba(67, 136, 255, 0.22), 0 0 20px rgba(69, 213, 242, 0.15);
+      }
+
+      /* --- DAY / NIGHT OBSERVATORY CONTRAST SYSTEM --- */
+      html, body {
+        transition: background-color 0.35s ease, color 0.35s ease !important;
+      }
+
+      /* DAY MODE (High Contrast Daylight Laboratory) */
+      html.day-mode,
+      html.day-mode body,
+      body.day-mode {
+        background-color: #f1f5f9 !important;
+        color: #0f172a !important;
+      }
+      html.day-mode #root,
+      body.day-mode #root {
+        background-color: #f1f5f9 !important;
+        color: #0f172a !important;
+      }
+      html.day-mode header,
+      body.day-mode header {
+        background: rgba(255, 255, 255, 0.95) !important;
+        border-bottom-color: #cbd5e1 !important;
+        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
+      }
+      html.day-mode header a,
+      html.day-mode header span,
+      body.day-mode header a,
+      body.day-mode header span {
+        color: #0f172a !important;
+      }
+      html.day-mode header button,
+      body.day-mode header button {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+      }
+      html.day-mode footer,
+      body.day-mode footer {
+        background-color: #ffffff !important;
+        border-top-color: #cbd5e1 !important;
+      }
+      html.day-mode footer span,
+      html.day-mode footer a,
+      html.day-mode footer p,
+      body.day-mode footer span,
+      body.day-mode footer a,
+      body.day-mode footer p {
+        color: #475569 !important;
+      }
+      html.day-mode section,
+      body.day-mode section,
+      html.day-mode main,
+      body.day-mode main {
+        background-color: transparent !important;
+      }
+
+      /* High-contrast Day Mode surfaces */
+      html.day-mode .bg-\[\#070B14\],
+      html.day-mode .bg-\[\#0A1020\],
+      html.day-mode .bg-\[\#040711\],
+      html.day-mode .bg-\[\#0d1527\],
+      html.day-mode .bg-\[\#101A2B\],
+      html.day-mode .bg-slate-950,
+      html.day-mode .bg-slate-900,
+      html.day-mode .bg-slate-900\/60,
+      html.day-mode .bg-slate-900\/80,
+      html.day-mode .bg-slate-900\/90,
+      html.day-mode .bg-black,
+      html.day-mode .bg-black\/80,
+      html.day-mode .bg-black\/85,
+      body.day-mode .bg-\[\#070B14\],
+      body.day-mode .bg-\[\#0A1020\],
+      body.day-mode .bg-\[\#040711\],
+      body.day-mode .bg-\[\#0d1527\],
+      body.day-mode .bg-\[\#101A2B\],
+      body.day-mode .bg-slate-950,
+      body.day-mode .bg-slate-900,
+      body.day-mode .bg-black {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode .border-\[\#1A2940\],
+      html.day-mode .border-\[\#24344D\],
+      html.day-mode .border-slate-800,
+      html.day-mode .border-slate-700,
+      body.day-mode .border-\[\#1A2940\],
+      body.day-mode .border-\[\#24344D\],
+      body.day-mode .border-slate-800 {
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode .text-\[\#F4F7FF\],
+      html.day-mode .text-white,
+      html.day-mode h1,
+      html.day-mode h2,
+      html.day-mode h3,
+      html.day-mode h4,
+      html.day-mode h5,
+      body.day-mode .text-\[\#F4F7FF\],
+      body.day-mode .text-white,
+      body.day-mode h1,
+      body.day-mode h2,
+      body.day-mode h3,
+      body.day-mode h4 {
+        color: #0f172a !important;
+      }
+      html.day-mode .text-\[\#B5C2D6\],
+      html.day-mode .text-\[\#8293AD\],
+      html.day-mode .text-slate-400,
+      html.day-mode .text-slate-300,
+      html.day-mode p,
+      body.day-mode .text-\[\#B5C2D6\],
+      body.day-mode .text-\[\#8293AD\],
+      body.day-mode .text-slate-400,
+      body.day-mode .text-slate-300,
+      body.day-mode p {
+        color: #334155 !important;
+      }
+      html.day-mode .text-\[\#E1E9F7\],
+      body.day-mode .text-\[\#E1E9F7\] {
+        color: #1e293b !important;
+      }
+      html.day-mode aside,
+      body.day-mode aside {
+        background-color: #f8fafc !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode input,
+      html.day-mode textarea,
+      html.day-mode select,
+      body.day-mode input,
+      body.day-mode textarea,
+      body.day-mode select {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
+      }
+      html.day-mode #afterlight-3d-cosmic-canvas,
+      body.day-mode #afterlight-3d-cosmic-canvas {
+        opacity: 0.16 !important;
+        filter: invert(0.9) contrast(1.1);
+      }
+      html.day-mode .astronomical-photon-grain,
+      body.day-mode .astronomical-photon-grain {
+        opacity: 0.08 !important;
+      }
+      html.day-mode .bg-\[\#070B14\]\/90,
+      html.day-mode .bg-\[\#070B14\]\/85,
+      html.day-mode .bg-\[\#070B14\]\/75,
+      body.day-mode .bg-\[\#070B14\]\/90 {
+        background-color: rgba(255, 255, 255, 0.95) !important;
+      }
+      html.day-mode #spacetime-4d-hud,
+      body.day-mode #spacetime-4d-hud {
+        background: rgba(255, 255, 255, 0.94) !important;
+        border-color: #cbd5e1 !important;
+        color: #0f172a !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
+      }
+      html.day-mode #spacetime-4d-hud strong,
+      body.day-mode #spacetime-4d-hud strong {
+        color: #0f172a !important;
+      }
+      html.day-mode #spacetime-t-val,
+      body.day-mode #spacetime-t-val {
+        color: #0369a1 !important;
+      }
+      html.day-mode #spacetime-gamma-val,
+      body.day-mode #spacetime-gamma-val {
+        color: #0284c7 !important;
+      }
+
     </style>
   </head>
   <body>
-    <!-- Hardware-accelerated 3D Starfield & Particle Warp Canvas -->
+    <!-- Hardware-accelerated 4D Relativistic Spacetime Canvas -->
     <canvas id="afterlight-3d-cosmic-canvas"></canvas>
+
+    <!-- Floating 4D Spacetime Telemetry Widget -->
+    <div
+      id="spacetime-4d-hud"
+      style="display: flex !important; position: fixed; bottom: 16px; left: 16px; z-index: 9999; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; border: 1px solid rgba(69, 213, 242, 0.45); background: rgba(7, 11, 20, 0.9); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; color: #45D5F2; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.5); pointer-events: none; select: none; transition: all 0.3s ease;"
+    >
+      <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #45D5F2; box-shadow: 0 0 10px #45D5F2;"></span>
+      <strong style="color: #F4F7FF; letter-spacing: 0.05em;">4D SPACETIME:</strong>
+      <span id="spacetime-t-val" style="color: #bae6fd;">τ = +0.00s</span>
+      <span style="color: #64748b;">•</span>
+      <span id="spacetime-gamma-val" style="color: #38bdf8;">γ = 1.000</span>
+      <span style="color: #64748b;">•</span>
+      <span style="color: #c084fc;">SPHEREx 102λ</span>
+    </div>
     
     <div id="root"></div>
 
+    <!-- 4D Relativistic Minkowski Spacetime Physics Engine -->
     <script>
       (function() {
         const canvas = document.getElementById('afterlight-3d-cosmic-canvas');
@@ -184,29 +434,36 @@
         let width = canvas.width = window.innerWidth;
         let height = canvas.height = window.innerHeight;
 
-        const numStars = 320;
+        const numStars = 340;
         const stars = [];
-        const focalLength = 400;
+        const focalLength = 420;
         let mouseX = 0, mouseY = 0;
         let targetAngleX = 0, targetAngleY = 0;
         let angleX = 0, angleY = 0;
+        let velocity = 0;
+        let properTime = 0; // The 4th Dimension: Time (tau)
+        let lastScrollY = window.scrollY;
 
-        const starColors = [
-          '#ffffff', // Pure white
-          '#bae6fd', // Pale cyan (A-type)
-          '#7dd3fc', // Electric sky (B-type)
-          '#c084fc', // Soft ultraviolet nebula
-          '#fde047', // Solar warm gold
-          '#f472b6'  // Infrared dust glow
+        const hudT = document.getElementById('spacetime-t-val');
+        const hudGamma = document.getElementById('spacetime-gamma-val');
+
+        const baseStarColors = [
+          '#ffffff', // Core white
+          '#bae6fd', // Blueshifted cyan (Doppler approaching)
+          '#7dd3fc', // Relativistic sky (Doppler approaching)
+          '#c084fc', // Temporal ultraviolet
+          '#fde047', // Solar rest frame
+          '#f472b6'  // Redshifted infrared (Doppler receding)
         ];
 
         for (let i = 0; i < numStars; i++) {
           stars.push({
-            x: (Math.random() - 0.5) * 2200,
-            y: (Math.random() - 0.5) * 2200,
-            z: Math.random() * 1000 + 1,
+            x: (Math.random() - 0.5) * 2400,
+            y: (Math.random() - 0.5) * 2400,
+            z: Math.random() * 1100 + 1,
+            w: Math.random() * Math.PI * 2, // 4th coordinate (hyper-temporal phase)
             size: Math.random() * 1.8 + 0.6,
-            color: starColors[Math.floor(Math.random() * starColors.length)],
+            color: baseStarColors[Math.floor(Math.random() * baseStarColors.length)],
             speed: Math.random() * 0.4 + 0.25,
             twinkle: Math.random() * 0.03 + 0.01,
             phase: Math.random() * Math.PI * 2
@@ -225,11 +482,45 @@
           targetAngleY = mouseY * 0.25;
         });
 
+        window.addEventListener('scroll', () => {
+          const dy = Math.abs(window.scrollY - lastScrollY);
+          lastScrollY = window.scrollY;
+          velocity = Math.min(velocity + dy * 0.05, 8);
+        }, { passive: true });
+
+        // Gravitational spacetime ripple on click
+        const ripples = [];
+        window.addEventListener('click', (e) => {
+          ripples.push({
+            x: e.clientX,
+            y: e.clientY,
+            radius: 10,
+            maxRadius: 280,
+            alpha: 0.65
+          });
+        });
+
         let lastTime = performance.now();
 
         function animate(time) {
           const delta = Math.min((time - lastTime) / 1000, 0.1);
           lastTime = time;
+
+          // 4th Dimension temporal flow
+          properTime += delta;
+          velocity *= 0.94; // Velocity damping
+
+          // Relativistic Lorentz Factor gamma = 1 / sqrt(1 - v^2/c^2)
+          const beta = Math.min(velocity / 12, 0.75); // v/c
+          const gamma = 1 / Math.sqrt(1 - beta * beta);
+
+          // Update HUD telemetry
+          if (hudT && (Math.floor(properTime * 10) % 2 === 0)) {
+            hudT.textContent = 'τ = +' + properTime.toFixed(2) + 's';
+          }
+          if (hudGamma) {
+            hudGamma.textContent = 'γ = ' + gamma.toFixed(3);
+          }
 
           // Smooth lerp for 3D camera rotation
           angleX += (targetAngleX - angleX) * 0.06;
@@ -240,15 +531,21 @@
           const cx = width / 2;
           const cy = height / 2;
 
+          // 4D Geodesic Spacetime Mesh (connect nearby guide stars in 4D Minkowski space)
+          const projectedStars = [];
+
           for (let i = 0; i < numStars; i++) {
             const star = stars[i];
 
-            // Move star towards camera (cosmic depth forward flight)
-            star.z -= star.speed * (delta * 60);
+            // 4th-dimensional time evolution: warp along z with Lorentz dilation
+            const effectiveSpeed = star.speed * gamma;
+            star.z -= effectiveSpeed * (delta * 60);
+            star.w += star.twinkle * gamma;
+
             if (star.z <= 1) {
-              star.z = 1000;
-              star.x = (Math.random() - 0.5) * 2200;
-              star.y = (Math.random() - 0.5) * 2200;
+              star.z = 1100;
+              star.x = (Math.random() - 0.5) * 2400;
+              star.y = (Math.random() - 0.5) * 2400;
             }
 
             // 3D Rotation with mouse angle
@@ -265,43 +562,94 @@
 
             if (rz <= 10) continue;
 
-            // 3D Perspective Projection
+            // 3D/4D Perspective Projection
             const k = focalLength / rz;
             const px = rx * k + cx;
             const py = ry * k + cy;
 
-            if (px < -20 || px > width + 20 || py < -20 || py > height + 20) continue;
+            if (px < -30 || px > width + 30 || py < -30 || py > height + 30) continue;
 
-            // Depth-based brightness & size
-            const depthRatio = 1 - (rz / 1000);
+            // Depth + 4th-dimensional temporal twinkle
+            const depthRatio = 1 - (rz / 1100);
             star.phase += star.twinkle;
-            const twinkleAlpha = 0.65 + Math.sin(star.phase) * 0.35;
+            const twinkleAlpha = 0.6 + Math.sin(star.phase + star.w) * 0.4;
             const alpha = Math.max(0.1, Math.min(1, depthRatio * twinkleAlpha));
             const size = Math.max(0.6, star.size * k * 0.45);
 
+            // Doppler Blueshift / Redshift based on velocity
+            let renderColor = star.color;
+            if (beta > 0.08) {
+              renderColor = depthRatio > 0.5 ? '#7dd3fc' : '#f472b6';
+            }
+
             ctx.save();
             ctx.globalAlpha = alpha;
-            ctx.fillStyle = star.color;
-            ctx.shadowBlur = depthRatio > 0.6 ? 8 : 0;
-            ctx.shadowColor = star.color;
+            ctx.fillStyle = renderColor;
+            ctx.shadowBlur = depthRatio > 0.65 ? 8 : 0;
+            ctx.shadowColor = renderColor;
 
             ctx.beginPath();
             ctx.arc(px, py, size, 0, Math.PI * 2);
             ctx.fill();
 
-            // Rare optical diffraction spike on close stars
-            if (depthRatio > 0.75 && star.size > 1.4) {
+            // Optical diffraction spike on bright close stars
+            if (depthRatio > 0.78 && star.size > 1.35) {
               ctx.lineWidth = 0.5;
-              ctx.strokeStyle = star.color;
+              ctx.strokeStyle = renderColor;
               ctx.beginPath();
-              ctx.moveTo(px - size * 3, py);
-              ctx.lineTo(px + size * 3, py);
-              ctx.moveTo(px, py - size * 3);
-              ctx.lineTo(px, py + size * 3);
+              ctx.moveTo(px - size * 3.2, py);
+              ctx.lineTo(px + size * 3.2, py);
+              ctx.moveTo(px, py - size * 3.2);
+              ctx.lineTo(px, py + size * 3.2);
               ctx.stroke();
             }
 
             ctx.restore();
+
+            if (depthRatio > 0.72 && projectedStars.length < 45) {
+              projectedStars.push({ px, py, alpha });
+            }
+          }
+
+          // Render faint 4D Spacetime Geodesic Worldlines between close guide stars
+          ctx.save();
+          ctx.lineWidth = 0.4;
+          for (let i = 0; i < projectedStars.length; i++) {
+            for (let j = i + 1; j < projectedStars.length; j++) {
+              const dx = projectedStars[i].px - projectedStars[j].px;
+              const dy = projectedStars[i].py - projectedStars[j].py;
+              const distSq = dx * dx + dy * dy;
+              if (distSq < 13000) { // ~114px apart
+                const lineAlpha = (1 - distSq / 13000) * 0.16 * Math.min(projectedStars[i].alpha, projectedStars[j].alpha);
+                ctx.strokeStyle = '#45D5F2';
+                ctx.globalAlpha = lineAlpha;
+                ctx.beginPath();
+                ctx.moveTo(projectedStars[i].px, projectedStars[i].py);
+                ctx.lineTo(projectedStars[j].px, projectedStars[j].py);
+                ctx.stroke();
+              }
+            }
+          }
+          ctx.restore();
+
+          // Render Gravitational Spacetime Wave Ripples
+          for (let i = ripples.length - 1; i >= 0; i--) {
+            const r = ripples[i];
+            r.radius += (r.maxRadius - r.radius) * 0.08;
+            r.alpha *= 0.93;
+
+            ctx.save();
+            ctx.strokeStyle = '#38bdf8';
+            ctx.globalAlpha = r.alpha;
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
+            ctx.stroke();
+            ctx.restore();
+
+            if (r.alpha < 0.02) {
+              ripples.splice(i, 1);
+            }
           }
 
           requestAnimationFrame(animate);
