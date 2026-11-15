@@ -84,16 +84,6 @@ It provides an intuitive, high-speed interface for astronomers, researchers, and
 
 ---
 
-## 📊 Presentation Deck (7 Slides)
-
-The complete project presentation covering the frontend, backend, observational data layer, and scientific validation is included in two formats:
-
-1. **PowerPoint Presentation (`.pptx`):**
-   - Download directly: [`AFTERLIGHT_Project_Presentation.pptx`](dist/AFTERLIGHT_Project_Presentation.pptx)
-2. **Interactive Standalone Web Application:**
-   - Open locally or visit `/presentation.html` on the server: [`presentation.html`](dist/presentation.html)
-
----
 
 ## 🚀 Quickstart & Installation
 
