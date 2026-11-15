@@ -84,6 +84,10 @@ async def telemetry_and_rate_limit(request: Request, call_next):
     response = await call_next(request)
     response.headers["X-Request-ID"] = req_id
     response.headers["X-Process-Time-Ms"] = f"{(time.perf_counter() - t0) * 1000:.2f}"
+    if request.url.path.startswith("/assets") or request.url.path == "/" or request.url.path.endswith(".html"):
+        response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        response.headers["Pragma"] = "no-cache"
+        response.headers["Expires"] = "0"
     return response
 
 

@@ -12,51 +12,46 @@
       rel="stylesheet"
     />
     <title>AFTERLIGHT | Astronomical Exploration Platform</title>
-    <script type="module" crossorigin src="/assets/index-4D.js"></script>
+    <script type="module" crossorigin src="/assets/index-Caqz24Pb.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-DENrO33d.css">
 
-    <!-- Immediate Theme & Day/Night Controller -->
+    <!-- Dark Space Theme & Button Cleanup Guard -->
     <script>
       (function() {
         try {
-          var t = localStorage.getItem('afterlight_theme');
-          if (t === 'day') {
-            document.documentElement.classList.add('day-mode');
-            document.documentElement.classList.remove('night-mode');
-          } else {
-            document.documentElement.classList.add('night-mode');
-            document.documentElement.classList.remove('day-mode');
-          }
+          localStorage.removeItem('afterlight_theme');
+          document.documentElement.classList.remove('day-mode');
+          document.documentElement.classList.add('night-mode');
         } catch (e) {}
 
-        // Global capture listener to ensure Day/Night toggle ALWAYS switches classes immediately
-        document.addEventListener('click', function(e) {
-          var btn = e.target.closest('button');
-          if (btn) {
-            var aria = (btn.getAttribute('aria-label') || '').toLowerCase();
-            var title = (btn.getAttribute('title') || '').toLowerCase();
-            if (aria.includes('theme') || aria.includes('mode') || title.includes('theme') || title.includes('mode')) {
-              var isDay = document.documentElement.classList.contains('day-mode');
-              if (isDay) {
-                document.documentElement.classList.remove('day-mode');
-                document.documentElement.classList.add('night-mode');
-                if (document.body) {
-                  document.body.classList.remove('day-mode');
-                  document.body.classList.add('night-mode');
-                }
-                localStorage.setItem('afterlight_theme', 'night');
-              } else {
-                document.documentElement.classList.add('day-mode');
-                document.documentElement.classList.remove('night-mode');
-                if (document.body) {
-                  document.body.classList.add('day-mode');
-                  document.body.classList.remove('night-mode');
-                }
-                localStorage.setItem('afterlight_theme', 'day');
-              }
+        function purgeButtons() {
+          var btns = document.querySelectorAll('button');
+          for (var i = 0; i < btns.length; i++) {
+            var b = btns[i];
+            var a = (b.getAttribute('aria-label') || '').toLowerCase();
+            var t = (b.getAttribute('title') || '').toLowerCase();
+            if (
+              a.includes('theme') ||
+              t.includes('theme') ||
+              a.includes('contrast') ||
+              t.includes('contrast') ||
+              a.includes('profile') ||
+              t.includes('profile') ||
+              a.includes('astronomer') ||
+              t.includes('astronomer')
+            ) {
+              b.remove();
             }
           }
-        }, true);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', purgeButtons);
+        } else {
+          purgeButtons();
+        }
+        var obs = new MutationObserver(purgeButtons);
+        obs.observe(document.documentElement, { childList: true, subtree: true });
       })();
     </script>
 
@@ -99,11 +94,17 @@
         background: #38bdf8;
       }
 
-      /* Hide user/astronomer profile login buttons permanently */
+      /* Hide user/astronomer profile and theme toggle buttons permanently */
       button[aria-label*="Profile"],
       button[title*="Profile"],
       button[aria-label*="Astronomer"],
-      button[title*="Astronomer"] {
+      button[title*="Astronomer"],
+      button[aria-label*="Theme"],
+      button[title*="Theme"],
+      button[aria-label*="theme"],
+      button[title*="theme"],
+      button[aria-label*="Contrast"],
+      button[title*="Contrast"] {
         display: none !important;
       }
 
@@ -236,171 +237,6 @@
       }
 
       /* DAY MODE (High Contrast Daylight Laboratory) */
-      html.day-mode,
-      html.day-mode body,
-      body.day-mode {
-        background-color: #f1f5f9 !important;
-        color: #0f172a !important;
-      }
-      html.day-mode #root,
-      body.day-mode #root {
-        background-color: #f1f5f9 !important;
-        color: #0f172a !important;
-      }
-      html.day-mode header,
-      body.day-mode header {
-        background: rgba(255, 255, 255, 0.95) !important;
-        border-bottom-color: #cbd5e1 !important;
-        box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08) !important;
-      }
-      html.day-mode header a,
-      html.day-mode header span,
-      body.day-mode header a,
-      body.day-mode header span {
-        color: #0f172a !important;
-      }
-      html.day-mode header button,
-      body.day-mode header button {
-        background-color: #f8fafc !important;
-        border-color: #cbd5e1 !important;
-        color: #0f172a !important;
-      }
-      html.day-mode footer,
-      body.day-mode footer {
-        background-color: #ffffff !important;
-        border-top-color: #cbd5e1 !important;
-      }
-      html.day-mode footer span,
-      html.day-mode footer a,
-      html.day-mode footer p,
-      body.day-mode footer span,
-      body.day-mode footer a,
-      body.day-mode footer p {
-        color: #475569 !important;
-      }
-      html.day-mode section,
-      body.day-mode section,
-      html.day-mode main,
-      body.day-mode main {
-        background-color: transparent !important;
-      }
-
-      /* High-contrast Day Mode surfaces */
-      html.day-mode .bg-\[\#070B14\],
-      html.day-mode .bg-\[\#0A1020\],
-      html.day-mode .bg-\[\#040711\],
-      html.day-mode .bg-\[\#0d1527\],
-      html.day-mode .bg-\[\#101A2B\],
-      html.day-mode .bg-slate-950,
-      html.day-mode .bg-slate-900,
-      html.day-mode .bg-slate-900\/60,
-      html.day-mode .bg-slate-900\/80,
-      html.day-mode .bg-slate-900\/90,
-      html.day-mode .bg-black,
-      html.day-mode .bg-black\/80,
-      html.day-mode .bg-black\/85,
-      body.day-mode .bg-\[\#070B14\],
-      body.day-mode .bg-\[\#0A1020\],
-      body.day-mode .bg-\[\#040711\],
-      body.day-mode .bg-\[\#0d1527\],
-      body.day-mode .bg-\[\#101A2B\],
-      body.day-mode .bg-slate-950,
-      body.day-mode .bg-slate-900,
-      body.day-mode .bg-black {
-        background-color: #ffffff !important;
-        color: #0f172a !important;
-        border-color: #cbd5e1 !important;
-      }
-      html.day-mode .border-\[\#1A2940\],
-      html.day-mode .border-\[\#24344D\],
-      html.day-mode .border-slate-800,
-      html.day-mode .border-slate-700,
-      body.day-mode .border-\[\#1A2940\],
-      body.day-mode .border-\[\#24344D\],
-      body.day-mode .border-slate-800 {
-        border-color: #cbd5e1 !important;
-      }
-      html.day-mode .text-\[\#F4F7FF\],
-      html.day-mode .text-white,
-      html.day-mode h1,
-      html.day-mode h2,
-      html.day-mode h3,
-      html.day-mode h4,
-      html.day-mode h5,
-      body.day-mode .text-\[\#F4F7FF\],
-      body.day-mode .text-white,
-      body.day-mode h1,
-      body.day-mode h2,
-      body.day-mode h3,
-      body.day-mode h4 {
-        color: #0f172a !important;
-      }
-      html.day-mode .text-\[\#B5C2D6\],
-      html.day-mode .text-\[\#8293AD\],
-      html.day-mode .text-slate-400,
-      html.day-mode .text-slate-300,
-      html.day-mode p,
-      body.day-mode .text-\[\#B5C2D6\],
-      body.day-mode .text-\[\#8293AD\],
-      body.day-mode .text-slate-400,
-      body.day-mode .text-slate-300,
-      body.day-mode p {
-        color: #334155 !important;
-      }
-      html.day-mode .text-\[\#E1E9F7\],
-      body.day-mode .text-\[\#E1E9F7\] {
-        color: #1e293b !important;
-      }
-      html.day-mode aside,
-      body.day-mode aside {
-        background-color: #f8fafc !important;
-        border-color: #cbd5e1 !important;
-      }
-      html.day-mode input,
-      html.day-mode textarea,
-      html.day-mode select,
-      body.day-mode input,
-      body.day-mode textarea,
-      body.day-mode select {
-        background-color: #ffffff !important;
-        color: #0f172a !important;
-        border-color: #cbd5e1 !important;
-      }
-      html.day-mode #afterlight-3d-cosmic-canvas,
-      body.day-mode #afterlight-3d-cosmic-canvas {
-        opacity: 0.16 !important;
-        filter: invert(0.9) contrast(1.1);
-      }
-      html.day-mode .astronomical-photon-grain,
-      body.day-mode .astronomical-photon-grain {
-        opacity: 0.08 !important;
-      }
-      html.day-mode .bg-\[\#070B14\]\/90,
-      html.day-mode .bg-\[\#070B14\]\/85,
-      html.day-mode .bg-\[\#070B14\]\/75,
-      body.day-mode .bg-\[\#070B14\]\/90 {
-        background-color: rgba(255, 255, 255, 0.95) !important;
-      }
-      html.day-mode #spacetime-4d-hud,
-      body.day-mode #spacetime-4d-hud {
-        background: rgba(255, 255, 255, 0.94) !important;
-        border-color: #cbd5e1 !important;
-        color: #0f172a !important;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12) !important;
-      }
-      html.day-mode #spacetime-4d-hud strong,
-      body.day-mode #spacetime-4d-hud strong {
-        color: #0f172a !important;
-      }
-      html.day-mode #spacetime-t-val,
-      body.day-mode #spacetime-t-val {
-        color: #0369a1 !important;
-      }
-      html.day-mode #spacetime-gamma-val,
-      body.day-mode #spacetime-gamma-val {
-        color: #0284c7 !important;
-      }
-
     </style>
   </head>
   <body>
