@@ -895,13 +895,16 @@ def _answer_general_astronomy(mode: str, query: str, context: Dict[str, Any]) ->
         '- **If an object moves** between pictures taken months apart, it is a solar system neighbor (like an asteroid, comet, or Planet X candidate).\n'
         '- **If an object blinks or flares** while staying in the exact same spot, it is a distant star flaring up, an exploding supernova, or a supermassive black hole consuming gas.\n'
         '- **If we split its light into 102 colors**, we can read its "cosmic barcode" to see if it has water, ice, or methane without ever leaving Earth!\n\n'
-        '### 🔍 How to Explore This in AFTERLIGHT\n'
-        '- **Universe Explorer (`/explore`):** Pan and zoom into real space telescope images.\n'
-        '- **Temporal Lab (`/temporal-analysis/...`):** Subtract two photos taken months apart to spot things that changed.\n'
-        '- **Spectral Lab (`/spectral-lab/...`):** Look at the 102-color barcode of any target.\n'
-        '- **Object Dossiers (`/objects`):** Review automated reports on asteroids, variable stars, and new worlds!\n\n'
-        '### 🔬 Scientific Measurement Integrity\n'
-        'All data in AFTERLIGHT is calibrated against European Space Agency Gaia DR3 reference stars ($\text{RMS} < 0.12^{\prime\prime}$) and verified against 6-part uncertainty budgets so every detection is mathematically defensible.\n'
+        '### 🔍 What the Numbers & Units Mean in Plain English\n'
+        '- **Astronomical Unit ($\text{AU}$):** The distance between Earth and the Sun (~93 million miles or 150 million km).\n'
+        '- **Micrometers ($\mu\text{m}$):** Wavelengths of infrared heat light. Human eyes see 0.4–0.7 $\mu\text{m}$; SPHEREx sees deeper heat light from 0.75 to 5.00 $\mu\text{m}$.\n'
+        '- **MilliJanskys ($\text{mJy}$):** A measure of how bright a celestial body appears. One Jansky is tiny ($10^{-26}\text{ W/m}^2/\text{Hz}$), and SPHEREx can detect faint whispers down to fractions of a milliJansky!\n'
+        '- **Sigma ($\sigma$):** How certain we are that a signal is real. $5\sigma$ means there is less than a 1-in-3.5-million chance that what we spotted is just camera noise.\n\n'
+        '### 🔬 Full Scientific Breakdown & Formulas\n'
+        'All data in AFTERLIGHT is processed through task-specific compatibility engines and mathematically defensible error budgets:\n'
+        '- **Image Subtraction Matrix:** $\mathcal{D}(x,y) = \mathcal{I}_1(x,y) - [\mathcal{I}_0 \otimes \mathcal{K}](x,y)$, where $\mathcal{K}$ is the optimal seeing convolution kernel.\n'
+        '- **Astrometric Precision:** Anchored to European Space Agency Gaia DR3 reference stars with residual RMS $< 0.12^{\prime\prime}$.\n'
+        '- **Compound Error Propagation:** $\sigma_{\text{total}}^2 = \sigma_{\text{poisson}}^2 + \sigma_{\text{readout}}^2 + \sigma_{\text{zodiacal}}^2 + \sigma_{\text{calib}}^2 + \sigma_{\text{astrometric}}^2$.\n'
     )
     return {
         "directAnswer": ans,
