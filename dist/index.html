@@ -70,6 +70,102 @@
         position: relative;
         z-index: 1;
       }
+    
+      /* --- Space Telescope Authentic Physics & Animations --- */
+      @keyframes cosmicGalaxyDrift {
+        0% {
+          transform: rotate(0deg) scale(1.02);
+        }
+        50% {
+          transform: rotate(2.4deg) scale(1.055);
+        }
+        100% {
+          transform: rotate(-1.6deg) scale(1.02);
+        }
+      }
+
+      @keyframes cosmicCorePulse {
+        0%, 100% {
+          opacity: 0.62;
+          transform: scale(0.96);
+          filter: brightness(1) drop-shadow(0 0 35px rgba(69, 213, 242, 0.45));
+        }
+        50% {
+          opacity: 0.94;
+          transform: scale(1.07);
+          filter: brightness(1.22) drop-shadow(0 0 65px rgba(69, 213, 242, 0.85));
+        }
+      }
+
+      @keyframes diffractionSpikePulse {
+        0%, 100% {
+          opacity: 0.55;
+          transform: scale(0.92);
+        }
+        50% {
+          opacity: 0.95;
+          transform: scale(1.08);
+        }
+      }
+
+      @keyframes reticleScanRotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes astrometricBlink {
+        0%, 100% {
+          opacity: 0.35;
+        }
+        50% {
+          opacity: 0.9;
+        }
+      }
+
+      /* Microscopic Astronomical Sensor Photon Shot Noise */
+      .astronomical-photon-grain {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 4px 4px;
+        pointer-events: none;
+      }
+
+      /* Optical 4-Point Space Telescope Diffraction Cross */
+      .diffraction-spike-star {
+        position: absolute;
+        pointer-events: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .diffraction-spike-star::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 52px;
+        background: linear-gradient(to bottom, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
+        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+      }
+      .diffraction-spike-star::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 52px;
+        background: linear-gradient(to right, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
+        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
+      }
+      .diffraction-core-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 9999px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(56, 189, 248, 0.9), 0 0 20px rgba(67, 136, 255, 0.7);
+        z-index: 2;
+      }
+
     </style>
   </head>
   <body>

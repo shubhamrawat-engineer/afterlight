@@ -11,21 +11,64 @@ import{_ as e,d as LinkComponent,g as n,i as r,n as i,p as a,r as o}from"./index
       (0,h.jsxs)(`div`,{
         onClick:()=>setIsGalaxyOpen(!0),
         title:`Click to Open Deep-Field Galaxy Core`,
-        className:`absolute inset-0 h-full w-full transition-transform duration-500 ease-out cursor-pointer group pointer-events-auto`,
-        style:{transform:`translate3d(${t.x*-12}px, ${t.y*-8}px, 0) scale(1.04)`},
+        className:`absolute inset-0 h-full w-full cursor-pointer group pointer-events-auto`,
+        style:{
+          perspective:`1300px`,
+          transform:`perspective(1300px) rotateX(${t.y*-8.5}deg) rotateY(${t.x*12.5}deg) translate3d(${t.x*-24}px, ${t.y*-16}px, 0px) scale(1.07)`,
+          transformStyle:`preserve-3d`,
+          transition:`transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)`,
+          willChange:`transform`
+        },
         children:[
           (0,h.jsx)(`img`,{
             src:`/assets/galaxy.png`,
             alt:``,
             loading:`eager`,
             fetchPriority:`high`,
-            className:`h-full w-full object-cover object-[62%_44%] sm:object-[60%_45%] lg:object-[58%_45%] opacity-95 contrast-[1.16] brightness-[1.14] saturate-[1.28] group-hover:scale-[1.03] transition-all duration-700`,
+            className:`h-full w-full object-cover object-[62%_44%] sm:object-[60%_45%] lg:object-[58%_45%] opacity-95 contrast-[1.08] brightness-[1.03] saturate-[1.05] group-hover:scale-[1.03] transition-all duration-700`,
             style:{
+              animation:`cosmicGalaxyDrift 110s ease-in-out infinite alternate`,
+              transformOrigin:`62% 45%`,
               maskImage:`radial-gradient(ellipse 92% 84% at 62% 45%, black 38%, rgba(0,0,0,0.88) 65%, rgba(0,0,0,0.35) 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 84%, transparent 100%)`,
               WebkitMaskImage:`radial-gradient(ellipse 92% 84% at 62% 45%, black 38%, rgba(0,0,0,0.88) 65%, rgba(0,0,0,0.35) 86%, transparent 100%), linear-gradient(to bottom, transparent 0%, black 8%, black 84%, transparent 100%)`,
               maskComposite:`intersect`,
               WebkitMaskComposite:`destination-in`
             }
+          }),
+          (0,h.jsx)(`div`,{
+            className:`astronomical-photon-grain absolute inset-0 pointer-events-none z-10 opacity-35 mix-blend-overlay`
+          }),
+          (0,h.jsx)(`div`,{
+            className:`absolute pointer-events-none rounded-full`,
+            style:{
+              left:`62%`,
+              top:`45%`,
+              width:`260px`,
+              height:`260px`,
+              transform:`translate(-50%, -50%)`,
+              background:`radial-gradient(circle, rgba(147, 217, 255, 0.42) 0%, rgba(56, 189, 248, 0.24) 35%, rgba(129, 140, 248, 0.12) 65%, transparent 80%)`,
+              animation:`cosmicCorePulse 9s ease-in-out infinite alternate`,
+              mixBlendMode:`screen`,
+              pointerEvents:`none`
+            }
+          }),
+          (0,h.jsxs)(`div`,{className:`diffraction-spike-star`,style:{left:`64%`,top:`82%`,animation:`diffractionSpikePulse 6s ease-in-out infinite alternate`},children:[(0,h.jsx)(`div`,{className:`diffraction-core-dot`})]}),
+          (0,h.jsxs)(`div`,{className:`diffraction-spike-star`,style:{left:`22%`,top:`68%`,animation:`diffractionSpikePulse 7s ease-in-out 1s infinite alternate`},children:[(0,h.jsx)(`div`,{className:`diffraction-core-dot`})]}),
+          (0,h.jsxs)(`div`,{className:`diffraction-spike-star`,style:{left:`76%`,top:`44%`,animation:`diffractionSpikePulse 5.5s ease-in-out 0.5s infinite alternate`},children:[(0,h.jsx)(`div`,{className:`diffraction-core-dot`})]}),
+          (0,h.jsxs)(`div`,{className:`diffraction-spike-star`,style:{left:`30%`,top:`34%`,animation:`diffractionSpikePulse 8s ease-in-out 2s infinite alternate`},children:[(0,h.jsx)(`div`,{className:`diffraction-core-dot`})]}),
+          (0,h.jsxs)(`div`,{
+            className:`absolute bottom-8 right-8 hidden lg:flex flex-col items-end gap-1 font-mono text-[11px] text-cyan-300/80 pointer-events-none z-20 bg-[#070B14]/75 px-3.5 py-2 rounded-xl border border-cyan-500/25 backdrop-blur-sm shadow-lg`,
+            children:[
+              (0,h.jsxs)(`div`,{className:`flex items-center gap-2 text-cyan-200 font-semibold`,children:[
+                (0,h.jsx)(`span`,{className:`h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping`}),
+                `WCS TANGENT PROJECTION (ICRS J2000)`
+              ]}),
+              (0,h.jsx)(`div`,{className:`text-slate-400`,children:`RA 150.1005° • DEC +02.2024° • 6.2″/px`}),
+              (0,h.jsxs)(`div`,{className:`flex items-center gap-2 text-[10px] text-slate-500 pt-1 border-t border-slate-800/80 w-full justify-between`,children:[
+                (0,h.jsx)(`span`,{children:`FOV: 0.25° × 0.25°`}),
+                (0,h.jsx)(`span`,{className:`text-cyan-400/90 font-bold`,children:`SPHEREx BAND 1-6`})
+              ]})
+            ]
           }),
           (0,h.jsxs)(`div`,{
             className:`absolute top-[38%] right-[8%] sm:right-[16%] lg:right-[22%] flex flex-col items-center gap-2 pointer-events-auto z-30 transition-transform duration-300 group-hover:scale-110`,
