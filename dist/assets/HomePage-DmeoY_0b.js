@@ -445,7 +445,204 @@ import{_ as e,d as LinkComponent,g as n,i as r,n as i,p as a,r as o}from"./index
       })
     ]
   })
-}function S({className:e}){return(0,h.jsx)(`section`,{"aria-label":`Core AFTERLIGHT Features`,className:e,children:(0,h.jsx)(`div`,{className:`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5`,children:v.map(e=>(0,h.jsx)(x,{feature:e},e.id))})})}function C({className:e}){let[t,n]=(0,m.useState)(``),r=(0,m.useRef)(null),o=a(),l=e=>{e.preventDefault();let n=t.trim();n&&o(`/ai?q=${encodeURIComponent(n)}`)},u=e=>{o(`/ai?q=${encodeURIComponent(e)}`)};return(0,h.jsx)(`section`,{"aria-label":`Cosmos AI Assistant Query`,className:`rounded-xl border border-[#24344D] bg-[#101A2B] p-6 sm:p-7 shadow-[0_6px_24px_rgba(3,6,14,0.42)] ${e??``}`,children:(0,h.jsxs)(`div`,{className:`flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between`,children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-3.5 lg:min-w-[230px]`,children:[(0,h.jsx)(`div`,{className:`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#4388FF]/35 bg-[#131F33] text-[#45D5F2] shadow-sm`,children:(0,h.jsx)(f,{className:`h-5 w-5`,"aria-hidden":`true`})}),(0,h.jsxs)(`div`,{children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-1.5`,children:[(0,h.jsx)(`h2`,{className:`font-[family-name:var(--font-display)] text-[16px] font-semibold tracking-wide text-[#F4F7FF]`,children:`Cosmos AI`}),(0,h.jsx)(c,{className:`h-3.5 w-3.5 text-[#45D5F2]`,"aria-hidden":`true`})]}),(0,h.jsx)(`p`,{className:`text-[13px] text-[#B5C2D6]`,children:`Contextual investigation assistant.`})]})]}),(0,h.jsx)(`form`,{onSubmit:l,className:`flex-1 lg:max-w-xl`,role:`search`,children:(0,h.jsx)(p,{ref:r,type:`text`,inputSize:`lg`,value:t,onChange:e=>n(e.target.value),placeholder:`Ask about candidate targets, compatibility thresholds, or workflow steps...`,"aria-label":`Ask anything about the universe`,rightElement:(0,h.jsx)(i,{type:`submit`,size:`sm`,variant:`active`,disabled:!t.trim(),"aria-label":`Submit astronomical inquiry`,children:(0,h.jsx)(s,{className:`h-4 w-4`})})})}),(0,h.jsxs)(`div`,{className:`flex flex-wrap items-center gap-2 lg:max-w-md lg:justify-end`,children:[(0,h.jsx)(`span`,{className:`mr-1 text-[11px] font-medium tracking-wider text-[#8293AD] uppercase`,children:`Suggested:`}),y.map(e=>(0,h.jsx)(`button`,{type:`button`,onClick:()=>u(e.text),className:`inline-flex h-8 items-center rounded-lg border border-[#24344D] bg-[#131F33] px-3 text-xs font-medium text-[#B5C2D6] transition-colors duration-200 hover:border-[#4388FF]/50 hover:bg-[#192842] hover:text-[#F4F7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2] cursor-pointer`,children:e.text},e.id))]})]})})}function w(){
+}function S({className:e}){return(0,h.jsx)(`section`,{"aria-label":`Core AFTERLIGHT Features`,className:e,children:(0,h.jsx)(`div`,{className:`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5`,children:v.map(e=>(0,h.jsx)(x,{feature:e},e.id))})})}function C({className:e}){let[t,n]=(0,m.useState)(``),r=(0,m.useRef)(null),o=a(),l=e=>{e.preventDefault();let n=t.trim();n&&o(`/ai?q=${encodeURIComponent(n)}`)},u=e=>{o(`/ai?q=${encodeURIComponent(e)}`)};return(0,h.jsx)(`section`,{"aria-label":`Cosmos AI Assistant Query`,className:`rounded-xl border border-[#24344D] bg-[#101A2B] p-6 sm:p-7 shadow-[0_6px_24px_rgba(3,6,14,0.42)] ${e??``}`,children:(0,h.jsxs)(`div`,{className:`flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between`,children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-3.5 lg:min-w-[230px]`,children:[(0,h.jsx)(`div`,{className:`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#4388FF]/35 bg-[#131F33] text-[#45D5F2] shadow-sm`,children:(0,h.jsx)(f,{className:`h-5 w-5`,"aria-hidden":`true`})}),(0,h.jsxs)(`div`,{children:[(0,h.jsxs)(`div`,{className:`flex items-center gap-1.5`,children:[(0,h.jsx)(`h2`,{className:`font-[family-name:var(--font-display)] text-[16px] font-semibold tracking-wide text-[#F4F7FF]`,children:`Cosmos AI`}),(0,h.jsx)(c,{className:`h-3.5 w-3.5 text-[#45D5F2]`,"aria-hidden":`true`})]}),(0,h.jsx)(`p`,{className:`text-[13px] text-[#B5C2D6]`,children:`Contextual investigation assistant.`})]})]}),(0,h.jsx)(`form`,{onSubmit:l,className:`flex-1 lg:max-w-xl`,role:`search`,children:(0,h.jsx)(p,{ref:r,type:`text`,inputSize:`lg`,value:t,onChange:e=>n(e.target.value),placeholder:`Ask about candidate targets, compatibility thresholds, or workflow steps...`,"aria-label":`Ask anything about the universe`,rightElement:(0,h.jsx)(i,{type:`submit`,size:`sm`,variant:`active`,disabled:!t.trim(),"aria-label":`Submit astronomical inquiry`,children:(0,h.jsx)(s,{className:`h-4 w-4`})})})}),(0,h.jsxs)(`div`,{className:`flex flex-wrap items-center gap-2 lg:max-w-md lg:justify-end`,children:[(0,h.jsx)(`span`,{className:`mr-1 text-[11px] font-medium tracking-wider text-[#8293AD] uppercase`,children:`Suggested:`}),y.map(e=>(0,h.jsx)(`button`,{type:`button`,onClick:()=>u(e.text),className:`inline-flex h-8 items-center rounded-lg border border-[#24344D] bg-[#131F33] px-3 text-xs font-medium text-[#B5C2D6] transition-colors duration-200 hover:border-[#4388FF]/50 hover:bg-[#192842] hover:text-[#F4F7FF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#45D5F2] cursor-pointer`,children:e.text},e.id))]})]})})}
+function MultiEpochSection(){
+  let [selectedId, setSelectedId] = (0,m.useState)("SPX-OBJ-KBO-XR1");
+  let [viewMode, setViewMode] = (0,m.useState)("diff");
+  let [isBlinking, setIsBlinking] = (0,m.useState)(!0);
+
+  (0,m.useEffect)(()=>{
+    if (!isBlinking) return;
+    let t = setInterval(()=>{
+      setViewMode(v => v === "e1" ? "e2" : "e1");
+    }, 650);
+    return () => clearInterval(t);
+  }, [isBlinking]);
+
+  let candidates = [
+    {
+      id: "SPX-OBJ-KBO-XR1",
+      name: "Trans-Neptunian Candidate 2024-XR1",
+      simpleTitle: "Outer Solar System Ice World (Planet X Candidate)",
+      tagline: "A distant world orbiting in the frigid deep freeze beyond Neptune, moving steadily against frozen background stars.",
+      categoryBadge: "MOVING BODY • 48.2 AU",
+      speed: "26.2 mas/day (3.42″ per year)",
+      distance: "48.2 AU (~4.5 Billion Miles)",
+      temperature: "40.2 K (-387°F, Cold Methane Frost)",
+      howToSpot: "When blinking between Epoch 1 and Epoch 2, watch the center: the blue dot leaps 4.82 arcseconds to the right while background stars remain motionless!",
+      funFact: "Because this world is so far away, visible sunlight takes over 6.6 hours to reach it and reflect back to NASA SPHEREx!"
+    },
+    {
+      id: "SPX-OBJ-COMET-C2",
+      name: "Cometary Outburst Candidate C/2026-SP1",
+      simpleTitle: "Awakening Dirty Snowball Comet",
+      tagline: "A giant ball of frozen ice and dust heating up as it approaches the Sun, outgassing a bright infrared cloud.",
+      categoryBadge: "COMETARY OUTBURST",
+      speed: "48.5 mas/day (Fast Motion)",
+      distance: "3.12 AU (Asteroid Belt Rim)",
+      temperature: "142 K (-204°F, Sublimating Ices)",
+      howToSpot: "In Epoch 1 it was a sharp point; in Epoch 2 it moved and grew a diffuse cloud (coma) that shines brightly in difference imaging!",
+      funFact: "Comets are cosmic time capsules from 4.6 billion years ago, preserving primordial water from the birth of our Solar System!"
+    },
+    {
+      id: "SPX-OBJ-NEO-2025",
+      name: "Near-Earth Asteroid Candidate 2025-SPX1",
+      simpleTitle: "Speeding Near-Earth Asteroid",
+      tagline: "A fast-moving rocky boulder tumbling through space near Earth’s orbital neighborhood.",
+      categoryBadge: "FAST NEO • 1.18 AU",
+      speed: "124.8 mas/day (Rapid Streak)",
+      distance: "1.18 AU (~110 Million Miles)",
+      temperature: "265 K (17°F, Sunlight-Warmed Rock)",
+      howToSpot: "Blinking between pictures reveals a large displacement streak across the telescope sensor between visits!",
+      funFact: "Infrared light allows NASA to measure how large the asteroid really is, because dark rocks absorb sunlight and glow in infrared heat!"
+    }
+  ];
+
+  let current = candidates.find(c => c.id === selectedId) || candidates[0];
+  let imgSrc = viewMode === "e1" ? `/static/objects_media/${current.id}/epoch1.png` : viewMode === "e2" ? `/static/objects_media/${current.id}/epoch2.png` : `/static/objects_media/${current.id}/difference.png`;
+  let modeLabel = viewMode === "e1" ? "NASA SPHEREx Epoch 1 (2025.4 Baseline)" : viewMode === "e2" ? "NASA SPHEREx Epoch 2 (2026.5 Follow-up)" : "Subtracted Difference Map (Shift Target)";
+
+  return (0,h.jsxs)("section",{
+    className: "rounded-3xl border border-sky-500/30 bg-gradient-to-b from-[#0c182c]/90 to-[#070d18]/90 p-6 sm:p-8 backdrop-blur-xl shadow-[0_0_50px_rgba(67,136,255,0.12)] space-y-6",
+    children: [
+      (0,h.jsxs)("div",{
+        className: "flex flex-wrap items-center justify-between gap-4 border-b border-slate-800/80 pb-5",
+        children: [
+          (0,h.jsxs)("div",{
+            className: "space-y-1.5",
+            children: [
+              (0,h.jsxs)("div",{
+                className: "flex items-center gap-2",
+                children: [
+                  (0,h.jsx)("span",{className:"px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-sky-500/20 text-sky-300 border border-sky-500/40",children:"MULTI-EPOCH VERIFICATION"}),
+                  (0,h.jsx)("span",{className:"text-xs text-slate-400 font-mono",children:"SPHEREx DR1 Cadence (379-day baseline)"})
+                ]
+              }),
+              (0,h.jsx)("h2",{className:"font-[family-name:var(--font-display)] text-xl sm:text-2xl font-bold text-white tracking-tight",children:"Multi-Epoch Blink Discovery Ledger"}),
+              (0,h.jsx)("p",{className:"text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed",children:"Witness celestial motion in action: toggle between Epoch 1, Epoch 2, and the subtracted Difference Map, or watch the 650ms auto-blink reveal moving worlds."})
+            ]
+          }),
+          (0,h.jsx)(n,{
+            to: `/objects/${current.id}`,
+            className: "inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-500 hover:to-sky-500 text-white text-xs font-semibold shadow-lg shadow-blue-500/25 transition-all cursor-pointer",
+            children: [
+              (0,h.jsx)("span",{children:"Inspect Full Ledger"}),
+              (0,h.jsx)(s,{className:"w-3.5 h-3.5"})
+            ]
+          })
+        ]
+      }),
+      (0,h.jsx)("div",{
+        className: "flex flex-wrap gap-2.5",
+        children: candidates.map(c => (0,h.jsxs)("button",{
+          key: c.id,
+          type: "button",
+          onClick: () => { setSelectedId(c.id); setViewMode("diff"); },
+          className: `px-3.5 py-2 rounded-xl text-xs font-medium border transition-all cursor-pointer flex items-center gap-2 ${selectedId === c.id ? "border-sky-400 bg-sky-950/70 text-white shadow-md shadow-sky-500/20" : "border-slate-800 bg-slate-900/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800/80"}`,
+          children: [
+            (0,h.jsx)("span",{className:`h-2 w-2 rounded-full ${selectedId === c.id ? "bg-sky-400" : "bg-slate-600"}`}),
+            (0,h.jsx)("span",{className:"font-semibold",children:c.name}),
+            (0,h.jsx)("span",{className:"text-[10px] text-slate-400 font-mono hidden sm:inline",children:c.categoryBadge})
+          ]
+        }))
+      }),
+      (0,h.jsxs)("div",{
+        className: "grid grid-cols-1 lg:grid-cols-12 gap-6 items-center",
+        children: [
+          (0,h.jsxs)("div",{
+            className: "lg:col-span-7 space-y-3",
+            children: [
+              (0,h.jsxs)("div",{
+                className: "relative h-72 sm:h-80 w-full overflow-hidden rounded-2xl border border-slate-700/80 bg-black flex items-center justify-center shadow-2xl",
+                children: [
+                  (0,h.jsx)("img",{
+                    src: imgSrc,
+                    alt: current.name,
+                    className: "h-full w-full object-contain bg-black/90 transition-opacity duration-200"
+                  }),
+                  (0,h.jsx)("div",{
+                    className: "absolute top-3 left-3 px-3 py-1 rounded-lg text-xs font-mono font-semibold bg-black/80 backdrop-blur-md text-cyan-300 border border-cyan-500/40 shadow",
+                    children: modeLabel
+                  }),
+                  isBlinking && (0,h.jsx)("div",{
+                    className: "absolute top-3 right-3 px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-amber-500 text-black shadow-lg animate-pulse",
+                    children: "● AUTO-BLINKING (650ms)"
+                  })
+                ]
+              }),
+              (0,h.jsxs)("div",{
+                className: "grid grid-cols-4 gap-2 text-xs font-semibold",
+                children: [
+                  (0,h.jsx)("button",{
+                    type: "button",
+                    onClick: () => { setIsBlinking(!1); setViewMode("e1"); },
+                    className: `py-2 rounded-xl bg-slate-900 border transition-all cursor-pointer ${viewMode === "e1" && !isBlinking ? "border-blue-400 bg-blue-950/80 text-blue-300 shadow" : "border-slate-800 text-slate-300 hover:bg-slate-800"}`,
+                    children: "Epoch 1 (2025.4)"
+                  }),
+                  (0,h.jsx)("button",{
+                    type: "button",
+                    onClick: () => { setIsBlinking(!1); setViewMode("e2"); },
+                    className: `py-2 rounded-xl bg-slate-900 border transition-all cursor-pointer ${viewMode === "e2" && !isBlinking ? "border-blue-400 bg-blue-950/80 text-blue-300 shadow" : "border-slate-800 text-slate-300 hover:bg-slate-800"}`,
+                    children: "Epoch 2 (2026.5)"
+                  }),
+                  (0,h.jsx)("button",{
+                    type: "button",
+                    onClick: () => { setIsBlinking(!1); setViewMode("diff"); },
+                    className: `py-2 rounded-xl bg-slate-900 border transition-all cursor-pointer ${viewMode === "diff" && !isBlinking ? "border-cyan-400 bg-cyan-950/80 text-cyan-300 shadow" : "border-slate-800 text-slate-300 hover:bg-slate-800"}`,
+                    children: "Diff Map"
+                  }),
+                  (0,h.jsx)("button",{
+                    type: "button",
+                    onClick: () => setIsBlinking(!isBlinking),
+                    className: `py-2 rounded-xl font-bold transition-all cursor-pointer ${isBlinking ? "bg-amber-500 text-black hover:bg-amber-400 shadow-md shadow-amber-500/25" : "bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-500 hover:to-orange-500"}`,
+                    children: isBlinking ? "Pause Blink" : "⚡ Live Blink"
+                  })
+                ]
+              })
+            ]
+          }),
+          (0,h.jsxs)("div",{
+            className: "lg:col-span-5 space-y-4",
+            children: [
+              (0,h.jsxs)("div",{
+                className: "p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2",
+                children: [
+                  (0,h.jsx)("div",{className:"text-xs font-mono uppercase text-sky-400 font-semibold tracking-wider",children:current.simpleTitle}),
+                  (0,h.jsx)("p",{className:"text-xs text-slate-300 leading-relaxed",children:current.tagline})
+                ]
+              }),
+              (0,h.jsxs)("div",{
+                className: "p-4 rounded-2xl bg-blue-950/30 border border-blue-800/50 space-y-2",
+                children: [
+                  (0,h.jsxs)("div",{className:"text-xs font-bold text-cyan-300 flex items-center gap-1.5",children:[(0,h.jsx)("span",{children:"💡"}),(0,h.jsx)("span",{children:"How to Spot the Shift in Plain English:"})]}),
+                  (0,h.jsx)("p",{className:"text-xs text-slate-200 leading-relaxed",children:current.howToSpot})
+                ]
+              }),
+              (0,h.jsxs)("div",{
+                className: "grid grid-cols-2 gap-3 text-xs font-mono",
+                children: [
+                  (0,h.jsxs)("div",{className:"p-3 rounded-xl bg-slate-950/60 border border-slate-800/80",children:[(0,h.jsx)("div",{className:"text-[10px] text-slate-400 uppercase",children:"Speed / Motion"}),(0,h.jsx)("div",{className:"font-bold text-sky-300 text-[11px] truncate mt-0.5",children:current.speed})]}),
+                  (0,h.jsxs)("div",{className:"p-3 rounded-xl bg-slate-950/60 border border-slate-800/80",children:[(0,h.jsx)("div",{className:"text-[10px] text-slate-400 uppercase",children:"Distance"}),(0,h.jsx)("div",{className:"font-bold text-indigo-300 text-[11px] truncate mt-0.5",children:current.distance})]}),
+                  (0,h.jsxs)("div",{className:"p-3 rounded-xl bg-slate-950/60 border border-slate-800/80",children:[(0,h.jsx)("div",{className:"text-[10px] text-slate-400 uppercase",children:"Temperature"}),(0,h.jsx)("div",{className:"font-bold text-amber-300 text-[11px] truncate mt-0.5",children:current.temperature})]}),
+                  (0,h.jsxs)("div",{className:"p-3 rounded-xl bg-slate-950/60 border border-slate-800/80",children:[(0,h.jsx)("div",{className:"text-[10px] text-slate-400 uppercase",children:"Target ID"}),(0,h.jsx)("div",{className:"font-bold text-emerald-300 text-[11px] truncate mt-0.5",children:current.id})]})
+                ]
+              }),
+              (0,h.jsxs)("div",{
+                className: "p-3.5 rounded-xl bg-amber-950/20 border border-amber-800/40 text-xs text-amber-200/90 leading-relaxed italic",
+                children: [
+                  (0,h.jsx)("strong",{className:"not-italic text-amber-300 mr-1.5",children:"🌟 Fun Cosmic Fact:"}),
+                  current.funFact
+                ]
+              })
+            ]
+          })
+        ]
+      })
+    ]
+  });
+}
+
+function w(){
   return (0,h.jsxs)(`div`,{
     className:`relative min-h-[calc(100vh-var(--navbar-height))] overflow-hidden bg-[#070B14]`,
     children:[
@@ -469,6 +666,7 @@ import{_ as e,d as LinkComponent,g as n,i as r,n as i,p as a,r as o}from"./index
         className:`relative z-10 mx-auto flex flex-col gap-12 px-4 sm:px-6 lg:px-8 pb-20 pt-4`,
         style:{maxWidth:`var(--content-max-width)`},
         children:[
+          (0,h.jsx)(MultiEpochSection,{}),
           (0,h.jsx)(S,{}),
           (0,h.jsx)(C,{})
         ]
