@@ -90,43 +90,47 @@ def query_cosmos_ai(
 
     # Routing
     if is_black_holes:
-        return _answer_black_holes(mode, prompt)
+        res = _answer_black_holes(mode, prompt)
     elif is_why_galaxies_glow:
-        return _answer_why_galaxies_glow(mode, prompt)
+        res = _answer_why_galaxies_glow(mode, prompt)
     elif is_planet_x or (context_type == "object" and "xr1" in obj_id.lower()):
-        return _answer_planet_x(mode, prompt)
+        res = _answer_planet_x(mode, prompt)
     elif is_brown_dwarf or (context_type == "object" and "bd" in obj_id.lower()):
-        return _answer_brown_dwarf(mode, prompt)
+        res = _answer_brown_dwarf(mode, prompt)
     elif is_variable_star or (context_type == "object" and ("v838" in obj_id.lower() or "mira" in obj_id.lower())):
-        return _answer_variable_star(mode, prompt)
+        res = _answer_variable_star(mode, prompt)
     elif is_apophis_or_asteroid:
-        return _answer_asteroids_comets(mode, prompt)
+        res = _answer_asteroids_comets(mode, prompt)
     elif is_jwst:
-        return _answer_jwst_synergy(mode, prompt)
+        res = _answer_jwst_synergy(mode, prompt)
     elif is_inflation:
-        return _answer_cosmic_inflation(mode, prompt)
+        res = _answer_cosmic_inflation(mode, prompt)
     elif is_ices:
-        return _answer_interstellar_ices(mode, prompt)
+        res = _answer_interstellar_ices(mode, prompt)
     elif is_dark_matter:
-        return _answer_dark_matter_energy(mode, prompt)
+        res = _answer_dark_matter_energy(mode, prompt)
     elif is_supernovae:
-        return _answer_supernovae_transients(mode, prompt)
+        res = _answer_supernovae_transients(mode, prompt)
     elif is_exoplanets:
-        return _answer_exoplanets(mode, prompt)
+        res = _answer_exoplanets(mode, prompt)
     elif is_astrometry:
-        return _answer_astrometry_gaia(mode, prompt)
+        res = _answer_astrometry_gaia(mode, prompt)
     elif is_difference_imaging or context_type == "temporal":
-        return _answer_difference_imaging(mode, prompt, target_id)
+        res = _answer_difference_imaging(mode, prompt, target_id)
     elif is_spectral_query or context_type == "spectral":
-        return _answer_spectral_science(mode, prompt, target_id)
+        res = _answer_spectral_science(mode, prompt, target_id)
     elif is_evidence_query or context_type == "evidence":
-        return _answer_evidence_uncertainty(mode, prompt, target_id)
+        res = _answer_evidence_uncertainty(mode, prompt, target_id)
     elif is_target_cosmos or target_id == "demo-deepfield-01":
-        return _answer_cosmos_deep_field(mode, prompt)
+        res = _answer_cosmos_deep_field(mode, prompt)
     elif is_spherex_mission:
-        return _answer_spherex_mission(mode, prompt)
+        res = _answer_spherex_mission(mode, prompt)
     else:
-        return _answer_general_astronomy(mode, prompt, ctx)
+        res = _answer_general_astronomy(mode, prompt, ctx)
+
+    if isinstance(res, dict) and "directAnswer" in res and "text" not in res:
+        res["text"] = res["directAnswer"]
+    return res
 
 
 def _answer_black_holes(mode: str, query: str) -> Dict[str, Any]:
