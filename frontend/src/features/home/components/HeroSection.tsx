@@ -131,20 +131,6 @@ export function HeroSection({ className }: HeroSectionProps) {
               <span className="text-cyan-400/90 font-bold">SPHEREx BAND 1-6</span>
             </div>
           </div>
-
-          {/* Interactive Galaxy Badge & Target Reticle on the Galaxy Core */}
-          <div className="absolute top-[38%] right-[12%] sm:right-[18%] lg:right-[22%] hidden sm:flex flex-col items-center gap-2 pointer-events-auto z-30 transition-transform duration-300 group-hover:scale-105">
-            <div className="relative flex h-10 w-10 items-center justify-center rounded-full border-2 border-cyan-400 bg-cyan-950/80 text-cyan-300 shadow-[0_0_25px_rgba(69,213,242,0.6)] animate-pulse">
-              <Telescope className="h-5 w-5" />
-              <span className="absolute -inset-1 rounded-full border border-cyan-400/50 animate-ping opacity-60" />
-            </div>
-            <div className="flex flex-col items-center rounded-xl border border-cyan-400/40 bg-[#070B14]/90 px-3.5 py-1.5 backdrop-blur-md shadow-xl text-center">
-              <span className="text-xs font-bold text-cyan-300 tracking-wide flex items-center gap-1.5">
-                <span>✨</span> Click to Open Galaxy
-              </span>
-              <span className="text-[10px] font-mono text-slate-400">COSMOS Deep Field Core</span>
-            </div>
-          </div>
         </div>
 
         {/* Localized Readability Scrim */}
@@ -207,10 +193,10 @@ export function HeroSection({ className }: HeroSectionProps) {
               to="/objects"
               variant="secondary"
               size="lg"
-              className="bg-gradient-to-r from-purple-900/60 to-indigo-900/60 hover:from-purple-800/80 hover:to-indigo-800/80 text-[#F4F7FF] border border-purple-500/50 hover:border-purple-400 backdrop-blur-md shadow-[0_6px_22px_rgba(155,140,255,0.3)] transition-all hover:-translate-y-0.5 cursor-pointer"
-              leftIcon={<Sparkles className="h-4 w-4 text-purple-300" />}
+              className="border border-[#24344D] bg-[#101A2B] hover:bg-[#131F33] text-[#F4F7FF] font-semibold transition-all hover:-translate-y-0.5 cursor-pointer"
+              leftIcon={<Sparkles className="h-4 w-4 text-[#45D5F2]" />}
             >
-              Autonomous Sifter (9 Objects)
+              Celestial Objects (9)
             </Button>
 
             <button
@@ -352,13 +338,13 @@ export function HeroSection({ className }: HeroSectionProps) {
               {/* Deep Links into the platform */}
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <Button
-                  to="/explore/demo-deepfield-01"
+                  to="/explore"
                   variant="primary"
                   size="sm"
                   className="bg-blue-600 hover:bg-blue-500 text-white font-semibold flex-1 sm:flex-initial"
                   rightIcon={<ArrowRight className="h-4 w-4" />}
                 >
-                  Open in Cutout Explorer
+                  Open in Universe Explorer
                 </Button>
                 <Button
                   to="/temporal-analysis/demo-deepfield-01"

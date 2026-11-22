@@ -67,12 +67,6 @@ export function Navbar() {
               AFTERLIGHT
             </span>
           </Link>
-
-          {/* 4D Spacetime Telemetry Badge */}
-          <div className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border border-cyan-500/30 bg-cyan-950/40 text-[10px] font-mono text-cyan-300">
-            <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping" />
-            <span>4D SPACETIME</span>
-          </div>
         </div>
 
         {/* Center Zone: Desktop Navigation Links */}
