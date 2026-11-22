@@ -3,12 +3,21 @@
 > **Autonomous Evidence-Based Astronomical Investigation Platform for NASA SPHEREx All-Sky Survey Data**  
 > *Developed for NASA Space Apps Challenge 12: Planet X and SPHEREx*
 
-[![Python](https://img.shields.io/badge/Python-3.13+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Live on Render](https://img.shields.io/badge/Render-Live%20Platform-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://afterlight-0arl.onrender.com)
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7+-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Tests](https://img.shields.io/badge/Pytest-10%2F10%20Passed-34D399?style=flat-square&logo=pytest&logoColor=white)](test_suite.py)
+[![Tests](https://img.shields.io/badge/Pytest-11%2F11%20Passed-34D399?style=flat-square&logo=pytest&logoColor=white)](test_suite.py)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+
+---
+
+## 🚀 Live Web Service on Render
+
+The official AFTERLIGHT platform is deployed and live on Render:
+**🌐 [https://afterlight-0arl.onrender.com](https://afterlight-0arl.onrender.com)**
 
 ---
 
