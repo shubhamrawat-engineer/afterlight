@@ -845,10 +845,12 @@ if DIST_DIR.exists():
 
 
 if __name__ == "__main__":
+    import os
     import uvicorn
 
+    port = int(os.environ.get("PORT", 8000))
     print("\n" + "=" * 60)
-    print("  AFTERLIGHT Backend API Server Starting (v2.1)...")
-    print("  Documentation: http://localhost:8000/docs (or http://127.0.0.1:8000/docs)")
+    print(f"  AFTERLIGHT Backend API Server Starting on port {port} (v2.1)...")
+    print(f"  Documentation: http://localhost:{port}/docs")
     print("=" * 60 + "\n")
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)

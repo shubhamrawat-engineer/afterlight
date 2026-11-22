@@ -21,3 +21,4 @@ data/live_cache/*
 # Ignore user cases created during local testing (keep directory)
 data/cases/*
 !data/cases/.gitkeep
+tempCodeRunnerFile.py
