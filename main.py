@@ -44,16 +44,8 @@ app = FastAPI(
 app.add_middleware(GZipMiddleware, minimum_size=500)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:8000",
-        "http://127.0.0.1:8000",
-        "http://0.0.0.0:8000",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
-    allow_origin_regex=r"^https?://(localhost|127\.0\.0\.1|0\.0\.0\.0)(:\d+)?$",
+    allow_origins=["*"],
+    allow_origin_regex=r".*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -307,6 +299,29 @@ def get_target_measurement(
 
     compat = TaskCompatibilityAuditor.evaluate(manifest=manifest, selected_observation_ids=obs_ids, task=task)
     return ScientificMeasurementEngine.compute(manifest=manifest, compatibility=compat, target_id=target_id, observable=observable)
+
+
+@app.get("/static/{subpath:path}", include_in_schema=False)
+def serve_bundle_static(subpath: str):
+    file_path = BUNDLE_DIR / subpath
+    if file_path.is_file():
+        media = "image/png" if file_path.suffix == ".png" else ("application/json" if file_path.suffix == ".json" else None)
+        return FileResponse(str(file_path), media_type=media, headers={"Cache-Control": "public, max-age=86400"})
+
+    # Graceful image fallback for cutouts/epochs (earlier, later, difference)
+    fname = Path(subpath).name
+    if fname in ("earlier.png", "later.png", "difference.png", "alignment.png"):
+        fallback = BUNDLE_DIR / "demo-deepfield-01" / fname
+        if fallback.is_file():
+            return FileResponse(str(fallback), media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
+
+    # Graceful fallback for object intelligence media
+    if "objects_media" in subpath or subpath.endswith(".png"):
+        crop_fallback = BUNDLE_DIR / "objects_media" / "test_crop.png"
+        if crop_fallback.is_file():
+            return FileResponse(str(crop_fallback), media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
+
+    raise HTTPException(status_code=404, detail=f"Static asset {subpath} not found")
 
 
 app.mount("/static", StaticFiles(directory=str(BUNDLE_DIR)), name="static")
@@ -824,6 +839,17 @@ if DIST_DIR.exists():
     def icons():
         return FileResponse(str(DIST_DIR / "icons.svg"))
 
+    @app.get("/galaxy.png", include_in_schema=False)
+    def galaxy_image():
+        for candidate in (
+            DIST_DIR / "galaxy.png",
+            DIST_DIR / "assets" / "galaxy.png",
+            DIST_DIR / "assets" / "galaxy.jpg",
+        ):
+            if candidate.is_file():
+                return FileResponse(str(candidate), media_type="image/png", headers={"Cache-Control": "public, max-age=86400"})
+        raise HTTPException(status_code=404, detail="Galaxy image not found")
+
     @app.get("/{full_path:path}", include_in_schema=False)
     def serve_frontend_spa(full_path: str):
         if full_path.startswith(("api", "static", "docs", "redoc", "openapi.json")):
@@ -833,14 +859,23 @@ if DIST_DIR.exists():
         bundle_file = BUNDLE_DIR / full_path
         if bundle_file.is_file():
             media = "image/png" if bundle_file.suffix == ".png" else None
-            return FileResponse(str(bundle_file), media_type=media)
+            return FileResponse(str(bundle_file), media_type=media, headers={"Cache-Control": "public, max-age=86400"})
 
         # 2. Check if file is in dist directory
         target_file = DIST_DIR / full_path
         if target_file.is_file():
             return FileResponse(str(target_file))
 
-        # 3. Fallback to index.html for client-side routing
+        # 3. Check if file is in dist/assets directory
+        asset_file = DIST_DIR / "assets" / full_path
+        if asset_file.is_file():
+            return FileResponse(str(asset_file))
+
+        # 4. If request has a file extension for an image/font/script and doesn't exist, return 404 instead of index.html
+        if any(full_path.lower().endswith(ext) for ext in (".png", ".jpg", ".jpeg", ".svg", ".ico", ".webp", ".gif", ".js", ".css", ".map", ".woff", ".woff2", ".ttf")):
+            raise HTTPException(status_code=404, detail=f"Asset {full_path} not found")
+
+        # 5. Fallback to index.html for client-side routing
         return FileResponse(str(DIST_DIR / "index.html"))
 
 

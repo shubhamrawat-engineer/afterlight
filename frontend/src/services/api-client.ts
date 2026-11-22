@@ -45,7 +45,8 @@ function buildUrl(
   path: string,
   params?: Record<string, string | number | boolean | undefined | null>
 ): string {
-  const base = config.apiBaseUrl.replace(/\/+$/, '');
+  const fallbackOrigin = typeof window !== 'undefined' && window.location?.origin ? window.location.origin : 'http://localhost:8000';
+  const base = (config.apiBaseUrl || fallbackOrigin).replace(/\/+$/, '');
   const normalised = path.startsWith('/') ? path : `/${path}`;
   const url = new URL(`${base}${normalised}`);
 

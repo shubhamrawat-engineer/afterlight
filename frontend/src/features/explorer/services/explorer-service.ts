@@ -69,7 +69,9 @@ export async function fetchTargetManifest(id: string): Promise<ServiceResult<Tar
  * Resolve an image/thumbnail path to a full URL.
  * - Preserves absolute URLs (http/https/data/blob).
  * - Resolves local frontend public assets (/assets/*, /demo-assets/*) directly without prepending backend base URL.
- * - Resolves backend static/storage routes (/static/*, /api/*) against config.apiBaseUrl.
+ * - In production (Render, Vercel, Docker) or when served by FastAPI, backend and frontend share the origin,
+ *   so root-relative paths (/static/*) resolve directly against the current domain, preventing Mixed Content errors.
+ * - Only prepends config.apiBaseUrl when developing on a separate local dev server port (e.g. Vite on :5173).
  */
 export function resolveImageUrl(path: string | null | undefined): string | null {
   if (!path || !path.trim()) return null;
@@ -88,6 +90,19 @@ export function resolveImageUrl(path: string | null | undefined): string | null 
   // Local public assets (including demonstration placeholders) resolve relative to frontend origin
   if (cleanPath.startsWith('/assets/') || cleanPath.startsWith('/demo-assets/')) {
     return cleanPath;
+  }
+
+  // If in browser and NOT running on a separate local dev port (e.g. 5173),
+  // root-relative /static paths are 100% reliable and avoid ERR_CONNECTION_REFUSED to localhost:8000
+  if (typeof window !== 'undefined' && window.location) {
+    const isDevDifferentPort =
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') &&
+      window.location.port !== '8000' &&
+      window.location.port !== '';
+
+    if (!isDevDifferentPort) {
+      return cleanPath;
+    }
   }
 
   const base = config.apiBaseUrl.replace(/\/+$/, '');

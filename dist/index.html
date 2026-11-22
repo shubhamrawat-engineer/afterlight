@@ -12,232 +12,24 @@
       rel="stylesheet"
     />
     <title>AFTERLIGHT | Astronomical Exploration Platform</title>
-    <script type="module" crossorigin src="/assets/index-Caqz24Pb.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DENrO33d.css">
 
-    <!-- Dark Space Theme & Button Cleanup Guard -->
+    <!-- Immediate Theme Initialization (Prevents theme flicker) -->
     <script>
       (function() {
         try {
-          localStorage.removeItem('afterlight_theme');
-          document.documentElement.classList.remove('day-mode');
-          document.documentElement.classList.add('night-mode');
-        } catch (e) {}
-
-        function purgeButtons() {
-          var btns = document.querySelectorAll('button');
-          for (var i = 0; i < btns.length; i++) {
-            var b = btns[i];
-            var a = (b.getAttribute('aria-label') || '').toLowerCase();
-            var t = (b.getAttribute('title') || '').toLowerCase();
-            if (
-              a.includes('theme') ||
-              t.includes('theme') ||
-              a.includes('contrast') ||
-              t.includes('contrast') ||
-              a.includes('profile') ||
-              t.includes('profile') ||
-              a.includes('astronomer') ||
-              t.includes('astronomer')
-            ) {
-              b.remove();
-            }
+          var t = localStorage.getItem('afterlight_theme');
+          if (t === 'day') {
+            document.documentElement.classList.add('day-mode');
+          } else {
+            document.documentElement.classList.add('night-mode');
           }
-        }
-
-        if (document.readyState === 'loading') {
-          document.addEventListener('DOMContentLoaded', purgeButtons);
-        } else {
-          purgeButtons();
-        }
-        var obs = new MutationObserver(purgeButtons);
-        obs.observe(document.documentElement, { childList: true, subtree: true });
+        } catch (e) {}
       })();
     </script>
 
-    <style>
-      /* --- Smooth 3D & Global Transitions --- */
-      html {
-        scroll-behavior: smooth;
-        background-color: #040711;
-      }
-      
-      body {
-        background-color: #040711;
-        overflow-x: hidden;
-      }
-
-      /* Subtle glowing hover & smooth transitions on cards and buttons */
-      button, a, input, select, textarea {
-        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-      }
-
-      /* Image loading smoothness */
-      img {
-        transition: opacity 0.35s ease-in-out, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-        will-change: transform, opacity;
-      }
-
-      /* Custom Sleek Cosmic Scrollbar */
-      ::-webkit-scrollbar {
-        width: 7px;
-        height: 7px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #040711;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #1e293b;
-        border-radius: 9999px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #38bdf8;
-      }
-
-      /* Hide user/astronomer profile and theme toggle buttons permanently */
-      button[aria-label*="Profile"],
-      button[title*="Profile"],
-      button[aria-label*="Astronomer"],
-      button[title*="Astronomer"],
-      button[aria-label*="Theme"],
-      button[title*="Theme"],
-      button[aria-label*="theme"],
-      button[title*="theme"],
-      button[aria-label*="Contrast"],
-      button[title*="Contrast"] {
-        display: none !important;
-      }
-
-      /* 4D Relativistic Spacetime Canvas */
-      #afterlight-3d-cosmic-canvas {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        pointer-events: none;
-        z-index: 0;
-        opacity: 0.9;
-        transition: opacity 0.4s ease;
-      }
-
-      #root {
-        position: relative;
-        z-index: 1;
-      }
-    
-      /* --- Space Telescope Authentic Physics & Animations --- */
-      @keyframes cosmicGalaxyDrift {
-        0% {
-          transform: rotate(0deg) scale(1.02);
-        }
-        50% {
-          transform: rotate(2.4deg) scale(1.055);
-        }
-        100% {
-          transform: rotate(-1.6deg) scale(1.02);
-        }
-      }
-
-      @keyframes cosmicCorePulse {
-        0%, 100% {
-          opacity: 0.62;
-          transform: scale(0.96);
-          filter: brightness(1) drop-shadow(0 0 35px rgba(69, 213, 242, 0.45));
-        }
-        50% {
-          opacity: 0.94;
-          transform: scale(1.07);
-          filter: brightness(1.22) drop-shadow(0 0 65px rgba(69, 213, 242, 0.85));
-        }
-      }
-
-      @keyframes diffractionSpikePulse {
-        0%, 100% {
-          opacity: 0.55;
-          transform: scale(0.92);
-        }
-        50% {
-          opacity: 0.95;
-          transform: scale(1.08);
-        }
-      }
-
-      @keyframes reticleScanRotate {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      @keyframes astrometricBlink {
-        0%, 100% {
-          opacity: 0.35;
-        }
-        50% {
-          opacity: 0.9;
-        }
-      }
-
-      /* Microscopic Astronomical Sensor Photon Shot Noise */
-      .astronomical-photon-grain {
-        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-        background-size: 4px 4px;
-        pointer-events: none;
-      }
-
-      /* Optical 4-Point Space Telescope Diffraction Cross */
-      .diffraction-spike-star {
-        position: absolute;
-        pointer-events: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .diffraction-spike-star::before {
-        content: "";
-        position: absolute;
-        width: 1px;
-        height: 52px;
-        background: linear-gradient(to bottom, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
-        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
-      }
-      .diffraction-spike-star::after {
-        content: "";
-        position: absolute;
-        height: 1px;
-        width: 52px;
-        background: linear-gradient(to right, transparent, rgba(186, 230, 253, 0.9) 45%, #ffffff 50%, rgba(186, 230, 253, 0.9) 55%, transparent);
-        box-shadow: 0 0 6px rgba(56, 189, 248, 0.7);
-      }
-      .diffraction-core-dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 9999px;
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(56, 189, 248, 0.9), 0 0 20px rgba(67, 136, 255, 0.7);
-        z-index: 2;
-      }
-
-      /* --- 4D Interactivity & Temporal Hover Depth --- */
-      .spacetime-4d-card {
-        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        transform-style: preserve-3d;
-      }
-      .spacetime-4d-card:hover {
-        transform: perspective(1000px) translateY(-3px) translateZ(8px);
-        box-shadow: 0 12px 35px rgba(67, 136, 255, 0.22), 0 0 20px rgba(69, 213, 242, 0.15);
-      }
-
-      /* --- DAY / NIGHT OBSERVATORY CONTRAST SYSTEM --- */
-      html, body {
-        transition: background-color 0.35s ease, color 0.35s ease !important;
-      }
-
-      /* DAY MODE (High Contrast Daylight Laboratory) */
-    </style>
+    <style>html{scroll-behavior:smooth;background-color:#040711}body{background-color:#040711;overflow-x:hidden}button,a,input,select,textarea{transition:all .25s cubic-bezier(.16,1,.3,1)!important}img{will-change:transform, opacity;transition:opacity .35s ease-in-out,transform .3s cubic-bezier(.16,1,.3,1)}::-webkit-scrollbar{width:7px;height:7px}::-webkit-scrollbar-track{background:#040711}::-webkit-scrollbar-thumb{background:#1e293b;border-radius:9999px}::-webkit-scrollbar-thumb:hover{background:#38bdf8}#afterlight-3d-cosmic-canvas{pointer-events:none;z-index:0;opacity:.9;width:100vw;height:100vh;transition:opacity .4s;position:fixed;top:0;left:0}#root{z-index:1;position:relative}@keyframes cosmicGalaxyDrift{0%{transform:rotate(0)scale(1.02)}50%{transform:rotate(2.4deg)scale(1.055)}to{transform:rotate(-1.6deg)scale(1.02)}}@keyframes cosmicCorePulse{0%,to{opacity:.62;filter:brightness()drop-shadow(0 0 35px #45d5f273);transform:scale(.96)}50%{opacity:.94;filter:brightness(1.22)drop-shadow(0 0 65px #45d5f2d9);transform:scale(1.07)}}@keyframes diffractionSpikePulse{0%,to{opacity:.55;transform:scale(.92)}50%{opacity:.95;transform:scale(1.08)}}@keyframes reticleScanRotate{0%{transform:rotate(0)}to{transform:rotate(360deg)}}@keyframes astrometricBlink{0%,to{opacity:.35}50%{opacity:.9}}.astronomical-photon-grain{pointer-events:none;background-image:radial-gradient(#ffffff14 1px,#0000 1px);background-size:4px 4px}.diffraction-spike-star{pointer-events:none;justify-content:center;align-items:center;display:flex;position:absolute}.diffraction-spike-star:before{content:"";background:linear-gradient(#0000,#bae6fde6 45%,#fff 50%,#bae6fde6 55%,#0000);width:1px;height:52px;position:absolute;box-shadow:0 0 6px #38bdf8b3}.diffraction-spike-star:after{content:"";background:linear-gradient(90deg,#0000,#bae6fde6 45%,#fff 50%,#bae6fde6 55%,#0000);width:52px;height:1px;position:absolute;box-shadow:0 0 6px #38bdf8b3}.diffraction-core-dot{z-index:2;background-color:#fff;border-radius:9999px;width:5px;height:5px;box-shadow:0 0 10px #38bdf8e6,0 0 20px #4388ffb3}.spacetime-4d-card{transform-style:preserve-3d;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s cubic-bezier(.16,1,.3,1)!important}.spacetime-4d-card:hover{transform:perspective(1000px)translateY(-3px)translateZ(8px);box-shadow:0 12px 35px #4388ff38,0 0 20px #45d5f226}html,body{transition:background-color .35s,color .35s!important}html.day-mode,html.day-mode body{color:#0f172a!important;background-color:#f8fafc!important}html.day-mode header{background:#fffffff0!important;border-bottom-color:#cbd5e1!important;box-shadow:0 4px 20px #0000000f!important}html.day-mode header a,html.day-mode header span{color:#0f172a!important}html.day-mode header button{color:#0f172a!important;background-color:#f1f5f9!important;border-color:#cbd5e1!important}html.day-mode header .bg-\[\#101A2B\]{background-color:#e2e8f0!important;border-color:#94a3b8!important}html.day-mode footer{background-color:#fff!important;border-top-color:#cbd5e1!important}html.day-mode footer span,html.day-mode footer a,html.day-mode footer p{color:#475569!important}html.day-mode .bg-\[\#070B14\],html.day-mode .bg-\[\#0A1020\],html.day-mode .bg-\[\#040711\],html.day-mode .bg-\[\#0d1527\],html.day-mode .bg-\[\#101A2B\],html.day-mode .bg-slate-950,html.day-mode .bg-slate-900,html.day-mode .bg-slate-900\/60,html.day-mode .bg-slate-900\/80,html.day-mode .bg-slate-900\/90,html.day-mode .bg-black\/80,html.day-mode .bg-black\/85{color:#0f172a!important;background-color:#fff!important;border-color:#cbd5e1!important}html.day-mode .border-\[\#1A2940\],html.day-mode .border-\[\#24344D\],html.day-mode .border-slate-800,html.day-mode .border-slate-700{border-color:#cbd5e1!important}html.day-mode .text-\[\#F4F7FF\],html.day-mode .text-white,html.day-mode h1,html.day-mode h2,html.day-mode h3,html.day-mode h4,html.day-mode h5{color:#0f172a!important}html.day-mode .text-\[\#B5C2D6\],html.day-mode .text-\[\#8293AD\],html.day-mode .text-slate-400,html.day-mode .text-slate-300,html.day-mode p{color:#334155!important}html.day-mode .text-\[\#E1E9F7\]{color:#1e293b!important}html.day-mode aside{background-color:#f8fafc!important;border-color:#cbd5e1!important}html.day-mode input,html.day-mode textarea,html.day-mode select{color:#0f172a!important;background-color:#fff!important;border-color:#cbd5e1!important}html.day-mode #afterlight-3d-cosmic-canvas{filter:invert(.92)contrast(1.2);opacity:.18!important}html.day-mode .astronomical-photon-grain{opacity:.1!important}html.day-mode .bg-\[\#070B14\]\/90,html.day-mode .bg-\[\#070B14\]\/85,html.day-mode .bg-\[\#070B14\]\/75{background-color:#fffffff0!important}</style>
+    <script type="module" crossorigin src="/assets/index-BfMuYkai.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CphW7mR7.css">
   </head>
   <body>
     <!-- Hardware-accelerated 4D Relativistic Spacetime Canvas -->
@@ -246,17 +38,20 @@
     <!-- Floating 4D Spacetime Telemetry Widget -->
     <div
       id="spacetime-4d-hud"
-      style="display: flex !important; position: fixed; bottom: 16px; left: 16px; z-index: 9999; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; border: 1px solid rgba(69, 213, 242, 0.45); background: rgba(7, 11, 20, 0.9); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 12px; color: #45D5F2; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.5); pointer-events: none; select: none; transition: all 0.3s ease;"
+      class="fixed bottom-3 left-4 z-40 hidden sm:flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-cyan-500/30 bg-[#070B14]/85 text-xs font-mono text-cyan-300 backdrop-blur-md shadow-lg pointer-events-none select-none transition-all duration-300"
     >
-      <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #45D5F2; box-shadow: 0 0 10px #45D5F2;"></span>
-      <strong style="color: #F4F7FF; letter-spacing: 0.05em;">4D SPACETIME:</strong>
-      <span id="spacetime-t-val" style="color: #bae6fd;">τ = +0.00s</span>
-      <span style="color: #64748b;">•</span>
-      <span id="spacetime-gamma-val" style="color: #38bdf8;">γ = 1.000</span>
-      <span style="color: #64748b;">•</span>
-      <span style="color: #c084fc;">SPHEREx 102λ</span>
+      <span class="flex h-2 w-2 relative">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+      </span>
+      <span class="text-cyan-200 font-semibold tracking-wider">4D SPACETIME:</span>
+      <span id="spacetime-t-val" class="text-slate-300">τ = +0.00s</span>
+      <span class="text-slate-500">•</span>
+      <span id="spacetime-gamma-val" class="text-cyan-400">γ = 1.000</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-purple-300">SPHEREx 102λ</span>
     </div>
-    
+
     <div id="root"></div>
 
     <!-- 4D Relativistic Minkowski Spacetime Physics Engine -->

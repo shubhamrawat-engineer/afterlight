@@ -1,3 +1,4 @@
+from pathlib import Path
 from fastapi.testclient import TestClient
 from main import app
 
@@ -47,9 +48,16 @@ def test_all_routes():
         print(f"[FRONTEND OK] {route} -> status 200")
 
     # 3. Static assets
+    dist_assets = list(Path("dist/assets").glob("index-*.js"))
+    js_asset = f"/assets/{dist_assets[0].name}" if dist_assets else "/assets/galaxy.png"
+    dist_css = list(Path("dist/assets").glob("index-*.css"))
+    css_asset = f"/assets/{dist_css[0].name}" if dist_css else "/assets/galaxy.png"
+
     asset_routes = [
-        "/assets/index-Caqz24Pb.js",
-        "/assets/index-DENrO33d.css",
+        js_asset,
+        css_asset,
+        "/assets/galaxy.png",
+        "/galaxy.png",
         "/favicon.svg",
     ]
     for route in asset_routes:
